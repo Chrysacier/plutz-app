@@ -1,2 +1,38 @@
 /* Layout 
 ================================================================================ */
+
+body{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+}
+
+/* général */
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+ul{
+    padding: 0px;
+}
+
+li{
+    list-style-type: none
+}
+
+
+
+/* planet-bullets */
+.planet-bullet{
+    width: 0px;
+
+    + span{
+        color: var(--color-primary);
+    }
+
+    &:checked + span{
+        font-weight: 800;
+        color: var(--color-text);
+    }
+}
