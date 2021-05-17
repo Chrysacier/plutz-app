@@ -1,9 +1,39 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: lime;
+/*!
+***
+Data Play
+***
+Projet scolaire - option DWM 
+*
+@version: 1.0
+
+@author: 
+* Florent Chaltin <florent-chaltin.be>
+* Chrysanthe Gomrée <chrysanthe-gomree.be>
+* Angie Courtoy <angie-courtoy.be>
+* Caroline Daoud <carolinedaoud.be>
+*
+***
+================================================================================ */
+
+
+
+
+/* TO DO 
+================================================================================ 
+- HTML Landing Page
+- HTML Experimentation 
+- HTML All 
+
+
+*/
+
+img{
+  width: 50%;
+}
+body{
+    background-color: silver;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+svg{
+  fill: black;
 }

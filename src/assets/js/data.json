@@ -1,0 +1,197 @@
+[
+  {
+    "Name": "Mercury",
+    "Type": "Terrestrial",
+    "Informations": "Mercury is the smallest planet — it is only slightly larger than Earth's moon. Since it has no significant atmosphere to stop impacts, the planet is pockmarked with&nbsp;craters.",
+    "Distance": "57.9",
+    "Diameter": "4 879",
+    "Mass": "0.33",
+    "Rotation_Period": "1 407.6",
+    "Gravity": "3.7",
+    "Mean_Temperature": "167",
+    "Number_of_satellites": "0",
+    "Facts":[
+      {
+        "Type": "Mercury has a compact, rocky surface like Earth's terra firma. The terrestrial planets are the four innermost planets in the solar&nbsp;system.",
+        "Distance": "The closest planet to the sun, Mercury takes the least time to orbit the giant star.",
+        "Diameter": "Mercury is the smallest planet in our Solar System. In fact, Mercury is not much larger than Earth’s own&nbsp;Moon",
+        "Mass": "Mercury has a large iron core similar to other rocky planets. This makes Mercury's mass is extremely large in comparison to its&nbsp;size.",
+        "Rotation_Period": "Mercury spins slowly compared to Earth, so one day lasts a long time. Mercury takes 59 Earth days to make one full rotation, which is about 2&nbsp;months.",
+        "Gravity": "On Mercury, your “standing jump” would excel to&nbsp;1,2m.",
+        "Mean_Temperature": "This is the average temperature on Mercury. Perfect for frying your potatoes into&nbsp;fries.",
+        "Number_of_satellites": "Mercury is too close to the Sun for having any&nbsp;satellites."
+      }
+    ]
+    
+  },
+  {
+    "Name": "Venus",
+    "Type": "Terrestrial",
+    "Informations": "Venus is often called the Earth’s sister planet and is the second planet from the sun, is named after the Roman goddess of love and beauty and is the only planet named after a&nbsp;female.",
+    "Distance": "108.2",
+    "Diameter": "12 104",
+    "Mass": "4.87",
+    "Rotation_Period": "-5 832,6",
+    "Gravity": "8,9",
+    "Mean_Temperature": "462",
+    "Number_of_satellites": "0",
+    "Facts":[
+      {
+        "Type": "Venus has a compact, rocky surface like Earth's terra firma. The terrestrial planets are the four innermost planets in the solar system.",
+        "Distance": "Venus orbits the Sun at a mean distance of 108 million km, which is about 0.7 times Earth’s distance from the Sun.",
+        "Diameter": "Venus is nearly as big as the Earth. If you ran along the diameter of Venus, you would run 30 000 times around an athletics track.",
+        "Mass": "The mass of Venus is 81.5 percent of the mass of earth.",
+        "Rotation_Period": "Whereas Earth rotates in about 24 hours Venus rotates in the contrary sense (retrograde rotation) in 243 days. ",
+        "Gravity": "Venus' gravity is almost 91 percent of Earth's. It would allow you to jump 20cm higher and objects would feel a bit lighter on Venus, compared with Earth.",
+        "Mean_Temperature": "This is the average temperature on Venus, basically the temperature of a pizza oven.",
+        "Number_of_satellites": "Venus is too close to the Sun for having any satellites."
+      }
+    ]
+  },
+  {
+    "Name": "Earth",
+    "Type": "Terrestrial",
+    "Informations": "Earth is called the “blue planet”. It is the only planet that has life on it. Life is possible on Earth because of water and because of all the gases which are important for&nbsp;life",
+    "Distance": "149.6",
+    "Diameter": "12 756",
+    "Mass": "5.97",
+    "Rotation_Period": "23.9",
+    "Gravity": "9.8",
+    "Mean_Temperature": "15",
+    "Number_of_satellites": "1",
+    "Facts":[
+      {
+        "Type": "The Earth is primarily composed of silicate rocks or metals, with a hard surface. The terrestrial planets are the four innermost planets in the solar system.",
+        "Distance": "The earts orbits the Sun at a mean distance of 149,6 million km. It would take 1 430 769 hours to drive to the sun at 100 km per hour.",
+        "Diameter": "The Earth is the fifth largest planet in the solar system. It would take no less than 107 000 football fields.",
+        "Mass": "The Earth makes up about 0.2% of the total mass of the planets.",
+        "Rotation_Period": "The Earth rotates once in about 24 hours with respect to the Sun, but once every 23 hours, 56 minutes, and 4 seconds with respect to other, distant, stars. Also known as a sidereal day.",
+        "Gravity": "The moon's gravity is 1/6 of Earth's gravity, So if you weigh 36 kg here on Earth, you would weigh about 6 kg on the moon!",
+        "Mean_Temperature": "This is the average temperature on Earth. But it varies, the hottest temperature ever recorded on Earth was 70.7°C and the coldest was -89.2°C.",
+        "Number_of_satellites": "The Earth has one large natural satellite, known as the Moon."
+      }
+    ]
+  },
+  {
+    "Name": "Mars",
+    "Type": "Terrestrial",
+    "Informations": "Consider Mars, Earth’s second-closest neighbor, and a planet that is often referred to as “Earth’s Twin”.Mars is a cold desert world. Like Earth, Mars has seasons, polar ice caps, volcanoes, canyons, and&nbsp;weather.",
+    "Distance": "227.9",
+    "Diameter": "6 792",
+    "Mass": "0.642",
+    "Rotation_Period": "24.6",
+    "Gravity": "3.7",
+    "Mean_Temperature": "-63",
+    "Number_of_satellites": "2",
+    "Facts":[
+      {
+        "Type": "Mars has a compact, rocky surface like Earth's terra firma. The terrestrial planets are the four innermost planets in the solar system.",
+        "Distance": "Mars is on average about 50 percent farther from the sun than Earth is, so it receives less than half as much sunlight.",
+        "Diameter": "Mars is the seventh largest planet in our solar system and about half the diameter of Earth.",
+        "Mass": "Mars's mass is about 10 times less than Earth.",
+        "Rotation_Period": "As Mars orbits the Sun, it completes one rotation every 24.6 hours, which is very similar to one day on Earth",
+        "Gravity": "Gravity on Mars is only about 38% of Earth's. If you can jump one meter high on Earth, you would be able to jump 2.64 meters high on Mars",
+        "Mean_Temperature": "Mars may look hot, but don't let its color fool you! Mars is very cold, way below freezing!",
+        "Number_of_satellites": "Mars has two tiny natural satellites, Phobos and Deimos."
+      }
+    ]
+  },
+  {
+    "Name": "Jupiter",
+    "Type": "Gas",
+    "Informations": "Jupiter is called a gas giant planet. Its atmosphere is made up of mostly hydrogen gas and helium gas, like the sun. The planet is covered in thick red, brown, yellow and white&nbsp;clouds.",
+    "Distance": "778.6",
+    "Diameter": "142 984",
+    "Mass": "1 898",
+    "Rotation_Period": "9.9",
+    "Gravity": "23.1",
+    "Mean_Temperature": "-148",
+    "Number_of_satellites": "79",
+    "Facts":[
+      {
+        "Type": "It is made primarily of gases and is therefore known as a “gas giant”.",
+        "Distance": "About 5.2 times the average distance from the Earth to the Sun.",
+        "Diameter": "Jupiter's diameter is 11.2 times larger than Earth. In other words, you could put 11.2 Earths side-by-side to match the diameter of Jupiter.",
+        "Mass": "Jupiter is a massive planet. and has a mass of two and a half times that of all the other planets in the Solar System combined. It would take 318 times Earth's mass to equal Jupiter's.",
+        "Rotation_Period": "The gas giants rotate really fast. It turns on its axis once every 9 hours and 55 minutes. The rapid rotation gives it an oblate shape.",
+        "Gravity": "Jupiter is the largest in our Solar System, meaning it also has the highest, around 2.4 times that of earth - so if you weighed 100 kg here, you would weigh 240 kg there.",
+        "Mean_Temperature": "The average temperature of Jupiter corresponds to the coldest recorded on Mars.",
+        "Number_of_satellites": "Jupiter is the planet with the most moons, 79 in total."
+      }
+    ]
+  },
+  {
+    "Name": "Saturn",
+    "Type": "Gas",
+    "Informations": "Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and&nbsp;helium.",
+    "Distance": "1 433,5",
+    "Diameter": "120 536",
+    "Mass": "568",
+    "Rotation_Period": "10.7",
+    "Gravity": "9",
+    "Mean_Temperature": "-179",
+    "Number_of_satellites": "62",
+    "Facts":[
+      {
+        "Type": "Saturn is mainly made of gas. If a spacecraft attempted to touch down on Saturn, it would never find solid ground.",
+        "Distance": "Saturn is about 10 times further from the Sun than the Earth.",
+        "Diameter": "Saturn is the most distant planet that can be seen with the naked eye.",
+        "Mass": "The mass of Saturn is 95 times the mass of Earth.",
+        "Rotation_Period": "Saturn turns on its axis once every 10 hours and 34 minutes giving it the second-shortest day of any of the solar system’s planets.",
+        "Gravity": "Saturn's gravity is only 1.08 times the gravity on Earth because Saturn is such a large planet.",
+        "Mean_Temperature": "This is the mean temperature, but as you travel down into the planet, temperatures rises.",
+        "Number_of_satellites": "Saturn has 62 known moons, a large number like Jupiter."
+      }
+    ]
+  },
+  {
+    "Name": "Uranus",
+    "Type": "Gas",
+    "Informations": "The methane makes Uranus blue. Like Venus, Uranus rotates in the opposite direction as most other planets. And unlike any other planet, Uranus rotates on its&nbsp;side.",
+    "Distance": "2 872,5",
+    "Diameter": "51 118",
+    "Mass": "86.8",
+    "Rotation_Period": "-1732",
+    "Gravity": "8,9",
+    "Mean_Temperature": "-212",
+    "Number_of_satellites": "27",
+    "Facts":[
+      {
+        "Type": "Uranus is much colder than the other gas planets. It has ice-forming molecules, earning them the nickname “ice giants.”",
+        "Distance": "Uranus is more than 19 times farther from the Sun than Earth is. ",
+        "Diameter": "Uranus is 4 times wider than Earth. If Earth was the size of a nickel, Uranus would be about as big as a softball.",
+        "Mass": "Uranus has a mass that’s 14.5 times that of Earth.",
+        "Rotation_Period": "Uranus turns on its axis once every 17 hours, 14 minutes. Like Venus, the planet rotates in a retrograde direction, opposite to the other planets.",
+        "Gravity": "Gravity on Uranus is only about 90 percent that of Earth; if you weigh 45kg. at home, you would only weigh 41kg.",
+        "Mean_Temperature": "The average temperature is just over twice the lowest temperature recorded on Earth.",
+        "Number_of_satellites": "Uranus' satellites are named for characters in the works of Shakespeare and Pope."
+      }
+    ]
+  },
+  {
+    "Name": "Neptune",
+    "Type": "Gas",
+    "Informations": "Neptune is the eighth planet from the Sun, and the fourth largest. It is an ice giant that has the strongest winds of any planet in the Solar System. Neptune has 6 known planetary rings and only 14 confirmed&nbsp;moons.",
+    "Distance": "4495,1",
+    "Diameter": "49528",
+    "Mass": "102",
+    "Rotation_Period": "16.1",
+    "Gravity": "11",
+    "Mean_Temperature": "-213",
+    "Number_of_satellites": "14",
+    "Facts":[
+      {
+        "Type": "Neptune is the smallest gas giant. It has ice-forming molecules, earning them the nickname “ice giants.”",
+        "Distance": "Neptune is the most distant planet from the Sun.",
+        "Diameter": "Neptune is the smallest gas giant, but the fourth-largest planet in the Solar System.",
+        "Mass": "Neptume is smaller than Uranus but is more massive, 17 times as massive as Earth.",
+        "Rotation_Period": "Neptune spins on its axis very rapidly. Its equatorial clouds take 16 hours to make one rotation. This is because Neptune is not solid body.",
+        "Gravity": "Although Neptune is much larger than Earth, its surface gravity is about the same as the gravity on Earth. This makes Neptune very light for its size. ",
+        "Mean_Temperature": "Along with Uranus, Neptune hits the coldest temperatures of any planet.",
+        "Number_of_satellites": "There have been 14 moons discovered orbiting Neptune, all named after Greek mythology water gods."
+      }
+    ]
+  }
+]
+
+  
