@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/main.css"> 
 		<script src="assets/js/main.min.js" defer></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" integrity="sha512-sAHYBRXSgMOV2axInO6rUzuKKM5SkItFLlLHQ8YjRD+FBwowtATOs4njP9oim3/MzyAGrB52SLDjpAOLcOT9TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</head>
 	<body>
         <header class="header header--exp">
@@ -73,6 +73,7 @@
             <a href="experimentation-view-all.html" class="link link--back">
             <svg fill="none" height="10" width="22" class="arrow-back" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M17.13.443l4.137 4.137a.65.65 0 010 .92l-4.136 4.136a.65.65 0 01-.92-.92L19.24 5.69H.808v-1.3h18.43l-3.026-3.027a.65.65 0 01.919-.92z"/></svg> 
             View all</a>
+            <!--
             <div class="wrapper">
                 <div class="slide slide1">1</div>
                 <div class="slide slide2">2</div>
@@ -83,6 +84,23 @@
                 <div class="slide slide7">7</div>
                 <div class="slide slide8">8</div>
             </div>
+            -->
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img src="assets/images/earth.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/images/mars.png" alt="">
+                </div>                  <div class="swiper-slide">
+                    <img src="assets/images/venus.png" alt="">
+                </div>                  <div class="swiper-slide">
+                    <img src="assets/images/jupiter.png" alt="">
+                </div>
+                </div>
+            </div>            
+
             <!--
             <div>
                  <input type="radio" name="point" checked>

@@ -11,7 +11,7 @@ body{
     font-size: 1.9rem; 
     font-weight: 300;
     letter-spacing: .18rem;
-    line-height: 1.6;
+    line-height: 1.85;
     overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ body{
     font-size: 4.4rem;
     line-height: 1;
     margin: 0;
+    margin-bottom: 3rem;
 
     &--planet{
         padding: 43px 0px; 
@@ -47,7 +48,7 @@ body{
     &--how{
         font-size: 39px;
         font-weight: 800;
-        padding: 43px 0px;
+        line-height: 1.2;
     }
 }
 
@@ -64,18 +65,13 @@ body{
 .p-big{
     font-size: 34px;
     font-weight: 800;
-    line-height: 1.4;
+    line-height: 1.35;
 }
 
 
 .copyright{
     font-size: 15px;
 }
-
-p{
-    margin: 0;
-}
-// .i
 
 .planet-data{
     margin-top: 5rem;

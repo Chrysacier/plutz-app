@@ -24,25 +24,29 @@ li{
 .lines{
     &::before{
         content: "";
-        height: 500vh;
+        height: 430vh;
         width: 1px;
         background-color: var(--color-secondary);
         position: absolute;
-        top: 0;
+        top: -220vw;
         left: 33%;
         z-index: -20;
     }
     &::after{
         content: "";
-        height: 500vh;
+        height: 430vh;
         width: 1px;
         background-color: var(--color-secondary);
         position: absolute;
-        top: 0;
+        top: -220vw;
         right: 33%;
         z-index: -20;
     }
 
+}
+
+.link--right{
+        align-self: flex-end;
 }
 
 
@@ -71,22 +75,42 @@ li{
     &--view-all{
         margin: 12rem 0px;
     }
+
+    &--landing{
+        position: relative;
+
+        &::after{
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        background-color: var(--color-primary);
+        bottom: 112px;
+        left: 0;
+        }
+    }
 }
 
 /* section planetes landing */
+
 .section--planets{
-    position: relative;
-    left: 25%;
+    display: flex;
+    flex-direction: column;
+
+    .p-big{
+        margin: 14rem 0px;
+    }
 }
 
 .block-planets{
     position: relative;
     transform: translateX(-6rem);
-    margin-bottom: 14rem;
+    left: 25%;
+
     
     &__item{
         display: flex;
-        margin-bottom: 8rem;
+        margin-bottom: 7rem;
         align-items: center;
     }
 
@@ -95,6 +119,7 @@ li{
         flex-direction: column;
         margin-left: 3rem;
     }
+
 }
 
 
@@ -123,3 +148,50 @@ li{
 .btn-icon--active{
     fill: white;
 }
+
+.section--how{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin-top: 0;
+    }
+}
+
+.how-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.swiper-container {
+    height: 300px;
+    position: absolute;
+    left: 0;
+    width: calc(100% + 7.5rem);
+    position: relative;
+    left: -3.8rem;
+  }
+
+  .swiper-wrapper{
+      align-items: center;
+  }
+
+  .swiper-slide{
+      width: 236px;
+      height: 236px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .swiper-slide img{
+    width: 140px;
+    height: 140px;
+  }
+
+  .swiper-slide-active{
+      transform: scale(1.37);
+      transition: .4s;
+  }

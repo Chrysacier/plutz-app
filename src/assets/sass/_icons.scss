@@ -23,7 +23,7 @@ svg{
     }
 
     &--landing{
-        top: 4.8rem;
+        top: 5rem;
         left: 0;
         background: none;
 
@@ -69,7 +69,20 @@ svg{
             width: 2.5em;
             height: 2.5em;  
         }
+    }  
 }
 
-    
+.how-intro__icons{
+    width: 23rem;
+    position: relative;
+    top: -2rem;
+}
+
+.icons-part2, .icons-part1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-part1{
+    margin-bottom: 3rem;
 }

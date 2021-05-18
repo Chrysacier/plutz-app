@@ -48,7 +48,11 @@
     }
 
     .link{
-        margin-top: 3rem;
+        svg{
+            position: relative;
+            left: 5px;
+            top: 1px;
+        }
     }
 }
 
@@ -100,6 +104,7 @@
 }
 
 .footer{
-    margin: 0rem 3.8rem;    
+    margin: 0rem 3.8rem;   
 }
+
 
