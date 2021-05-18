@@ -6,19 +6,57 @@
 .btn{
     background-color: transparent;
     border: none;
+    padding: 0 3.5rem;
+    cursor: pointer;
+
+    &:first-of-type{
+        padding-left: 0px;
+    }
 
     &__text{
         display: none;
     }
 }
 
-.nav{
-    height: 100vh;
-    border-right: 1px solid var(--color-primary);
-    width: 5em;
+.header{
+    position: relative;
 
-    &-icons{
-        text-align: center;
+    &--exp{
+        position: fixed;
+        background-color: var(--color-bg);
+        top: 0;
+
     }
 }
 
+.nav{
+    width: 100vw;
+    display: flex;
+    height: 11.2rem;
+    align-items: center;
+    overflow-x: scroll;
+    margin-left: 10.6rem;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        background-color: var(--color-primary);
+        top: 112px;
+        left: 0;
+    }
+    
+    &-icons{
+        text-align: center;
+        display: flex;
+        margin: 0px;
+        height: 2rem;
+        align-items: center;
+
+        &__item{
+            position: relative;
+            top: 6px;
+        }
+    }
+}

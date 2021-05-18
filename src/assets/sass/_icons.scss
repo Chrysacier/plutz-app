@@ -6,10 +6,31 @@ svg{
 }
 
 .logo{
-    position: relative;
-	border: none;
-	display: inline-block;
-	overflow: hidden;
+    position: absolute;
+    left: 2em;
+    border: none;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #000;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-45%);
+    height: 38px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 92px;
+        height: 71px;
+        bottom: -12px;
+        left: -31px;
+        z-index: -1;
+    }
+
+    svg{
+        width: 2em;
+        height: 2em;
+    }
 
     &__text{
         text-indent: 100%;
@@ -18,7 +39,27 @@ svg{
     }
 }
 
-.btn__icon{
-    width: 2em;
-    height: 2em;
+.btn{
+    svg{
+        fill: var(--color-primary);  
+    }
+
+    &__icon{
+        width: 1.5em;
+        height: 1.5em;
+    
+        &--distance{
+            width: 2em;
+            height: 2em;    
+        }
+    
+        &--mass{
+            position: relative;
+            top: -3px;
+            width: 2.5em;
+            height: 2.5em;  
+        }
+}
+
+    
 }

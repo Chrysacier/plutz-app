@@ -2,23 +2,38 @@
 ================================================================================ */
 
 html {
-    font-size: 118.75%;
+    font-size: 62.5%;
+    // overflow: hidden;
 }
 
 body{
     font-family: "Bandeins Strange";
-    font-size: 1em;
+    font-size: 1.9rem; 
     font-weight: 300;
-    letter-spacing: .05em;
+    letter-spacing: .18rem;
+    line-height: 1.6;
 }
 
 
 .title{
-    font-size: 44px;
+    font-size: 4.4rem;
     line-height: 1;
+    margin: 0;
+
+    &--planet{
+        padding: 43px 0px; 
+    }
 
     &--planet-landing{
-        font-size: 17px;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &--planet-exp{
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 300;
     }
 
     &--footer{
@@ -29,12 +44,12 @@ body{
     &--how{
         font-size: 39px;
         font-weight: 800;
+        padding: 43px 0px;
     }
 }
 
 .link{
     font-size: 17px;
-    font-family: "Bandeins Strange";
     font-weight: 300;
     letter-spacing: 0.15em;
 
@@ -46,6 +61,7 @@ body{
 .p-big{
     font-size: 34px;
     font-weight: 800;
+    line-height: 1.4;
 }
 
 
@@ -53,6 +69,9 @@ body{
     font-size: 15px;
 }
 
+p{
+    margin: 0;
+}
 // .i
 
 
