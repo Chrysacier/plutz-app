@@ -17,6 +17,21 @@ svg{
     transform: translateY(-45%);
     height: 38px;
 
+    svg{
+        width: 2em;
+        height: 2em;
+    }
+
+    &--landing{
+        top: 4.8rem;
+        left: 0;
+        background: none;
+
+        svg{
+            width: 6em;
+        }
+    }
+
     &::after{
         content: "";
         position: absolute;
@@ -25,11 +40,6 @@ svg{
         bottom: -12px;
         left: -31px;
         z-index: -1;
-    }
-
-    svg{
-        width: 2em;
-        height: 2em;
     }
 
     &__text{

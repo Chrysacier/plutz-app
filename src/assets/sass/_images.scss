@@ -5,16 +5,23 @@
   &--planet-landing{
     width: 98.88px;
     height: 98.88px;
+    border: 1px solid var(--color-secondary);
+    padding: 5.9vw;
+    border-radius: 50%;  
   }
 
+  
   &--planet-exp{
-    width: 37vw;
-    height: 37vw;
+    width: 50vw;
+    height: 50vw;
+  } 
+
+  &--planet-border{
     border: 1px solid var(--color-primary);
     padding: 5.9vw;
     border-radius: 50%;
   }
-
+  
   &--mercury{
     width: 10%
   }
@@ -52,6 +59,9 @@
     z-index: -20;
     top: 50%;
     transform: translateY(-45%);
+    width: 114Vw;
+    left: -17rem;
+    z-index: -10;
   }
 }
 

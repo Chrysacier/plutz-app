@@ -21,6 +21,30 @@ li{
     list-style-type: none
 }
 
+.lines{
+    &::before{
+        content: "";
+        height: 500vh;
+        width: 1px;
+        background-color: var(--color-secondary);
+        position: absolute;
+        top: 0;
+        left: 33%;
+        z-index: -20;
+    }
+    &::after{
+        content: "";
+        height: 500vh;
+        width: 1px;
+        background-color: var(--color-secondary);
+        position: absolute;
+        top: 0;
+        right: 33%;
+        z-index: -20;
+    }
+
+}
+
 
 /* planet-bullets */
 .planet-bullet{
@@ -49,8 +73,28 @@ li{
     }
 }
 
+/* section planetes landing */
+.section--planets{
+    position: relative;
+    left: 25%;
+}
+
 .block-planets{
-    padding-bottom: 3.0rem;
+    position: relative;
+    transform: translateX(-6rem);
+    margin-bottom: 14rem;
+    
+    &__item{
+        display: flex;
+        margin-bottom: 8rem;
+        align-items: center;
+    }
+
+    &-text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+    }
 }
 
 

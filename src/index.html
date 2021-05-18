@@ -11,8 +11,8 @@
 	<body>
 		<div class="container">
 			<header class="header header--landing">
-				<a class="logo" href="index.html">
-					<span class="logo__text">Logo Plutz</span>
+				<a class="logo logo--landing" href="index.html">
+					<!-- <span class="logo__text">Logo Plutz</span> -->
 					<svg class="#" fill="none" height="56" viewBox="0 0 226 56" width="226" xmlns="http://www.w3.org/2000/svg">
 						<path clip-rule="evenodd" d="m.212891.960938h54.951109v54.951162h-54.951109zm4.106489 4.106482v46.73818h46.73812v-46.73818zm33.80752 33.22938-4.8937-6.4409-2.7392-1.7994 3.4349-.1255 8.5768-2.8929-2.3479-5.105-7.8376 2.6417-2.8697 2.0923 1.1305-3.3476-.087-8.5109-5.7827.5858.087 7.7577.9565 3.4313-2.8696-2.176-8.837-2.851-1.1739 5.4817 8.1848 2.6837 3.5218.1673-2.8261 1.8831-5.3574 7.2605 5.0435 2.8036 5.0096-6.8002 1.0435-3.0129 1.0435 3.0129 5.285 7.0267zm47.3388-21.4775h-9.3768v25.2455h4.6884v-9.7376h4.6884c4.4721 0 7.754-3.2819 7.754-7.7539 0-4.4721-3.2819-7.754-7.754-7.754zm-.1082 11.1801h-4.5802v-6.8523h4.5802c2.0918 0 3.5344 1.3705 3.5344 3.4262s-1.4426 3.4261-3.5344 3.4261zm39.1815 9.7376h-11.829v-20.9177h-4.688v25.2455h16.517zm33.886-20.9177v15.2915c0 6.2393-4.075 10.3867-10.278 10.3867s-10.279-4.1474-10.279-10.3867v-15.2915h4.689v14.5702c0 4.2557 1.983 6.5278 5.59 6.5278 3.606 0 5.59-2.2721 5.59-6.5278v-14.5702zm21.935 25.2455h4.688v-20.9177h8.043v-4.3278h-20.774v4.3278h8.043zm36.798-11.1014c-3.091 2.0161-5.848 3.8142-5.848 6.4129v.3607h14.426v4.3278h-19.007v-3.2459c0-5.3666 4.47-8.284 8.408-10.8549 3.102-2.0247 5.874-3.8344 5.874-6.4562v-.3607h-13.344v-4.3278h17.924v3.2459c0 5.3984-4.488 8.3258-8.433 10.8982z" fill-rule="evenodd"/>
 					</svg>
@@ -30,25 +30,31 @@
 			<main class="main">
 				<section class="section section--planets">
 					<div class="block-planets">
-						<div class="#">
-							<img class="img img--planet-landing" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
-							<h2 class="title title--planet-landing">Mercury</h2>
-							<a class="link" href="#">Learn more</a>
+						<div class="block-planets__item">
+							<img class="img img--planet-landing title--planet-border" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
+							<div class="block-planets-text">
+								<h2 class="title title--planet-border title--planet-landing">Mercury</h2>
+								<a class="link" href="#">Learn more</a>
+							</div>
 						</div>
-						<div class="#">
-							<img class="img img--planet-landing" src="assets/images/venus.png" srcset="assets/images/venus@2x.png 2x" alt="Planet Venus">
-							<h2 class="title title--planet-landing">Venus</h2>
+						<div class="block-planets__item">
+							<img class="img img--planet-landing title--planet-border" src="assets/images/venus.png" srcset="assets/images/venus@2x.png 2x" alt="Planet Venus">
+							<div class="block-planets-text">
+							<h2 class="title title--planet-border title--planet-landing">Venus</h2>
 							<a class="link" href="#">Learn more</a>
+							</div>
 						</div>
-						<div class="#">
-							<img class="img img--planet-landing" src="assets/images/earth.png" srcset="assets/images/earth@2x.png 2x" alt="Planet Earth">
-							<h2 class="title title--planet-landing">Earth</h2>
+						<div class="block-planets__item">
+							<img class="img img--planet-landing title--planet-border" src="assets/images/earth.png" srcset="assets/images/earth@2x.png 2x" alt="Planet Earth">
+							<div class="block-planets-text">
+							<h2 class="title title--planet-border title--planet-landing">Earth</h2>
 							<a class="link" href="#">Learn more</a>
+							</div>
 						</div>
+						<a class="link" href="experimentation-view-all.html">View all						
+							<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/></svg>					
+						</a>
 					</div>
-					<a class="link" href="experimentation-view-all.html">View all						
-						<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/></svg>					
-					</a>
 					<p class="p-big">Plutz aim at comparing various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp.</p>
 				</section>
 
@@ -109,6 +115,7 @@
 						</svg>
 					</a>
 				</div>
+				<div class="lines"></div>
 			</footer>
 		</div>
 	</body>

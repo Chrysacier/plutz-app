@@ -3,7 +3,7 @@
 
 html {
     font-size: 62.5%;
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -12,6 +12,7 @@ body{
     font-weight: 300;
     letter-spacing: .18rem;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 
@@ -24,17 +25,18 @@ body{
         padding: 43px 0px; 
     }
  
-    &--planet-landing{
-        font-size: 22px;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
+    
     &--planet-exp{
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1.9rem;
         letter-spacing: .3rem;
+    }
+    
+    &--planet-landing{
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: .5rem;
     }
 
     &--footer{
@@ -52,7 +54,7 @@ body{
 .link{
     font-size: 17px;
     font-weight: 300;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.3rem;
 
     &--footer{
         letter-spacing: 0.05em;

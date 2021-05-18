@@ -139,15 +139,3 @@ buttons_all.forEach(button => {
 
     });
 });
-
-const hammerTime = new Hammer(document.body);
-hammerTime.on('swipeleft swiperight', (event) => {
-  switch(event.type) {
-    case 'swipeleft': 
-      window.location.href = "http://carolinedaoud.be/"
-      break
-    case 'swiperight':
-      window.location.href = "http://carolinedaoud.be/"
-      break
-  }
-})
