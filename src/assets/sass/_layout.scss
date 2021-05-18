@@ -22,7 +22,6 @@ li{
 }
 
 
-
 /* planet-bullets */
 .planet-bullet{
     width: 0px;
@@ -37,16 +36,9 @@ li{
     }
 }
 
- .main, .footer, .header--landing{
-    max-width: 1600px;
-    margin: 0rem 3.8rem;
-}
-
-
 .main{
-
     max-width: 1600px;
-    margin: 0rem 3.8rem;
+    margin:6.0rem 3.5rem 15.0rem;
 
     &--exp{
         margin-top: 14rem;
@@ -57,11 +49,9 @@ li{
     }
 }
 
-.header--landing{
-height: 100vh;
-margin-bottom: 3.8rem;
+.block-planets{
+    padding-bottom: 3.0rem;
 }
-
 
 
 .planet-all{
@@ -78,9 +68,14 @@ margin-bottom: 3.8rem;
     margin-top: 2.9rem;
 }
 
+
 .planet-name{
     margin-top: 4.1rem;
     margin-bottom: 3.8rem;
     display: flex;
     justify-content: space-evenly;
+}
+
+.btn-icon--active{
+    fill: white;
 }

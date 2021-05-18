@@ -6,6 +6,7 @@ let exp_planet= document.querySelector(".planet");
 let planet_infos = document.querySelector(".planet__infos");
 let planet_all_item = document.querySelectorAll(".planet-all__item");
 let planet_data = document.querySelectorAll(".planet-data");
+let btns_icon = document.querySelectorAll(".btn__icon")
 let previous_data = "none";
 let planetdata;
 
@@ -74,10 +75,25 @@ buttons_exp.forEach(button => {
                 planet_title.innerHTML = `${planets.Name}`
                 planet_infos.innerHTML = `${planets.Informations}`  
                 previous_data = "none"
+                
+                btns_icon.forEach(btn_icon => {
+                    btn_icon.classlist.remove("btn-icon--active") 
+
+                });   
+
+                
+                
             }else{
-                planet_title.innerHTML = `${planets[btn_data]} ${measure}`
+                planet_title.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`
                 planet_infos.innerHTML = `${planets['Facts'][0][btn_data]}`  
-                previous_data = btn_data          
+                previous_data = btn_data 
+                btns_icon.forEach(btn_icon => {
+                    let btn_icon_data = btn_icon.getAttribute("data-type")
+                    if(btn_data == btn_icon_data){
+                        console.log("oui")
+                         btn_icon.classlist.add("btn-icon--active")           
+                    }
+                }); 
             }
             
         });
@@ -113,7 +129,7 @@ buttons_all.forEach(button => {
                 planet_data.forEach(planet_data_mono => {
                     let current_planet_data = planet_data_mono.getAttribute("data-planet")
                     if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
-                        planet_data_mono.innerHTML = `${planets[btn_data]} ${measure}`
+                        planet_data_mono.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`
                        
                     }
     

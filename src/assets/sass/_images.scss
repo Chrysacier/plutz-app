@@ -1,6 +1,7 @@
 /* Images 
 ================================================================================ */
 .img{
+  width: 100%;
   &--planet-landing{
     width: 98.88px;
     height: 98.88px;
@@ -46,8 +47,11 @@
     width: 45%
   }
 
-  &--how{
-    width: 100%;
+  &--intro{
+    position: absolute;  
+    z-index: -20;
+    top: 50%;
+    transform: translateY(-45%);
   }
 }
 
@@ -79,4 +83,5 @@ height: 20px;
 
 .arrow-back{
   transform: rotate(-180deg);
+  margin-right: .5rem;
 }
