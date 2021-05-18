@@ -1,9 +1,11 @@
 "use strict";
-let buttons = document.querySelectorAll(".btn");
+let buttons_exp = document.querySelectorAll(".btn--exp");
+let buttons_all = document.querySelectorAll(".btn--all");
 let planet_title= document.querySelector(".planet__title");
+let exp_planet= document.querySelector(".planet");
 let planet_infos = document.querySelector(".planet__infos");
 let planet_all_item = document.querySelectorAll(".planet-all__item");
-let solo_planet_names = document.querySelectorAll(".solo-planet-name ");
+let planet_data = document.querySelectorAll(".planet-data");
 let planetdata
 
 const json = fetch('assets/js/data.json')
@@ -22,10 +24,10 @@ function view_all_data(){
             return planets.Name.toLowerCase().includes(solo_planet_data.toLocaleLowerCase())
         })
         planet_filter.forEach(planets => {
-            solo_planet_names.forEach(solo_planet_name => {
-                let current_planet_data = solo_planet_name.getAttribute("data-planet")
+            planet_data.forEach(planet_data_mono => {
+                let current_planet_data = planet_data_mono.getAttribute("data-planet")
                 if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
-                    solo_planet_name.innerHTML = `${planets.Name}`
+                    planet_data_mono.innerHTML = `${planets.Distance}`
                    
                 }
 
@@ -35,20 +37,86 @@ function view_all_data(){
 
 }
 
-buttons.forEach(button => {
+buttons_exp.forEach(button => {
     button.addEventListener("click", (e) =>{
         e.preventDefault()
         let btn_data = button.getAttribute("data-type");
-        //let clicked_planet = button.getAttribute('data-planet');
-        let clicked_planet = "Earth"
-    
+        let clicked_planet = exp_planet.getAttribute('data-planet');
+        
+        let measure = " "
+        if(btn_data == "Distance"){
+            measure = "millions km"
+        }else if(btn_data == "Diameter"){
+            measure = "km"
+        }else if(btn_data == "Mass"){
+            measure = "x10.24 kg"
+        }else if(btn_data == "Rotation_Period"){
+            measure = "hours"
+        }else if(btn_data == "Gravity"){
+            measure = "m/s²"
+        }else if(btn_data == "Mean_Temperature"){
+            measure = "°C"
+        }else if(btn_data == "Number_of_satellites"){
+            measure = "satellites"
+        }
         let planet_filter = planetdata.filter((planets) =>{
             return planets.Name.toLowerCase().includes(clicked_planet.toLocaleLowerCase())
         })
         planet_filter.forEach(planets => {
-            planet_title.innerHTML = `${planets[btn_data]}`
+            planet_title.innerHTML = `${planets[btn_data]} ${measure}`
             planet_infos.innerHTML = `${planets['Facts'][0][btn_data]}`
         });
     })
     
 });
+buttons_all.forEach(button => {
+    button.addEventListener('click', (event) =>{
+        let btn_data = button.getAttribute("data-type");
+        let measure = " "
+        if(btn_data == "Distance"){
+            measure = "millions km"
+        }else if(btn_data == "Diameter"){
+            measure = "km"
+        }else if(btn_data == "Mass"){
+            measure = "x10.24 kg"
+        }else if(btn_data == "Rotation_Period"){
+            measure = "hours"
+        }else if(btn_data == "Gravity"){
+            measure = "m/s²"
+        }else if(btn_data == "Mean_Temperature"){
+            measure = "°C"
+        }else if(btn_data == "Number_of_satellites"){
+            measure = "satellites"
+        }
+
+        planet_all_item.forEach(planet_one_item => {
+            let solo_planet_data = planet_one_item.getAttribute("data-planet");
+            let planet_filter = planetdata.filter((planets) =>{
+                return planets.Name.toLowerCase().includes(solo_planet_data.toLocaleLowerCase())
+            })
+            planet_filter.forEach(planets => {
+                solo_planet_names.forEach(solo_planet_name => {
+                    let current_planet_data = solo_planet_name.getAttribute("data-planet")
+                    if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
+                        solo_planet_name.innerHTML = `${planets[btn_data]} ${measure}`
+                       
+                    }
+    
+                });
+            })
+        });
+
+    });
+});
+
+const hammerTime = new Hammer(document.body);
+hammerTime.on('swipeleft swiperight', (event) => {
+  switch(event.type) {
+    case 'swipeleft': 
+      window.location.href = "http://carolinedaoud.be/"
+      break
+    case 'swiperight':
+      window.location.href = "http://carolinedaoud.be/"
+      break
+  }
+})

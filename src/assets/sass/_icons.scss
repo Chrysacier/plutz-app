@@ -4,3 +4,21 @@
 svg{
     fill: white;
 }
+
+.logo{
+    position: relative;
+	border: none;
+	display: inline-block;
+	overflow: hidden;
+
+    &__text{
+        text-indent: 100%;
+        white-space: nowrap;
+        position: absolute;    
+    }
+}
+
+.btn__icon{
+    width: 2em;
+    height: 2em;
+}

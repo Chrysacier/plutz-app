@@ -2,12 +2,59 @@
 ================================================================================ */
 
 html {
-    font-size: 106.25%;
+    font-size: 118.75%;
 }
 
 body{
     font-family: "Bandeins Strange";
-    // font-size: 1em;
+    font-size: 1em;
     font-weight: 300;
     letter-spacing: .05em;
 }
+
+
+.title{
+    font-size: 44px;
+    line-height: 1;
+
+    &--planet-landing{
+        font-size: 17px;
+    }
+
+    &--footer{
+        font-size: 19px;
+        font-weight: 800;
+    }
+
+    &--how{
+        font-size: 39px;
+        font-weight: 800;
+    }
+}
+
+.link{
+    font-size: 17px;
+    font-family: "Bandeins Strange";
+    font-weight: 300;
+    letter-spacing: 0.15em;
+
+    &--footer{
+        letter-spacing: 0.05em;
+    }
+}
+
+.p-big{
+    font-size: 34px;
+    font-weight: 800;
+}
+
+
+.copyright{
+    font-size: 15px;
+}
+
+// .i
+
+
+
+
