@@ -22,25 +22,24 @@ li{
 }
 
 .lines{
+
     &::before{
         content: "";
-        height: 430vh;
+        height: 3303px;
         width: 1px;
         background-color: var(--color-secondary);
         position: absolute;
-        top: -220vw;
+        top: 0;
         left: 33%;
-        z-index: -20;
     }
     &::after{
         content: "";
-        height: 430vh;
+        height: 3303px;
         width: 1px;
         background-color: var(--color-secondary);
         position: absolute;
-        top: -220vw;
+        top: 0;
         right: 33%;
-        z-index: -20;
     }
 
 }
@@ -66,7 +65,7 @@ li{
 
 .main{
     max-width: 1600px;
-    margin:6.0rem 3.5rem 15.0rem;
+    margin:6rem 3.5rem 20rem;
 
     &--exp{
         margin-top: 14rem;
@@ -80,13 +79,13 @@ li{
         position: relative;
 
         &::after{
-        content: "";
-        position: absolute;
-        width: 100vw;
-        height: 1px;
-        background-color: var(--color-primary);
-        bottom: 112px;
-        left: 0;
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            background-color: var(--color-secondary);
+            bottom: -200px;
+            left: -3.8rem;
         }
     }
 }
@@ -117,7 +116,7 @@ li{
     &-text{
         display: flex;
         flex-direction: column;
-        margin-left: 3rem;
+        margin-left: 1.5rem;
     }
 
 }
@@ -135,6 +134,14 @@ li{
 
 .link--back{
     margin-top: 2.9rem;
+}
+
+.link{
+    svg{
+        position: relative;
+        left: 5px;
+        top: 1px;
+    }
 }
 
 
@@ -155,6 +162,7 @@ li{
 
     p{
         margin-top: 0;
+        margin-bottom: 4rem;
     }
 }
 

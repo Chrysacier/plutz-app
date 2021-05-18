@@ -46,14 +46,6 @@
         flex-direction: column;
         justify-content: center;
     }
-
-    .link{
-        svg{
-            position: relative;
-            left: 5px;
-            top: 1px;
-        }
-    }
 }
 
 .nav{
@@ -90,9 +82,7 @@
     &-icons{
         display: flex;
         margin: 0px;
-        // height: 2rem;
         align-items: center;
-        // top: 2px;
         top: -2px;
         position: relative;
 
@@ -105,6 +95,55 @@
 
 .footer{
     margin: 0rem 3.8rem;   
+    padding-top: 5rem;
+
+    &__infos{
+        position: relative;
+        margin-bottom: 6rem;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            background-color: var(--color-secondary);
+            bottom: -4rem;
+            left: -3.8rem;
+        }
+        &-team-credits{
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__copyright{
+        display: flex;
+        align-items: baseline;
+        padding-bottom: 4rem;
+    }
 }
 
+.team{
+    margin-right: 12%;
+}
 
+.dwm {
+    width: 50px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 19px;
+    margin-top: 17px;
+    fill: var(--color-text);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4px;
+
+    &__content {
+        text-indent: 100%;
+        white-space: nowrap;
+        position: absolute;
+    }
+}

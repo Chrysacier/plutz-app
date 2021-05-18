@@ -35,30 +35,32 @@ body{
     }
     
     &--planet-landing{
-        font-size: 22px;
+        font-size: 2.2rem;
         font-weight: 700;
         margin-bottom: .5rem;
     }
 
     &--footer{
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 800;
+        margin-bottom: 1rem;
     }
 
     &--how{
-        font-size: 39px;
+        font-size: 3.9rem;
         font-weight: 800;
         line-height: 1.2;
     }
 }
 
 .link{
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 300;
     letter-spacing: 0.3rem;
 
     &--footer{
         letter-spacing: 0.05em;
+        font-size: 1.6rem;
     }
 }
 
@@ -70,7 +72,7 @@ body{
 
 
 .copyright{
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .planet-data{
