@@ -5,7 +5,7 @@ let planet_title= document.querySelector(".planet__title");
 let exp_planet= document.querySelector(".planet");
 let planet_infos = document.querySelector(".planet__infos");
 let planet_all_item = document.querySelectorAll(".planet-all__item");
-let planet_data = document.querySelectorAll(".planet-data");
+let solo_planet_names = document.querySelectorAll(".solo-planet-name");
 let planetdata
 
 const json = fetch('assets/js/data.json')
@@ -24,10 +24,10 @@ function view_all_data(){
             return planets.Name.toLowerCase().includes(solo_planet_data.toLocaleLowerCase())
         })
         planet_filter.forEach(planets => {
-            planet_data.forEach(planet_data_mono => {
-                let current_planet_data = planet_data_mono.getAttribute("data-planet")
+            solo_planet_names.forEach(solo_planet_name => {
+                let current_planet_data = solo_planet_name.getAttribute("data-planet")
                 if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
-                    planet_data_mono.innerHTML = `${planets.Distance}`
+                    solo_planet_name.innerHTML = `${planets.Distance}`
                    
                 }
 
