@@ -139,7 +139,6 @@ if (swiper_container){
         
         slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 5,
         loop: true,
         // If we need pagination
         pagination: {

@@ -16,7 +16,6 @@ svg{
     top: 50%;
     transform: translateY(-45%);
     height: 38px;
-
     
     svg{
         width: 1.8em;
@@ -30,14 +29,27 @@ svg{
         }
     }
 
-
     &--landing{
         top: 5rem;
         left: 0;
         background: none;
 
+        @media (min-width: 728px){
+            width: 12rem;
+            top: 6rem;
+            left: -5rem;
+        }
+
+        @media (min-width: 1200px){
+            left: -9rem;
+        }
+
         svg{
-            width: 6em;
+            width: 12rem;
+
+            @media (min-width: 1020px){
+                width: 10rem;
+            }
         }
     }
 
@@ -86,10 +98,6 @@ svg{
             @media (min-width:1024px){
                 top: 0px;
             }
-        }
-
-        &--type{
-            padding-left: 1rem;
         }
     }  
 }

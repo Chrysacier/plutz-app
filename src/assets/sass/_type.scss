@@ -17,7 +17,8 @@ body{
 
 
 .title{
-    font-size: 4.4rem;
+    // font-size: 4.4rem;
+    font-size: 12vw;
     line-height: 1;
     margin: 0;
     margin-bottom: 3rem;
@@ -94,7 +95,7 @@ body{
 }
 
    @media (min-width:1024px){
-    font-size: 1.5rem;
+    font-size: 1.7rem;
    }
 
     &--footer{
@@ -128,6 +129,25 @@ body{
         font-size: 5.2rem;
     }
 
+}
+
+.datavisu{
+    display: none;
+    @media(min-width: 1024px){
+        display: inherit;
+        position: absolute;
+        right: -17rem;
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+    }
+    
+    @media(min-width: 1200px){
+        right: -20rem;
+    }
+}
+
+.cap{
+    text-transform: uppercase;
 }
 
 
