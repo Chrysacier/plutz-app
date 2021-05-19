@@ -65,7 +65,7 @@ body{
 }
 
 .p-big{
-    font-size: 34px;
+    font-size: 3.875rem;
     font-weight: 800;
     line-height: 1.35;
 }
@@ -80,6 +80,10 @@ body{
     margin-bottom: 1rem;
     font-size: 4.4rem;
     font-weight: 800;
+
+    &--unit{
+        font-size: 1.3rem;
+    }
 }
 
 

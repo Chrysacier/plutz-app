@@ -29,7 +29,7 @@ function view_all_data(){
             planet_data.forEach(planet_data_mono => {
                 let current_planet_data = planet_data_mono.getAttribute("data-planet")
                 if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
-                    planet_data_mono.innerHTML = `${planets.Distance} millions km`
+                    planet_data_mono.innerHTML = `${planets.Distance} <span class="planet-data--unit">millions km</span>`
                    
                 }
 
@@ -44,10 +44,7 @@ buttons_exp.forEach(button => {
         e.preventDefault()
         let btn_data = button.getAttribute("data-type");
         let clicked_planet = exp_planet.getAttribute('data-planet');
-        
 
-        
-        
         let measure = " "
         if(btn_data == "Distance"){
             measure = "millions km"
@@ -75,25 +72,20 @@ buttons_exp.forEach(button => {
                 planet_title.innerHTML = `${planets.Name}`
                 planet_infos.innerHTML = `${planets.Informations}`  
                 previous_data = "none"
-                
-                btns_icon.forEach(btn_icon => {
-                    btn_icon.classlist.remove("btn-icon--active") 
 
+                btns_icon.forEach(btn_icon => {
+                    btn_icon.classList.remove("btn-icon--active") 
                 });   
 
-                
-                
             }else{
                 planet_title.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`
                 planet_infos.innerHTML = `${planets['Facts'][0][btn_data]}`  
-                previous_data = btn_data 
                 btns_icon.forEach(btn_icon => {
                     let btn_icon_data = btn_icon.getAttribute("data-type")
-                    if(btn_data == btn_icon_data){
-                        console.log("oui")
-                         btn_icon.classlist.add("btn-icon--active")           
-                    }
+                    btn_icon.classList.add("btn-icon--active")           
                 }); 
+                previous_data = btn_data 
+
             }
             
         });
@@ -141,10 +133,20 @@ buttons_all.forEach(button => {
 });
 
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 26,
-    centeredSlides: true,
-    grabCursor: true,
-    loop: true,
-  });
+var menu = ['M', 'V', 'J']
+var mySwiper = new Swiper ('.swiper-container', {
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })

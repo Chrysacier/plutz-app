@@ -85,22 +85,36 @@
                 <div class="slide slide8">8</div>
             </div>
             -->
-
+            <div class="planet-name">
+                <label><input class="planet-bullet" type="radio" name="point" checked><span>M</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>V</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>E</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>M</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>J</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>S</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>U</span></label>
+                <label><input class="planet-bullet" type="radio" name="point"><span>N</span></label>
+            </div>
+            <!-- Slider main container -->
             <div class="swiper-container">
+                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <img src="assets/images/earth.png" alt="">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/images/mars.png" alt="">
-                </div>                  <div class="swiper-slide">
-                    <img src="assets/images/venus.png" alt="">
-                </div>                  <div class="swiper-slide">
-                    <img src="assets/images/jupiter.png" alt="">
+                    <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
                 </div>
-                </div>
-            </div>            
-
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="planet" data-planet="Earth">  
+                <img class="img img--planet-exp img--planet-border" src="assets/images/earth.png" srcset="assets/images/earth@2x.png" alt="La planète Terre.">          
+                <h1 class="planet__title">Earth</h1>
+                <p class="planet__infos">
+                    Earth is called the “blue planet”. 
+                    It is the only planet that has life on it. Life is possible on Earth because of water and because of all the gases which are important for life.
+                </p>
+            </div>
             <!--
             <div>
                  <input type="radio" name="point" checked>
