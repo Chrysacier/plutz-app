@@ -135,15 +135,13 @@ body{
     display: none;
     @media(min-width: 1024px){
         display: inherit;
-        position: absolute;
-        right: -17rem;
         transform: rotate(90deg);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        position: fixed;
+        top: 50%;
+        right: -4rem;
     }
-    
-    @media(min-width: 1200px){
-        right: -20rem;
-    }
+
 }
 
 .cap{

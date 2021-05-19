@@ -56,7 +56,6 @@
 
 .header{
     position: relative;
-    z-index: 20;
 
     &--exp{
         position: fixed;
@@ -77,14 +76,14 @@
         }
 
         @media (min-width:1200px){
-            margin: 0rem 14rem;        
+            margin: 0rem 18rem;        
         }
     }
 
     &__content{
         @media (min-width:1200px){
             position: absolute;
-            bottom: 10rem;
+            bottom: 8rem;
         }
     }
 }
@@ -181,6 +180,7 @@
 
     }
 }
+
 
 .footer{
     margin: 0rem 3.8rem;   

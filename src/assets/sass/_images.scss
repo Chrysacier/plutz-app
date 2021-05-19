@@ -89,8 +89,7 @@
 
   &--intro{
     position: absolute;  
-    z-index: -20;
-    top: 50%;
+     top: 50%;
     transform: translateY(-45%);
     width: 115vw;
     max-width: 66rem;
@@ -104,9 +103,9 @@
       left: 51%;
       transform: translatex(-52%);
       bottom: 0;
-      width: 103rem;    
+      width: 115rem;    
       max-width: inherit;
-      top: 20%;
+      top: 15%;
     }
   }
 
