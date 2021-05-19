@@ -22,16 +22,31 @@ body{
     margin: 0;
     margin-bottom: 3rem;
 
+    @media(min-width: 600px){
+        font-size: 7.7rem;
+    }
+
+    @media(min-width: 900px){
+        font-size: 8.8rem;
+    }
+  
     &--planet{
         padding: 43px 0px; 
+    
     }
  
-    
     &--planet-exp{
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1.9rem;
         letter-spacing: .3rem;
+        
+        
+        @media (min-width:1024px){
+            font-size: 1.7rem;
+            margin-top: 0rem;
+            margin-bottom: 5rem;
+        }
     }
     
     &--planet-landing{
@@ -44,30 +59,75 @@ body{
         font-size: 1.9rem;
         font-weight: 800;
         margin-bottom: 1rem;
+
+        @media (min-width:600px){
+            font-size:3.2rem;
+            margin: 0;
+        }
+
+        @media (min-width:900px){
+            font-size:2.2rem;
+        }
     }
 
     &--how{
         font-size: 3.9rem;
         font-weight: 800;
         line-height: 1.2;
+
+        @media (min-width:600px){
+            font-size: 4.4rem;
+            margin: 6rem 3rem ;
+        }
+
+        @media (min-width:900px){
+            font-size: 3.9rem;
+        }
     }
 }
 
 .link{
-    font-size: 1.7rem;
-    font-weight: 300;
-    letter-spacing: 0.3rem;
+   font-size: 1.9rem;
+
+   @media(min-width: 900px){
+    font-size: 1.9rem;
+}
+
+   @media (min-width:1024px){
+    font-size: 1.5rem;
+   }
 
     &--footer{
         letter-spacing: 0.05em;
         font-size: 1.6rem;
+
+        @media(min-width: 600px){
+            font-size: 2.1rem;
+        }
+    
+        @media (min-width:900px){
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+    @media (min-width:600px){
+        
+        .footer__copyright{
+        margin: 6rem 3rem;
     }
 }
 
 .p-big{
-    font-size: 3.875rem;
+    font-size: 3.1rem;
     font-weight: 800;
     line-height: 1.35;
+
+    @media(min-width: 600px){
+        font-size: 5.2rem;
+    }
+
 }
 
 
@@ -80,10 +140,17 @@ body{
     margin-bottom: 1rem;
     font-size: 4.4rem;
     font-weight: 800;
+    width: max-content;
 
     &--unit{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
+}
+
+@media (min-width:600px){
+    p{
+    margin: 6rem 3rem ;
+}
 }
 
 

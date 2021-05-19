@@ -44,6 +44,7 @@ buttons_exp.forEach(button => {
         e.preventDefault()
         let btn_data = button.getAttribute("data-type");
         let clicked_planet = exp_planet.getAttribute('data-planet');
+        
 
         let measure = " "
         if(btn_data == "Distance"){
@@ -65,8 +66,6 @@ buttons_exp.forEach(button => {
             return planets.Name.toLowerCase().includes(clicked_planet.toLocaleLowerCase())
         })
         planet_filter.forEach(planets => {
-            console.log(previous_data)           
-            console.log(btn_data)           
 
             if(previous_data == btn_data){
                 planet_title.innerHTML = `${planets.Name}`
@@ -133,20 +132,44 @@ buttons_all.forEach(button => {
 });
 
 
-var menu = ['M', 'V', 'J']
-var mySwiper = new Swiper ('.swiper-container', {
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-			clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (menu[index]) + '</span>';
+var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N' ]
+let swiper_container = document.querySelector(".swiper-container")
+if (swiper_container){
+    var mySwiper = new Swiper ('.swiper-container', {
+        
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 5,
+        loop: true,
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+                clickable: true,
+            renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
         },
-    },
+    })
+    mySwiper.on('activeIndexChange', function () {
+        let slide_active = document.querySelector(".swiper-slide-active");
+        let slide_active_data = slide_active.getAttribute("data-swiper-slide-index")
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
+        if (mySwiper.activeIndex == "8" | mySwiper.activeIndex == "16" ){
+            console.log('Mercury');
+        }else if (mySwiper.activeIndex == "9"){
+            console.log('Venus');
+        }else if (mySwiper.activeIndex == "10"){
+            console.log('Earth');
+        }else if (mySwiper.activeIndex == "11"){
+            console.log('Mars');
+        }else if (mySwiper.activeIndex == "12"){
+            console.log('Jupiter');
+        }else if (mySwiper.activeIndex == "13"){
+            console.log('Saturn');
+        }else if (mySwiper.activeIndex == "14"){
+            console.log('Uranus');
+        }else if (mySwiper.activeIndex == "15" | mySwiper.activeIndex == "7"){
+            console.log('Neptune');
+        }
+      });
+}

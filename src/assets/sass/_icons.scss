@@ -17,10 +17,19 @@ svg{
     transform: translateY(-45%);
     height: 38px;
 
+    
     svg{
-        width: 2em;
-        height: 2em;
+        width: 1.8em;
+        height: 1.8em;
     }
+
+    &--exp{
+        @media (min-width:1024px){
+            top: 7rem;
+            left: 6rem;
+        }
+    }
+
 
     &--landing{
         top: 5rem;
@@ -52,6 +61,11 @@ svg{
 .btn{
     svg{
         fill: var(--color-primary);  
+        transition: .3s all;
+
+        &:hover{
+            fill: var(--color-text);  
+        }
     }
 
     &__icon{
@@ -65,9 +79,17 @@ svg{
     
         &--mass{
             position: relative;
-            top: -3px;
+            top: 1rem;
             width: 2.5em;
             height: 2.5em;  
+
+            @media (min-width:1024px){
+                top: 0px;
+            }
+        }
+
+        &--type{
+            padding-left: 1rem;
         }
     }  
 }
@@ -86,3 +108,39 @@ svg{
 .icons-part1{
     margin-bottom: 4rem;
 }
+
+.svg--dwm{
+    width: 39px;
+    height: 20px;
+}
+
+
+.link{
+    svg{
+        position: relative;
+        left: 1px;
+        top: 1px;
+    }
+}
+
+.link--back{
+    svg{
+        position: relative;
+        left: 0;
+        top: 1px;
+        transform: rotate(180deg);
+        margin-right: 1rem;
+    }
+}
+
+.btn-icon--active{
+    fill: white;
+}
+
+// .rot-hover:hover{
+
+//           transition: 0.70s;
+//           transform: rotate(360deg);       
+//           transform-origin: center center; 
+// }
+

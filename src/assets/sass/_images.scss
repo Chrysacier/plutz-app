@@ -2,7 +2,6 @@
 ================================================================================ */
 .img{
   width: 100%;
-  z-index: -10;
   position: relative;
 
   &--planet-landing{
@@ -25,35 +24,67 @@
   }
   
   &--mercury{
-    width: 10%
+    width: 10%;
+
+    @media(min-width:1024px){
+      width: 5rem;    
+    }
   }
 
   &--venus{
-    width: 30%
+    width: 30%;
+
+    @media(min-width:1024px){
+      width: 20rem;    
+    }
   }
 
   &--earth{
-    width: 35%
+    width: 35%;
+
+    @media(min-width:1024px){
+      width: 25rem;    
+    }
   }
 
   &--mars{
-    width: 20%
+    width: 20%;
+
+    @media(min-width:1024px){
+      width: 10rem;    
+    }
   }
 
   &--jupiter{
-    width: 85%
+    width: 85%;
+
+    @media(min-width:1024px){
+      width: 45rem;
+    }
   }
 
   &--saturn{
-    width: 65%
+    width: 65%;
+
+    @media(min-width:1024px){
+      width: 35rem;
+    }
   }
 
   &--uranus{
-    width: 50%
+    width: 50%;
+
+    @media(min-width:1024px){
+      width: 30rem;
+    }
   }
 
   &--neptune{
-    width: 45%
+    width: 65%;
+
+    @media(min-width:1024px){
+      width: 25rem;
+    }
   }
 
   &--intro{
@@ -64,6 +95,11 @@
     width: 114Vw;
     left: -13rem;
     z-index: -10;
+
+    @media (min-width:600px){
+      width: 90%;
+      top:54%;
+    }
   }
 
   &--how{
@@ -71,33 +107,8 @@
   }
 }
 
-.planet::before{
-    content: "";
-    position: absolute;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    width: 333px;
-    height: 153px;
-    top: calc(48% + 5.9vw);
-    background: linear-gradient(0deg, #323B55, #323B55);
-    z-index: -1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    filter: blur(124px);
-    transform: rotate(-90deg);
-}
-
-.planet{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 
-.svg--dwm{
-width: 39px;
-height: 20px;
-}
-
-.arrow-back{
-  transform: rotate(-180deg);
-  margin-right: .5rem;
+picture{
+  z-index: -20
 }

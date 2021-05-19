@@ -11,10 +11,12 @@
 	<body>
 		<div class="container">
 			<header class="header header--exp">
-				<a class="logo" href="index.html">
+				<a class="logo logo--exp" href="index.html">
 					<span class="logo__text">Logo Plutz</span>
-					<svg fill="none" height="56" viewBox="0 0 56 56" width="56" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m55.164.571289h-54.951109v54.951111h54.951109zm-50.84462 50.844611v-46.73812h46.73812v46.73812zm28.91382-19.9497 4.8937 6.4409-4.3044 3.7661-5.285-7.0267-1.0435-3.0129-1.0435 3.0129-5.0096 6.8001-5.0435-2.8036 5.3574-7.2605 2.8261-1.883-3.5218-.1674-8.1848-2.6836 1.1739-5.4817 8.837 2.851 2.8696 2.1759-.9565-3.4313-.087-7.7576 5.7827-.5859.087 8.5109-1.1305 3.3476 2.8697-2.0922 7.8376-2.6418 2.3479 5.1051-8.5768 2.8928-3.4349.1256z" fill-rule="evenodd"/></svg>
-				</a>
+					<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.5099 14.0219H14.8662L19.5099 16.7026L22.5693 22.6208H15.2486L12.9541 19.6056L11.8615 16.3112L10.7688 19.6056L8.47429 22.6208H1.15363L4.49805 16.6169L8.85672 14.0219H4.21301L0.498047 12.7934V5.86958L6.39828 7.43303L9.84009 10.2807L8.52893 6.14877V0.62085H15.4598V6.14877L13.8828 10.2807L17.3246 7.43303L23.498 5.92542V12.8493L19.5099 14.0219Z"/>
+						</svg>				
+					</a>
 				<nav class="nav">
 					<ul class="nav-icons">
 						<li class="nav-icons__item nav-icons__item--type">
@@ -69,66 +71,78 @@
 				</nav>
 			</header> 
 			<main class="main main--exp main--view-all">
-				<ul class="planet-all">
-					<li class="planet-all__item planet-all__item--mercury" data-planet="Mercury">
-						<!-- Ou mettre le h1? Ou pas de headings? -->
-						<!-- Mettre des span pour les données? -->
-						<a href="">
-							<img class="img img--mercury" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
-							<p class="planet-data" data-planet="Mercury">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" >Mercury</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--venus" data-planet="Venus">
-						<a href="">
+				<div class="planet-name planet-name--view-all">
+					<label><input class="planet-bullet" type="radio" name="point" checked><span>M</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>V</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>E</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>M</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>J</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>S</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>U</span></label>
+					<label><input class="planet-bullet" type="radio" name="point"><span>N</span></label>
+				</div>
+				<a class="scroll link" href="">Scroll 						
+					<svg fill="none" height="10" width="22" class="arrow-back" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M17.13.443l4.137 4.137a.65.65 0 010 .92l-4.136 4.136a.65.65 0 01-.92-.92L19.24 5.69H.808v-1.3h18.43l-3.026-3.027a.65.65 0 01.919-.92z"/></svg> 			
+				</a>
+				<div class="planet-all">
+					<a class="planet-all__item planet-all__item--mercury" href="" data-planet="Mercury">
+							<!-- Ou mettre le h1? Ou pas de headings? -->
+								<img class="img img--mercury" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Mercury">data</p>
+									<h2 class="title title--planet-exp solo-planet-name" >Mercury</h2>
+								</div>
+					</a>				
+					<a class="planet-all__item planet-all__item--venus" href="" data-planet="Venus">
 							<img class="img img--venus" src="assets/images/venus.png" srcset="assets/images/venus@2x.png 2x" alt="Planet Venus">
-							<p class="planet-data" data-planet="Venus">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Venus">Venus</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--earth" data-planet="Earth">
-						<a href="">
+							<div class="planet-all-content">
+								<p class="planet-data" data-planet="Venus">data</p>
+								<h2 class="title title--planet-exp solo-planet-name" data-planet="Venus">Venus</h2>
+							</div>
+					</a>
+					<a class="planet-all__item planet-all__item--earth" data-planet="Earth">
 							<img class="img img--earth" src="assets/images/earth.png" srcset="assets/images/earth@2x.png 2x" alt="Planet Earth">
-							<p class="planet-data" data-planet="Earth">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Earth">Earth</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--mars" data-planet="Mars">
-						<a href="">
+							<div class="planet-all-content">
+								<p class="planet-data" data-planet="Earth">data</p>
+								<h2 class="title title--planet-exp solo-planet-name" data-planet="Earth">Earth</h2>
+							</div>
+					</a>
+					<a class="planet-all__item planet-all__item--mars" data-planet="Mars">
 							<img class="img img--mars" src="assets/images/mars.png" srcset="assets/images/mars@2x.png 2x" alt="Planet Mars">
-							<p class="planet-data" data-planet="Mars">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Mars">Mars</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--jupiter" data-planet="Jupiter">
-						<a href="">
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Mars">data</p>
+									<h2 class="title title--planet-exp solo-planet-name" data-planet="Mars">Mars</h2>
+								</div>
+					</a>
+					<a class="planet-all__item planet-all__item--jupiter" data-planet="Jupiter">
 							<img class="img img--jupiter" src="assets/images/jupiter.png" srcset="assets/images/jupiter@2x.png 2x" alt="Planet Jupiter">
-							<p class="planet-data" data-planet="Jupiter">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Jupiter">Jupiter</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--saturn" data-planet="Saturn">
-						<a href="">
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Jupiter">data</p>
+									<h2 class="title title--planet-exp solo-planet-name" data-planet="Jupiter">Jupiter</h2>
+								</div>
+					</a>
+					<a class="planet-all__item planet-all__item--saturn" data-planet="Saturn">
 							<img class="img img--saturn" src="assets/images/saturn.png" srcset="assets/images/saturn@2x.png 2x" alt="Planet Saturn">
-							<p class="planet-data" data-planet="Saturn">data</p>
-							<h2 class="title title--planet-exp solo-planet-name"  data-planet="Saturn">Saturn</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--uranus" data-planet="Uranus">
-						<a href="">
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Saturn">data</p>
+									<h2 class="title title--planet-exp solo-planet-name"  data-planet="Saturn">Saturn</h2>
+								</div>
+					</a>
+					<a class="planet-all__item planet-all__item--uranus" data-planet="Uranus">
 							<img class="img img--uranus" src="assets/images/uranus.png" srcset="assets/images/uranus@2x.png 2x" alt="Planet Uranus">
-							<p class="planet-data" data-planet="Uranus">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Uranus">Uranus</h2>
-						</a>
-					</li>
-					<li class="planet-all__item planet-all__item--neptune" data-planet="Neptune">
-						<a href="">
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Uranus">data</p>
+									<h2 class="title title--planet-exp solo-planet-name" data-planet="Uranus">Uranus</h2>
+								</div>
+					</a>
+					<a class="planet-all__item planet-all__item--neptune" data-planet="Neptune">
 							<img class="img img--neptune" src="assets/images/neptune.png" srcset="assets/images/neptune@2x.png 2x" alt="Planet Neptune">
-							<p class="planet-data" data-planet="Neptune">data</p>
-							<h2 class="title title--planet-exp solo-planet-name" data-planet="Neptune">Neptune</h2>
-						</a>
-					</li>
-				</ul>
+								<div class="planet-all-content">
+									<p class="planet-data" data-planet="Neptune">data</p>
+									<h2 class="title title--planet-exp solo-planet-name" data-planet="Neptune">Neptune</h2>
+								</div>
+					</a>
+				</div>
 			</main>
 		</div>
 	</body>
