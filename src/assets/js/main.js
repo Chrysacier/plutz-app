@@ -1,13 +1,14 @@
 "use strict";
 let buttons_exp = document.querySelectorAll(".btn--exp");
 let buttons_all = document.querySelectorAll(".btn--all");
-let planet_title= document.querySelector(".planet__title");
+let buttons_filter = document.querySelectorAll(".btn--filter")
+let planet_title= document.querySelector(".title--planet-slider");
 let exp_planet= document.querySelector(".planet");
 let planet_infos = document.querySelector(".planet__infos");
 let planet_all_item = document.querySelectorAll(".planet-all__item");
 let planet_data = document.querySelectorAll(".planet-data");
 let btns_icon = document.querySelectorAll(".btn__icon")
-let previous_data = "none";
+let previous_data = "Name";
 let planetdata;
 
 const json = fetch('assets/js/data.json')
@@ -27,6 +28,7 @@ function view_all_data(){
         })
         planet_filter.forEach(planets => {
             planet_data.forEach(planet_data_mono => {
+                planet_data_mono.classList.add("hidden")
                 let current_planet_data = planet_data_mono.getAttribute("data-planet")
                 if (current_planet_data.toLocaleLowerCase() == planets.Name.toLowerCase()){
                     planet_data_mono.innerHTML = `${planets.Distance} <span class="planet-data--unit">millions km</span>`
@@ -70,7 +72,7 @@ buttons_exp.forEach(button => {
             if(previous_data == btn_data){
                 planet_title.innerHTML = `${planets.Name}`
                 planet_infos.innerHTML = `${planets.Informations}`  
-                previous_data = "none"
+                previous_data = "Name"
 
                 btns_icon.forEach(btn_icon => {
                     btn_icon.classList.remove("btn-icon--active") 
@@ -93,6 +95,9 @@ buttons_exp.forEach(button => {
 });
 buttons_all.forEach(button => {
     button.addEventListener('click', (event) =>{
+        planet_data.forEach(planet_data_mono => {
+            planet_data_mono.classList.remove("hidden")
+        });
         let btn_data = button.getAttribute("data-type");
         let measure = " "
         if(btn_data == "Distance"){
@@ -131,6 +136,28 @@ buttons_all.forEach(button => {
     });
 });
 
+buttons_filter.forEach(button_filter => {
+    button_filter.addEventListener('click', (e) =>{
+
+        let button_filter_data = button_filter.getAttribute("data-planet")
+        console.log(button_filter_data)
+        planet_all_item.forEach(planet_item => {
+            let planet_item_data = planet_item.getAttribute("data-planet");
+            
+            if(button_filter_data == planet_item_data){
+                if(button_filter.classList.contains("btn--filter-active")){
+                    planet_item.classList.add("hidden")
+                    button_filter.classList.remove("btn--filter-active")
+                }else{
+                    planet_item.classList.remove("hidden")
+                    button_filter.classList.add("btn--filter-active")
+                }
+                
+            }
+                
+        });
+    })
+});
 
 var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N' ]
 let swiper_container = document.querySelector(".swiper-container")
@@ -154,22 +181,61 @@ if (swiper_container){
         let slide_active_data = slide_active.getAttribute("data-swiper-slide-index")
 
         if (mySwiper.activeIndex == "8" | mySwiper.activeIndex == "16" ){
-            console.log('Mercury');
+            exp_planet.setAttribute("data-planet", "Mercury")
         }else if (mySwiper.activeIndex == "9"){
-            console.log('Venus');
+            exp_planet.setAttribute("data-planet", "Venus")
         }else if (mySwiper.activeIndex == "10"){
-            console.log('Earth');
+            exp_planet.setAttribute("data-planet", "Earth")
         }else if (mySwiper.activeIndex == "11"){
-            console.log('Mars');
+            exp_planet.setAttribute("data-planet", "Mars")
         }else if (mySwiper.activeIndex == "12"){
-            console.log('Jupiter');
+            exp_planet.setAttribute("data-planet", "Jupiter")
         }else if (mySwiper.activeIndex == "13"){
-            console.log('Saturn');
+            exp_planet.setAttribute("data-planet", "Saturn")
         }else if (mySwiper.activeIndex == "14"){
-            console.log('Uranus');
+            exp_planet.setAttribute("data-planet", "Uranus")
         }else if (mySwiper.activeIndex == "15" | mySwiper.activeIndex == "7"){
-            console.log('Neptune');
+            exp_planet.setAttribute("data-planet", "Neptune")
         }
+
+        let clicked_planet = exp_planet.getAttribute('data-planet');
+        
+        let planet_filter = planetdata.filter((planets) =>{
+            return planets.Name.toLowerCase().includes(clicked_planet.toLocaleLowerCase())
+        })
+        planet_filter.forEach(planets => {
+            if(previous_data == "Name"){
+                planet_title.innerHTML = `${planets.Name}`
+                planet_infos.innerHTML = `${planets.Informations}`
+            }else{
+                let measure = " "
+                if(previous_data == "Distance"){
+                    measure = "millions km"
+                }else if(previous_data == "Diameter"){
+                    measure = "km"
+                }else if(previous_data == "Mass"){
+                    measure = "x10.24 kg"
+                }else if(previous_data == "Rotation_Period"){
+                    measure = "hours"
+                }else if(previous_data == "Gravity"){
+                    measure = "m/s²"
+                }else if(previous_data == "Mean_Temperature"){
+                    measure = "°C"
+                }else if(previous_data == "Number_of_satellites"){
+                    measure = "satellites"
+                }
+                planet_title.innerHTML = `${planets[previous_data]} <span class="planet-data--unit">${measure}</span>`
+                planet_infos.innerHTML = `${planets['Facts'][0][previous_data]}`
+            }
+            
+        });
+
       });
 }
+
+new kursor({
+    type: 4,
+    removeDefaultCursor: true,
+    color: '#ffffff'
+});
 

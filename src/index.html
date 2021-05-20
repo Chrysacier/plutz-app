@@ -7,9 +7,14 @@
 		<link rel="stylesheet" href="assets/css/main.css"> 
 		<script src="assets/js/main.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
+	    <link rel="icon" type="image/svg" href="assets/images/icons/logo-symbole-test.svg">
+		<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+
 	</head>
 	<body>
 		<div class="container">
+			<div class="all all">
 			<div class="lines"></div>
 			<div class="lines-middle"></div>
 			<header class="header header--landing">
@@ -28,12 +33,12 @@
 					</svg>
 				</a>
 				<picture>
-					<source media="(min-width:1200px)" srcset="assets/images/intro-desktop@2x.png 2x, assets/images/intro-desktop.png">
+					<source media="(min-width:900px)" srcset="assets/images/intro-desktop@2x.png 2x, assets/images/intro-desktop.png">
 					<img class="img img--intro" src="assets/images/intro-mobile.png" srcset="assets/images/intro-mobile@2x.png 2x" alt="Introduction planet image.">
 				</picture>
 				<div class="header__content">
 					<h1 class="title">Visulalization <br>of our solar <br>system.</h1>
-					<a class="link" href="experimentation-view-all.html">Discover						
+					<a class="link link--arrow" href="experimentation-view-all.html">Discover						
 						<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/></svg>
 					</a>
 				</div>
@@ -66,16 +71,16 @@
 							</div>
 						</div>
 					</div>
-					<a class="link link--right" href="experimentation-view-all.html">View all						
+					<a class="link link--right link--arrow" href="experimentation-view-all.html">View all						
 						<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/></svg>					
 					</a>
-					<p class="p-big">Plutz aim at comparing various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp.</p>
+					<p class="title title--how title--how-p">Plutz aim at comparing various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp.</p>
 				</section>
 
 				<section class="section section--how">
 					<div class="how-intro">
 						<picture>
-							<source media="(min-width:1100px)" srcset="assets/images/how-desktop@2x.png 2x, assets/images/how-desktop.png">
+							<source media="(min-width:1024px)" srcset="assets/images/how-desktop@2x.png 2x, assets/images/how-desktop.png">
 							<img class="img img--how" src="assets/images/how-mobile.png" srcset="assets/images/how-mobile@2x.png 2x" alt="Planet image.">
 						</picture>
 						<div class="how-intro__icons">
@@ -93,41 +98,47 @@
 							</div>
 						</div>
 					</div>
-
-					<h3 class="title title--how">How does it <br>work?</h3>
-					<p>When you arrive in front of the solar system, all planets can be visualized. You can navigate through the different data by clicking on the corresponding icons and compare these data to each other. In order to visualize the data about a specific planet, just scroll until you reach the planet you are looking for.</p>
-					<a class="link link--right" href="experimentation-view-all.html">Discover
-						<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg">
-							<path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/>
-						</svg>
-					</a>
+					<div class="how-intro__content">
+						<h3 class="title title--how">How does it <br>work?</h3>
+						<p>When you arrive in front of the solar system, all planets can be visualized. You can navigate through the different data by clicking on the corresponding icons and compare these data to each other. In order to visualize the data about a specific planet, just scroll until you reach the planet you are looking for.</p>
+						<a class="link link--right link--arrow" href="experimentation-view-all.html">Discover
+							<svg fill="none" height="10" viewBox="0 0 22 10" width="22" xmlns="http://www.w3.org/2000/svg">
+								<path clip-rule="evenodd" d="m17.1308.44331 4.1366 4.13657c.2538.25385.2538.6654 0 .91924l-4.1366 4.13658c-.2539.25384-.6654.25384-.9193 0-.2538-.25384-.2538-.6654 0-.91924l3.027-3.02696h-18.430761v-1.3h18.430761l-3.027-3.02695c-.2538-.25384-.2538-.665399 0-.91924.2539-.253841.6654-.253841.9193 0z" fill-rule="evenodd"/>
+							</svg>
+						</a>
+					</div>
 				</section>
 			</main>
-
+		</div>
 			<footer class="footer">
+				<span class="datavisu datavisu--footer"><span class="cap">Plutz&nbsp;&nbsp;&nbsp;</span> Data visualization</span>
 				<div class="footer__infos">
-					<div class="footer__infos-team-credits">
 						<div class="team">
 							<h4 class="title title--footer">Our team</h4>
-								<ul class="">
-									<li class=""><a class="link link--footer" target="_blank" href="https://www.chrysanthe-gomree.be" class="link link--footer">Chrysanthe Gomrée</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="http://florent-chaltin.be" class="link link--footer">Florent Chaltin</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="http://angie-courtoy.be" class="link link--footer">Angie Courtoy</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="http://carolinedaoud.be" class="link link--footer">Caroline Daoud</a></li>
+								<ul class="team-footer__list footer__list">
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="https://www.chrysanthe-gomree.be"><small>Chrysanthe G.</small></a></li>
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="http://florent-chaltin.be"><small>Florent C.</small></a></li>
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="http://angie-courtoy.be"><small>Angie C.</small></a></li>
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="http://carolinedaoud.be"><small>Caroline D.</small></a></li>
 								</ul>
 						</div>
 						<div class="credits">
 							<h4 class="title title--footer">Credits</h4>
-								<ul class="">
-									<li class=""><a class="link link--footer" target="_blank" href="">Api</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="" class="link link--footer">Flaticon</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="" class="link link--footer">Adobe Stock</a></li>
-									<li class=""><a class="link link--footer" target="_blank" href="" class="link link--footer">Js. Hammer</a></li>
+								<ul class="footer__list">
+									<li class="footer__item"><a class="link link--footer" target="_blank" href=""><small>Api</small></a></li>
+									<li class="footer__item footer__item"><a class="link link--footer" target="_blank" href="https://www.flaticon.com/"><small>Flaticon</small></a></li>
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="https://stock.adobe.com/be_fr/"><small>Adobe Stock</small></a></li>
+									<li class="footer__item"><a class="link link--footer" target="_blank" href="https://swiperjs.com/"><small>Swiper.js</small></a></li>
 								</ul>
 						</div>
-					</div>
-					<a class="link link--footer" href="experimentation-view-all.html">Experimentation</a>
+						<div class="experimentation">
+							<h4 class="title title--footer">Experimentation</h4>
+								<ul class="footer__list">
+									<li class="footer__item"><a class="link link--footer" target="_blank" href=""><small>Try Plutz</small></a></li>
+								</ul>
+						</div>
 				</div>
+			
 				<div class="footer__copyright">
 					<small class="copyright">Dataplay ©2021</small>
                     <a class="dwm" href="http://dwm.re/">

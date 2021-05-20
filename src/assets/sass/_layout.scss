@@ -11,39 +11,52 @@ body{
 a{
     text-decoration: none;
     color: var(--color-text);
-    
 }
 
 ul{
     padding: 0px;
-    // @media(min-width:900px){
-    //     display: flex;
-    //     margin:0.7rem 0rem;
-    // }
 }
+
 
 li{
     list-style-type: none;
    
-    // @media(min-width:900px){  
-    // margin:0rem 2rem 3rem 0rem;
-    // }
+//    @media(min-width:900px){  
+//     padding-right: 2rem;
+//     }
+}
+
+.all{
+        margin: 0rem 4.3rem;    
+
+        @media (min-width:728px){
+            margin: 0rem 10rem;    
+        }
+
+        @media (min-width:1200px){
+            margin: 0rem 18rem;        
+        }
 }
 
 
 .main{
-    max-width: 1600px;
-    margin: 6rem 3.5rem 20rem;
+    max-width: 1800px;
+    margin-top: 6rem;
+    margin-bottom: 20rem;
     
-    @media(min-width:600px){
-        // margin: 6rem 3rem 20rem;
+
+    @media(min-width:1024px){
+        margin-bottom: 30rem;
     }
 
-    // @media(min-width:900px){}
-
     &--exp{
-        margin-top: 18rem;
-        justify-content: center;    
+        margin: 17rem 4.3rem 0rem;
+        justify-content: center;   
+        
+        @media(min-width:1024px){
+            margin-top: 0px;
+            height: 100vh;
+        }
     }
 
     &--view-all{
@@ -57,20 +70,6 @@ li{
             position: relative;
             justify-content: inherit;    
         } 
-    }
-
-    &--landing{
-        position: relative;
-
-        &::after{
-            content: "";
-            position: absolute;
-            width: 100vw;
-            height: 1px;
-            background-color: var(--color-secondary);
-            bottom: -200px;
-            left: -3.8rem;
-        }
     }
 }
 
@@ -132,11 +131,6 @@ li{
 
 .link--right{
         align-self: flex-end;
-
-       @media(min-width:900px){
-          display: none;
-        }
-        
 }
 
 
@@ -164,31 +158,45 @@ li{
 .section--planets{
     display: flex;
     flex-direction: column;
+    position: relative;
 
-    @media (min-width:600px){
-     margin: 6rem 3rem 0rem ;
-    }
-
-    @media (min-width:1200px){
-        margin: 6rem 11rem 0rem ;
-       }
 
     .p-big{
         margin: 14rem 0px;
+    }
+
+    .link--right{
+        transition: 0.3s ease-in-out;
+
+        @media(min-width:1024px){
+            position: absolute;
+            top: 34.2rem;
+            right: -2rem;
+        }
+
+        @media(min-width:1200px){
+            position: absolute;
+            right: -7rem;
+        }
     }
 }
 
 .block-planets{
     position: relative;
-    transform: translateX(-6rem);
-    left: 25%;
+    left: calc(33% - 8.5rem);
 
-    @media(min-width:900px){
+    @media(min-width:728px){
+        left: calc(33% - 14.5rem);
+    }
+
+    @media(min-width:1024px){
         display: flex;
-        left: 0;
-        transform: inherit;
-        justify-content: space-between;
-        margin: 14rem 0rem 0rem;
+        left: calc(25% - 13rem);
+        margin: 12rem 0rem 0rem;
+    }
+
+    @media(min-width:1200px){
+        left: calc(25% - 17rem);    
     }
 
     
@@ -197,21 +205,50 @@ li{
         margin-bottom: 7rem;
         align-items: center;
 
-        @media(min-width: 900px){
+
+        @media(min-width: 728px){
+            margin-bottom: 12rem;
+        }
+        
+        @media(min-width: 1024px){
             flex-direction: column;
-            margin: 0;
-            padding: 0;
+            margin-right: calc(25% - 11.2rem);   
+            margin-bottom: 0px; 
+
+            &:last-of-type{
+                margin-right: 0px;
+            }
+        }
+
+        @media(min-width: 1200px){
+            margin-right: calc(25% - 7.1rem);        
+        }
+
+        
+
+        &:last-of-type{
+            margin-bottom: 5rem;
+
+            
+            @media(min-width: 728px){
+                margin-bottom: 4rem;
+            }
         }
     }
 
     &-text{
         display: flex;
         flex-direction: column;
-        margin-left: 1.5rem;
+        margin-left: 2.5rem;
 
-        @media(min-width: 900px){
+        @media(min-width: 728px){
+            margin-left: 5.5rem;
+        }
+        
+        @media(min-width: 1024px){
+            margin-top: 3.5rem;
             align-items: center;
-            margin-top: 4rem;
+            margin-left: 0px;
         }
     }
 
@@ -243,17 +280,17 @@ li{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0px 8rem;
+            padding: 0px 9.5rem;
             place-content: flex-end;
         }
 
-        &:first-of-type{
-            padding-top: 15rem;
+        // &:first-of-type{
+        //     padding-top: 15rem;
 
-            @media (min-width:1024px){
-                padding-top: 0px;
-            }
-        }
+        //     @media (min-width:1024px){
+        //         padding-top: 0px;
+        //     }
+        // }
 
         &--neptune{
             border: none;
@@ -289,7 +326,14 @@ li{
     margin-top: 4.1rem;
     margin-bottom: 3.8rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+
+    // @media (min-width:728px){
+    //     justify-content: flex-end;
+    //     margin-top: 0px;
+    //     position: relative;
+    //     left: 5rem;
+    // }
 
     &--view-all{
         position: absolute;
@@ -315,6 +359,14 @@ li{
     display: flex;
     flex-direction: column;
 
+    @media (min-width:1024px){
+        flex-direction: row;
+    }
+
+    @media (min-width:1200px){
+        margin-left: 3rem;    
+    }
+
     p{
         margin-top: 0;
         margin-bottom: 4rem;
@@ -326,11 +378,30 @@ li{
     flex-direction: column;
     align-items: center;
     margin-bottom: 6rem;
+    
+    @media(min-width:728px){
+        margin-bottom: 2rem;
+    }
 
-    @media(min-width:900px){
-        transform: rotate(90deg);
+    @media(min-width:1024px){
+        align-self: flex-start;
         position: relative;
-        left: -13rem;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        max-width: 60rem;
+        align-self: center;
+
+        @media(min-width:1024px){
+            padding-left: 15rem;            
+            max-width: 53rem;
+        }
+
+        @media(min-width:1200px){
+            padding-left: 15rem;            
+        }
     }
 }
 
@@ -340,12 +411,33 @@ li{
     position: absolute !important;
     left: 0;
     top: 205px;
+
+    @media(min-width:1024px){
+        transform: rotate(90deg);
+        top: 121px;
+        left: 260px;
+    }
 }
 
 .swiper-wrapper{
     align-items: center;
-    margin-top: 50px;
+    margin-top: 75px;
     height: 700px !important;
+}
+
+.swiper-container::after {
+    content: "";
+    height: 1px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 225px;
+    /* z-index: -50; */
+    width: 100vw;
+
+    @media(min-width:1024px){
+        width: 100vh;
+        left: 15rem;
+    }
 }
 
 
@@ -358,9 +450,21 @@ li{
 }
 
 .swiper-slide-active img {
-    transform: scale(1.37);
-    transition: .4s;
+   transform: scale(1.37);
 }
+
+
+.swiper-slide-active::after{
+    content: "";
+    border: 1px solid var(--color-primary);
+    padding: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: -3.1px;
+    top: -51px;
+    z-index: -50;
+}
+
 
 .swiper-pagination{
     top: 0;
@@ -398,10 +502,17 @@ li{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 400px;
+  max-width: 60rem;
+  margin: 0 auto;
+  max-width: 55rem;
+  margin-top: 39rem;
 }
 
 .scroll{
+    display: none;
+
+    @media(min-width:1024px){
+    display: block;
     position: absolute;
     right: 5.5rem;
     top: 5.6rem;
@@ -416,14 +527,13 @@ li{
 
 
     &:hover{
-        color: var(--color-primary);
 
         svg{
-            fill: var(--color-primary);
             left: 8px;
             transition: 0.3s;
         }
     }
+}
     
 }
 
@@ -442,3 +552,31 @@ li{
 //         transform: rotate(-90deg);
 //     }
 // }
+
+
+.link--arrow{
+    transition: 0.3s ease-in-out;
+
+    svg{
+        transition: 0.3s;
+    }
+
+
+    &:hover{
+
+        svg{
+            fill: var(--color-text);
+            left: 8px;
+            transition: 0.3s;
+        }
+    }
+
+    &-back{
+        &:hover{
+
+            svg{
+                left: -8px;
+            }
+        }
+    }
+}

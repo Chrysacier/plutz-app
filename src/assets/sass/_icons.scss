@@ -25,23 +25,24 @@ svg{
     &--exp{
         @media (min-width:1024px){
             top: 7rem;
-            left: 6rem;
+            left: 6.3rem;        
         }
     }
 
     &--landing{
-        top: 6rem;
-        left: 0;
+        top: 6.9rem;
         background: none;
-
+        left: 0;
+        
+        
         @media (min-width: 728px){
             width: 12rem;
-            left: -5rem;
+            left: -5.5rem;
         }
-
+        
         @media (min-width: 1200px){
-            left: 5rem;
             position: fixed;
+            left: 4.5rem;
         }
 
         svg{
@@ -81,19 +82,24 @@ svg{
     }
 
     &__icon{
-        width: 1.5em;
-        height: 1.5em;
+        width: 2.2rem;
+        height: 2.2rem;
     
         &--distance{
-            width: 2em;
-            height: 2em;    
+            width: 2.8rem;
+            height: 2.8rem;  
+
+            @media (min-width:1024px){
+                width: 3.1rem;
+                height: 3.1rem;      
+            }
         }
     
         &--mass{
             position: relative;
-            top: 1rem;
-            width: 2.5em;
-            height: 2.5em;  
+            top: .5rem;
+            width: 3.3rem;
+            height: 3.3rem;  
 
             @media (min-width:1024px){
                 top: 0px;
@@ -112,23 +118,49 @@ svg{
         left: 5.3rem;
         background-repeat: no-repeat;
         background-size: contain;
-        top: .8rem;
+        top: .6rem;
+    }
+}
+
+.datavisu--footer{
+    .cap{
+        &::after{
+            opacity: .2; 
+            top: .7rem;
+        }
     }
 }
 
 .how-intro__icons{
-    width: 23rem;
+    width: 53vw;
     position: relative;
-    top: -2rem;
+    top: -6vw;
+    max-width: 28rem;
+
+    @media (min-width: 728px){
+        top: -10vw;
+    }
+
+    @media (min-width: 1024px){
+        transform: rotate(90deg);   
+        top: 13rem;
+        left: -15rem; 
+    }
 }
 
 .icons-part2, .icons-part1{
     display: flex;
     justify-content: space-between;
+
+    svg{
+        @media (min-width: 1024px){
+            transform: rotate(270deg);
+        }
+    }
 }
 
 .icons-part1{
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .svg--dwm{
@@ -158,6 +190,10 @@ svg{
 .btn-icon--active{
     fill: white;
 }
+
+// .favicon{
+//     fill: black;
+// }
 
 // .rot-hover:hover{
 

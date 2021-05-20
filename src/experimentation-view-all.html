@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css"> 
 		<script src="assets/js/main.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
+	    <link class="favicon" rel="icon" type="image/svg" href="assets/images/icons/logo-symbole-test.svg">
 	</head>
 	<body>
 		<div class="container">
@@ -72,6 +73,18 @@
 			</header> 
 			<main class="main main--exp main--view-all">
 				<div class="planet-name planet-name--view-all">
+					<ul>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Mercury">M</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Venus">V</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Earth">E</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Mars">M</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Jupiter">J</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Saturn">S</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Uranus">U</button></li>
+						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Neptune">N</button></li>
+					</ul>
+					
+					<!--
 					<label><input class="planet-bullet" type="radio" name="point" checked><span>M</span></label>
 					<label><input class="planet-bullet" type="radio" name="point"><span>V</span></label>
 					<label><input class="planet-bullet" type="radio" name="point"><span>E</span></label>
@@ -80,63 +93,65 @@
 					<label><input class="planet-bullet" type="radio" name="point"><span>S</span></label>
 					<label><input class="planet-bullet" type="radio" name="point"><span>U</span></label>
 					<label><input class="planet-bullet" type="radio" name="point"><span>N</span></label>
+					-->
+					
 				</div>
-				<a class="scroll link" href="">Scroll 						
+				<!-- <a class="scroll link" href="">Scroll 						
 					<svg fill="none" height="10" width="22" class="arrow-back" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M17.13.443l4.137 4.137a.65.65 0 010 .92l-4.136 4.136a.65.65 0 01-.92-.92L19.24 5.69H.808v-1.3h18.43l-3.026-3.027a.65.65 0 01.919-.92z"/></svg> 			
-				</a>
+				</a> -->
 				<div class="planet-all">
 					<a class="planet-all__item planet-all__item--mercury" href="experimentation.html" data-planet="Mercury">
 							<!-- Ou mettre le h1? Ou pas de headings? -->
-								<img class="img img--mercury" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
+								<img class="img img--planet-all img--mercury" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Mercury">data</p>
 									<h2 class="title title--planet-exp solo-planet-name" >Mercury</h2>
 								</div>
 					</a>				
 					<a class="planet-all__item planet-all__item--venus" href="experimentation.html" data-planet="Venus">
-							<img class="img img--venus" src="assets/images/venus.png" srcset="assets/images/venus@2x.png 2x" alt="Planet Venus">
+							<img class="img img--planet-all img--venus" src="assets/images/venus.png" srcset="assets/images/venus@2x.png 2x" alt="Planet Venus">
 							<div class="planet-all-content">
 								<p class="planet-data" data-planet="Venus">data</p>
 								<h2 class="title title--planet-exp solo-planet-name" data-planet="Venus">Venus</h2>
 							</div>
 					</a>
 					<a class="planet-all__item planet-all__item--earth" data-planet="Earth">
-							<img class="img img--earth" src="assets/images/earth.png" srcset="assets/images/earth@2x.png 2x" alt="Planet Earth">
+							<img class="img img--planet-all img--earth" src="assets/images/earth.png" srcset="assets/images/earth@2x.png 2x" alt="Planet Earth">
 							<div class="planet-all-content">
 								<p class="planet-data" data-planet="Earth">data</p>
 								<h2 class="title title--planet-exp solo-planet-name" data-planet="Earth">Earth</h2>
 							</div>
 					</a>
 					<a class="planet-all__item planet-all__item--mars" data-planet="Mars">
-							<img class="img img--mars" src="assets/images/mars.png" srcset="assets/images/mars@2x.png 2x" alt="Planet Mars">
+							<img class="img img--planet-all img--mars" src="assets/images/mars.png" srcset="assets/images/mars@2x.png 2x" alt="Planet Mars">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Mars">data</p>
 									<h2 class="title title--planet-exp solo-planet-name" data-planet="Mars">Mars</h2>
 								</div>
 					</a>
 					<a class="planet-all__item planet-all__item--jupiter" data-planet="Jupiter">
-							<img class="img img--jupiter" src="assets/images/jupiter.png" srcset="assets/images/jupiter@2x.png 2x" alt="Planet Jupiter">
+							<img class="img img--planet-all img--jupiter" src="assets/images/jupiter.png" srcset="assets/images/jupiter@2x.png 2x" alt="Planet Jupiter">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Jupiter">data</p>
 									<h2 class="title title--planet-exp solo-planet-name" data-planet="Jupiter">Jupiter</h2>
 								</div>
 					</a>
 					<a class="planet-all__item planet-all__item--saturn" data-planet="Saturn">
-							<img class="img img--saturn" src="assets/images/saturn.png" srcset="assets/images/saturn@2x.png 2x" alt="Planet Saturn">
+							<img class="img img--planet-all img--saturn" src="assets/images/saturn.png" srcset="assets/images/saturn@2x.png 2x" alt="Planet Saturn">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Saturn">data</p>
 									<h2 class="title title--planet-exp solo-planet-name"  data-planet="Saturn">Saturn</h2>
 								</div>
 					</a>
 					<a class="planet-all__item planet-all__item--uranus" data-planet="Uranus">
-							<img class="img img--uranus" src="assets/images/uranus.png" srcset="assets/images/uranus@2x.png 2x" alt="Planet Uranus">
+							<img class="img img--planet-all img--uranus" src="assets/images/uranus.png" srcset="assets/images/uranus@2x.png 2x" alt="Planet Uranus">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Uranus">data</p>
 									<h2 class="title title--planet-exp solo-planet-name" data-planet="Uranus">Uranus</h2>
 								</div>
 					</a>
 					<a class="planet-all__item planet-all__item--neptune" data-planet="Neptune">
-							<img class="img img--neptune" src="assets/images/neptune.png" srcset="assets/images/neptune@2x.png 2x" alt="Planet Neptune">
+							<img class="img img--planet-all img--neptune" src="assets/images/neptune.png" srcset="assets/images/neptune@2x.png 2x" alt="Planet Neptune">
 								<div class="planet-all-content">
 									<p class="planet-data" data-planet="Neptune">data</p>
 									<h2 class="title title--planet-exp solo-planet-name" data-planet="Neptune">Neptune</h2>
