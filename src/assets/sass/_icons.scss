@@ -1,3 +1,4 @@
+
 /* Icons 
 ================================================================================ */
 
@@ -24,20 +25,23 @@ svg{
 
     &--exp{
         @media (min-width:1024px){
-            top: 7rem;
-            left: 6.3rem;        
+            // top: 7rem;
+            // left: 6.3rem;   
+            position: revert;
+            display: block;
+            width: 35px;
+            margin: 0 auto;  
+            transform: inherit;   
         }
     }
 
     &--landing{
         top: 6.9rem;
         background: none;
-        left: 0;
-        
+        left: 4.3rem;
         
         @media (min-width: 728px){
             width: 12rem;
-            left: -5.5rem;
         }
         
         @media (min-width: 1200px){
@@ -106,6 +110,7 @@ svg{
             }
         }
     }  
+
 }
 
 .cap{
@@ -131,37 +136,34 @@ svg{
     }
 }
 
+
 .how-intro__icons{
-    width: 53vw;
-    position: relative;
-    top: -6vw;
-    max-width: 28rem;
-
-    @media (min-width: 728px){
-        top: -10vw;
-    }
-
-    @media (min-width: 1024px){
-        transform: rotate(90deg);   
-        top: 13rem;
-        left: -15rem; 
-    }
-}
-
-.icons-part2, .icons-part1{
+    margin-bottom: 8rem;
+    align-self: center;
+    flex-direction: row;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 70%;
+    place-content: space-between;
+}
 
-    svg{
-        @media (min-width: 1024px){
-            transform: rotate(270deg);
-        }
+.how-intro__icons{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+
+    @media (min-width: 1024px) {
+        margin-right: 12rem;
+        width: 30%;
     }
 }
 
-.icons-part1{
-    margin-bottom: 3rem;
+.how-type{
+    flex-direction: column;
 }
+
+
 
 .svg--dwm{
     width: 39px;
@@ -202,3 +204,35 @@ svg{
 //           transform-origin: center center; 
 // }
 
+
+.icon-how{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+
+    @media (min-width: 500px) {
+        width: 25%;
+    }
+
+    @media (min-width: 900px) {
+        width: 50%;
+    }
+
+
+    span{
+        margin-bottom: 5rem;
+        margin-top: .8rem;
+        font-size: 1.3rem;
+    }
+}
+
+.how-icon__list{
+    @media (min-width: 500px) {
+    display: flex;    
+    align-items: baseline;
+    }
+    // @media (min-width: 800px) {
+    //     flex-direction: column;    
+    // }
+}

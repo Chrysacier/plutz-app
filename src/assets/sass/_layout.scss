@@ -40,7 +40,6 @@ li{
 
 
 .main{
-    max-width: 1800px;
     margin-top: 6rem;
     margin-bottom: 20rem;
     
@@ -136,7 +135,7 @@ li{
 
 /* planet-bullets */
 .planet-bullet{
-    width: 0px;
+    width: 30px;
 
     + span{
         color: var(--color-secondary);
@@ -170,13 +169,17 @@ li{
 
         @media(min-width:1024px){
             position: absolute;
-            top: 34.2rem;
+            top: 34.1rem;
             right: -2rem;
         }
 
         @media(min-width:1200px){
             position: absolute;
             right: -7rem;
+        }
+
+        @media(min-width:1400px){
+            right: -7px;
         }
     }
 }
@@ -227,12 +230,7 @@ li{
         
 
         &:last-of-type{
-            margin-bottom: 5rem;
-
-            
-            @media(min-width: 728px){
-                margin-bottom: 4rem;
-            }
+            margin-bottom: 0rem;
         }
     }
 
@@ -281,20 +279,27 @@ li{
             justify-content: center;
             align-items: center;
             padding: 0px 9.5rem;
+            min-width: 18vw;
             place-content: flex-end;
         }
-
-        // &:first-of-type{
-        //     padding-top: 15rem;
-
-        //     @media (min-width:1024px){
-        //         padding-top: 0px;
-        //     }
-        // }
 
         &--neptune{
             border: none;
         }
+
+        &--jupiter{
+            min-width: 38vw;
+        }
+
+        &--saturn{
+            min-width: 28vw;
+        }
+
+        &--uranus{
+            min-width: 25vw;
+        }
+
+
     }
 
     &-content{
@@ -337,6 +342,7 @@ li{
 
     &--view-all{
         position: absolute;
+        
 
         @media (min-width:1024px){
             left: 6rem;
@@ -355,55 +361,33 @@ li{
     }
 }
 
+
 .section--how{
-    display: flex;
+    display:flex;
     flex-direction: column;
 
+    @media (min-width:900px){
+        flex-direction: row;   
+    }
+
     @media (min-width:1024px){
-        flex-direction: row;
+        max-width: 160rem;
+        margin: 0 auto; 
     }
 
-    @media (min-width:1200px){
-        margin-left: 3rem;    
-    }
-
-    p{
-        margin-top: 0;
-        margin-bottom: 4rem;
-    }
 }
 
 .how-intro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 6rem;
+    max-width: 65rem;  
     
-    @media(min-width:728px){
-        margin-bottom: 2rem;
-    }
-
-    @media(min-width:1024px){
-        align-self: flex-start;
-        position: relative;
-    }
-
     &__content{
-        display: flex;
-        flex-direction: column;
-        max-width: 60rem;
-        align-self: center;
 
-        @media(min-width:1024px){
-            padding-left: 15rem;            
-            max-width: 53rem;
-        }
-
-        @media(min-width:1200px){
-            padding-left: 15rem;            
+        @media (min-width:900px){
+            width: 70%;
         }
     }
 }
+
 
 .swiper-container {
     width: 100%;
@@ -413,9 +397,9 @@ li{
     top: 205px;
 
     @media(min-width:1024px){
-        transform: rotate(90deg);
-        top: 121px;
-        left: 260px;
+        top: 0;
+        height: 100vh;
+        left: 350px;
     }
 }
 
@@ -423,6 +407,8 @@ li{
     align-items: center;
     margin-top: 75px;
     height: 700px !important;
+
+
 }
 
 .swiper-container::after {
@@ -435,8 +421,8 @@ li{
     width: 100vw;
 
     @media(min-width:1024px){
-        width: 100vh;
-        left: 15rem;
+        transform: rotate(90deg);
+        top: 140px;
     }
 }
 
@@ -465,10 +451,25 @@ li{
     z-index: -50;
 }
 
+.swiper-slide-active{
+    @media(min-width: 1024px) {
+        top: 124px;
+    }
+
+}
+
 
 .swiper-pagination{
     top: 0;
+
+    @media(min-width:1024px){
+        transform: rotate(90deg) !important;
+        left: 450px !important;
+    }
 }
+
+
+
 
 .swiper-pagination-bullet{
     opacity: .2;
@@ -496,6 +497,33 @@ li{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     filter: blur(124px);
     transform: rotate(-90deg);
+
+    @media (min-width:1024px) {
+        height: unset;
+    }
+}
+
+
+.planet[data-planet="Mercury"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(237, 234, 213) 0%, rgba(214, 210, 205) 85.87%);
+}
+.planet[data-planet="Venus"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 218, 184) 0%, rgba(119, 155, 193) 85.87%);
+}
+.planet[data-planet="Mars"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(221, 192, 162) 0%, rgba(145, 134, 122) 85.87%);
+}
+.planet[data-planet="Jupiter"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(221, 192, 162) 0%, rgba(145, 134, 122) 85.87%);
+}
+.planet[data-planet="Saturn"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(165, 160, 121) 0%, rgba(119, 135, 103) 85.87%);
+}
+.planet[data-planet="Uranus"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(210, 248, 249) 0%, rgba(115, 150, 156) 85.87%);
+}
+.planet[data-planet="Neptune"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(151, 216, 252) 0%, rgba(83, 63, 154,) 85.87%);
 }
 
 .planet{
@@ -505,7 +533,20 @@ li{
   max-width: 60rem;
   margin: 0 auto;
   max-width: 55rem;
-  margin-top: 39rem;
+  margin-top: 39rem; 
+  &-filter{
+      display: flex;
+      width: 300px;
+      justify-content: space-around;
+      margin: auto;
+  }
+
+  @media(min-width: 1024px){
+      margin-left: 205px;
+      margin-top: 25vh;
+      max-width: 450px;
+  }
+
 }
 
 .scroll{
@@ -556,9 +597,13 @@ li{
 
 .link--arrow{
     transition: 0.3s ease-in-out;
-
+    display: flex;
+    align-items: center;
+    margin-top: 3.5rem;
+    
     svg{
         transition: 0.3s;
+        left: 7px;
     }
 
 
@@ -566,7 +611,7 @@ li{
 
         svg{
             fill: var(--color-text);
-            left: 8px;
+            left: 12px;
             transition: 0.3s;
         }
     }
@@ -579,4 +624,12 @@ li{
             }
         }
     }
+}
+
+.link--view{
+
+    @media(min-width:1024px){
+        margin-top: 10rem;
+    }
+
 }

@@ -10,6 +10,9 @@ let planet_data = document.querySelectorAll(".planet-data");
 let btns_icon = document.querySelectorAll(".btn__icon")
 let previous_data = "Name";
 let planetdata;
+let filter_index = 0;
+let previous_filter_index = 0;
+let check = false;
 
 const json = fetch('assets/js/data.json')
 .then(function(response) {
@@ -105,7 +108,7 @@ buttons_all.forEach(button => {
         }else if(btn_data == "Diameter"){
             measure = "km"
         }else if(btn_data == "Mass"){
-            measure = "x10.24 kg"
+            measure = "x10<sup kg"
         }else if(btn_data == "Rotation_Period"){
             measure = "hours"
         }else if(btn_data == "Gravity"){
@@ -139,34 +142,78 @@ buttons_all.forEach(button => {
 buttons_filter.forEach(button_filter => {
     button_filter.addEventListener('click', (e) =>{
 
+        
         let button_filter_data = button_filter.getAttribute("data-planet")
-        console.log(button_filter_data)
         planet_all_item.forEach(planet_item => {
             let planet_item_data = planet_item.getAttribute("data-planet");
-            
-            if(button_filter_data == planet_item_data){
-                if(button_filter.classList.contains("btn--filter-active")){
-                    planet_item.classList.add("hidden")
-                    button_filter.classList.remove("btn--filter-active")
+
+
+            if(filter_index > 0){
+                console.log("1")
+                
+                 if(button_filter_data == planet_item_data){
+                    if(button_filter.classList.contains("btn--filter-active")){
+                        planet_item.classList.add("hidden")
+                        button_filter.classList.remove("btn--filter-active")
+                        previous_filter_index = filter_index;
+                        filter_index--;
+                        
+
                 }else{
-                    planet_item.classList.remove("hidden")
-                    button_filter.classList.add("btn--filter-active")
+                        planet_item.classList.remove("hidden")
+                        button_filter.classList.add("btn--filter-active")
+                        previous_filter_index = filter_index;
+                        filter_index++;
+
+                    }       
+                } 
+            
+            }else if(filter_index== 0 && previous_filter_index > filter_index  ){
+                console.log("2")
+                check = true
+                planet_all_item.forEach(planet_item => {
+                planet_item.classList.remove("hidden")
+                });
+                if(planet_item_data == "Neptune"){
+                    
+                    previous_filter_index = -1
+                    check = false
                 }
-                
+
+            }else if (filter_index== 0 && check ==false){
+                console.log("3")
+
+                previous_filter_index = 0
+                if (planet_item_data == "Neptune"){
+                    previous_filter_index = filter_index;
+                    filter_index++;
+                }
+                if(button_filter_data != planet_item_data){
+                    planet_item.classList.add("hidden");
+                } 
+                buttons_filter.forEach(button => {
+                    button.classList.remove("btn--filter-active");  
+                    button_filter.classList.add("btn--filter-active");
+                });
             }
-                
         });
-    })
+    });
+
 });
 
 var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N' ]
 let swiper_container = document.querySelector(".swiper-container")
 if (swiper_container){
     var mySwiper = new Swiper ('.swiper-container', {
-        
+        breakpoints:{
+        1024:{
+            direction: 'vertical',
+        }
+    },
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
+
         // If we need pagination
         pagination: {
         el: '.swiper-pagination',
@@ -231,11 +278,21 @@ if (swiper_container){
         });
 
       });
+
+      window.addEventListener("resize", reportWindowSize);
+      function reportWindowSize() {
+        if (window.matchMedia("(min-width: 1020px)").matches) {
+            mySwiper.mousewheel.enable();
+        } else {
+            mySwiper.mousewheel.disable();
+          }
+      }
+      reportWindowSize();
 }
 
 new kursor({
     type: 4,
     removeDefaultCursor: true,
     color: '#ffffff'
-});
+}); 
 

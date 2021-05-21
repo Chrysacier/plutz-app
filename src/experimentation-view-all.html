@@ -8,6 +8,8 @@
 		<script src="assets/js/main.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous"></script>
 	    <link class="favicon" rel="icon" type="image/svg" href="assets/images/icons/logo-symbole-test.svg">
+		<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
 	</head>
 	<body>
 		<div class="container">
@@ -73,7 +75,7 @@
 			</header> 
 			<main class="main main--exp main--view-all">
 				<div class="planet-name planet-name--view-all">
-					<ul>
+					<ul class="planet-filter">
 						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Mercury">M</button></li>
 						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Venus">V</button></li>
 						<li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Earth">E</button></li>
@@ -96,9 +98,9 @@
 					-->
 					
 				</div>
-				<!-- <a class="scroll link" href="">Scroll 						
+				<a class="scroll link" href="">Scroll 						
 					<svg fill="none" height="10" width="22" class="arrow-back" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M17.13.443l4.137 4.137a.65.65 0 010 .92l-4.136 4.136a.65.65 0 01-.92-.92L19.24 5.69H.808v-1.3h18.43l-3.026-3.027a.65.65 0 01.919-.92z"/></svg> 			
-				</a> -->
+				</a>
 				<div class="planet-all">
 					<a class="planet-all__item planet-all__item--mercury" href="experimentation.html" data-planet="Mercury">
 							<!-- Ou mettre le h1? Ou pas de headings? -->

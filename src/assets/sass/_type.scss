@@ -84,7 +84,7 @@ body{
     }
 
     &--how{
-        font-size: 6vw;
+        font-size: 8vw;
         font-weight: 800;
         line-height: 1.1;
     
@@ -93,17 +93,21 @@ body{
         }
 
         @media(min-width: 1024px){
-            font-size: 3.9rem;    
+            font-size: 3.9rem;  
         }
 
         &-p{
             line-height: 1.2;
             margin: 15rem 0px;
             font-size: 8vw;
+            max-width: 160rem;
+            margin-left: auto;
+            margin-right: auto;  
 
             @media(min-width: 1024px){
                 font-size: 5.5rem;
-                margin: 25rem 0px 47rem;
+                margin-top: 26rem;
+                margin-bottom: 26rem;
             }
 
             @media(min-width: 1200px){
@@ -118,6 +122,10 @@ body{
 
    @media (min-width:1024px){
     font-size: 1.7rem;
+   }
+
+   &--footer{
+    font-size: 1.4rem;
    }
 }
 
@@ -141,7 +149,7 @@ body{
             right: inherit;
             top: 4rem;
             position: absolute;
-            color: var(--color-secondary);
+            color: var(--color-primar);
             font-size: 1.4rem;
         }
 
