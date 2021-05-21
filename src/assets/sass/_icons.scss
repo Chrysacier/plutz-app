@@ -58,6 +58,10 @@ svg{
         }
     }
 
+    &--footer{
+        position: absolute;
+    }
+
     &::after{
         content: "";
         position: absolute;
@@ -80,9 +84,21 @@ svg{
         fill: var(--color-primary);  
         transition: .3s all;
 
-        &:hover{
-            fill: var(--color-text);  
-        }
+        // &:focus-within {
+        //     fill: var(--color-text);  
+        // }
+        // &:active {
+        //     fill: var(--color-text);  
+        // }
+        // &:focus-visible {
+        //     fill: var(--color-text);  
+        // }
+        // &:visited {
+        //     fill: var(--color-text);  
+        // }
+        // &:target {
+        //     fill: var(--color-text);  
+        // }
     }
 
     &__icon{
@@ -130,7 +146,7 @@ svg{
 .datavisu--footer{
     .cap{
         &::after{
-            opacity: .2; 
+            opacity: .4; 
             top: .7rem;
         }
     }
@@ -144,18 +160,27 @@ svg{
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    width: 70%;
     place-content: space-between;
-}
-
-.how-intro__icons{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: -webkit-center;
+    max-width: 30rem;    
+    
+    @media (min-width: 500px) {
+        width: 113%;
+        max-width: 55rem; 
+        position: relative;
+    }
+    
+    @media (min-width: 900px) {
+        width: 40%;   
+        max-width: 30rem;
+        left: -5rem;   
+    }
 
     @media (min-width: 1024px) {
-        margin-right: 12rem;
-        width: 30%;
+        top: -5rem;    
+    }
+
+    @media (min-width: 1325px) {
+        top: -6rem;    
     }
 }
 
@@ -175,7 +200,6 @@ svg{
     svg{
         position: relative;
         left: 1px;
-        top: 1px;
     }
 }
 
@@ -183,7 +207,6 @@ svg{
     svg{
         position: relative;
         left: 0;
-        top: 1px;
         transform: rotate(180deg);
         margin-right: 1rem;
     }
@@ -210,6 +233,7 @@ svg{
     flex-direction: column;
     width: 50%;
     align-items: center;
+    margin-bottom: 5rem;
 
     @media (min-width: 500px) {
         width: 25%;
@@ -219,9 +243,35 @@ svg{
         width: 50%;
     }
 
+    svg{
+        width: 20vw;
+        height: 6vw;
+        max-width: 2.8rem;
+        max-height: 2.8rem;
+    }
+
+    &--mass{
+        svg{
+            height: 20vw;
+            @media (min-width: 1024px) {
+                    max-width: 4.8rem;
+                    max-height: 3.8rem;
+            }
+        }
+    }
+
+    &--distance{
+        svg{
+        height: 8vw;
+
+        @media (min-width: 1024px) {
+                max-width: 4.8rem;
+                max-height: 4rem;
+            }
+        }
+    }
 
     span{
-        margin-bottom: 5rem;
         margin-top: .8rem;
         font-size: 1.3rem;
     }
@@ -231,6 +281,7 @@ svg{
     @media (min-width: 500px) {
     display: flex;    
     align-items: baseline;
+    width: 100%;
     }
     // @media (min-width: 800px) {
     //     flex-direction: column;    
