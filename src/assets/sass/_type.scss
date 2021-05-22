@@ -100,15 +100,15 @@ body{
             line-height: 1.2;
             margin: 15rem 0px;
             font-size: 8vw;
-            max-width: 160rem;
+            max-width: 120rem;
             margin-left: auto;
             margin-right: auto;  
 
             @media(min-width: 1024px){
                 font-size: 5.5rem;
-                margin-top: 26rem;
-                margin-bottom: 26rem;
-            }
+                margin-top: 32rem;
+                margin-bottom: 32rem;           
+             }
 
             @media(min-width: 1200px){
                 font-size: 6.4rem;
@@ -149,7 +149,7 @@ body{
             right: inherit;
             top: 4rem;
             position: absolute;
-            color: var(--color-primar);
+            color: var(--color-primary);
             font-size: 1.4rem;
         }
 
@@ -183,3 +183,6 @@ small{
 }
 
 
+.btn--filter{
+    font-size: 1.5rem;
+}
