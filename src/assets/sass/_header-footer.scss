@@ -98,9 +98,9 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding-left: 40px;
-
+    
     &--exp{
+        padding-left: 40px;
         position: fixed;
         background-color: var(--color-bg);
         top: 0;
