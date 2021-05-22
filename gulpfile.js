@@ -86,7 +86,7 @@ const compressImages = () => {
 
 const build = gulp.series(html, styles, javascript);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
-const compress = gulp.series(compressImages);
+// const compress = gulp.series(compressImages);
 
 exports.watch = watch;
 exports.compress = compress;

@@ -53,7 +53,7 @@ buttons_exp.forEach(button => {
 
         let measure = " "
         if(btn_data == "Distance"){
-            measure = "km"
+            measure = "millions km"
         }else if(btn_data == "Diameter"){
             measure = "km"
         }else if(btn_data == "Mass"){
@@ -104,7 +104,7 @@ buttons_all.forEach(button => {
         let btn_data = button.getAttribute("data-type");
         let measure = " "
         if(btn_data == "Distance"){
-            measure = "km"
+            measure = "millions km"
         }else if(btn_data == "Diameter"){
             measure = "km"
         }else if(btn_data == "Mass"){
@@ -202,9 +202,11 @@ buttons_filter.forEach(button_filter => {
 });
 
 var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N' ]
+let swiper_container = document.querySelector(".swiper-container")
+if (swiper_container){
     var mySwiper = new Swiper ('.swiper-container', {
         breakpoints:{
-        1160:{
+        1024:{
             direction: 'vertical',
         }
     },
@@ -279,17 +281,14 @@ var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N' ]
 
       window.addEventListener("resize", reportWindowSize);
       function reportWindowSize() {
-        if (window.matchMedia("(min-width: 1160px)").matches) {
+        if (window.matchMedia("(min-width: 1020px)").matches) {
             mySwiper.mousewheel.enable();
         } else {
             mySwiper.mousewheel.disable();
           }
       }
       reportWindowSize();
-
-
-
-
+    }
 new kursor({
     type: 4,
     removeDefaultCursor: true,

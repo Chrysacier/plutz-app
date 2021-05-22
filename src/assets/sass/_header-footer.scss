@@ -27,7 +27,7 @@
         font-size: 1.3rem;
         letter-spacing: .08rem;
         position: absolute;
-        top: 4.2rem;
+        top: 3.2rem;
         color: var(--color-primary);
 
         @media (min-width: 1024px){
@@ -69,7 +69,7 @@
     }
 
     &--type{
-        padding-left: 1.5rem;
+        padding-left: 0rem;
 
         @media (min-width: 1024px){
             padding-left: 0px;
@@ -95,17 +95,25 @@
     max-width: 101rem;
     left: 0;
     margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
 
     &--exp{
         position: fixed;
         background-color: var(--color-bg);
         top: 0;
-        z-index: 20;
+        z-index: 20;            
+        border-bottom: 1px solid var(--color-primary);
+
 
         @media (min-width:1024px){
             padding: 5.6rem 0;
             height: 100vh;
             box-sizing: border-box;
+            flex-direction: column;
+            border-right: 1px solid var(--color-primary);
         }
     }
 
@@ -133,6 +141,8 @@
     align-items: center;
     overflow-x: scroll;
     margin-left: 10.6rem;
+    height: 14rem;
+    margin-left: 30px;
 
     @media (min-width:800px){
         margin-left: 0px;
@@ -140,30 +150,30 @@
     }
 
     @media (min-width:1024px){
-        width: 16rem;    
+        width: 14rem;    
         overflow: auto;
         height: calc(100% - 38px);  
     }
 
     
-    &::after{
-        content: "";
-        position: absolute;
-        width: 100vw;
-        height: 1px;
-        background-color: var(--color-primary);
-        bottom: 0;
-        left: 0;
-        z-index: 20;
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 100vw;
+    //     height: 1px;
+    //     background-color: var(--color-primary);
+    //     bottom: 0;
+    //     left: 0;
+    //     z-index: 20;
 
-        @media (min-width:1024px){
-            width: 1px;
-            height: 100vh;
-            right: -1px;
-            left: inherit;
-            top: 0;
-        }
-    }
+    //     @media (min-width:1024px){
+    //         width: 1px;
+    //         height: 100vh;
+    //         right: -1px;
+    //         left: inherit;
+    //         top: 0;
+    //     }
+    // }
 
     &::before {
         content: "";

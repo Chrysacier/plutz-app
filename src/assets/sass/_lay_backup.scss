@@ -1,3 +1,5 @@
+/* layout backup 
+================================================================================ */
 /* Layout 
 ================================================================================ */
 
@@ -396,7 +398,8 @@ li{
 }
 
 .swiper-container{
-    height: 35rem;
+    height: 50rem;
+    // height: 60vh;
     width: 100vw;
     position: absolute !important;
     left: 0;
@@ -404,6 +407,9 @@ li{
     display: flex;
     align-items: center;
     margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column-reverse;
 
     @media(min-width:728px) {
         height: 60rem;
@@ -442,11 +448,13 @@ li{
 
 .swiper-wrapper{
     align-items: center !important;
+    top: -11rem;
 }
 
 .swiper-slide {
     height: 24rem !important;
-    width: 24rem!important;
+    // width: 24rem!important;
+    width: 65vw !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -458,13 +466,15 @@ li{
 }
 
 .swiper-slide-active img{
-    transform: scale(1.37);
+    // transform: scale(1.37);
+    transform: scale(1.25);
 }
 
 .swiper-slide-active::after{
     content: "";
     border: 1px solid var(--color-primary);
-    padding: 12rem;
+    // padding: 12rem;
+    padding: 35vw;
     border-radius: 50%;
     position: absolute;
     z-index: -50;
@@ -479,6 +489,9 @@ li{
     top: -4rem;
     font-size: 1.7rem;
     display: flex;
+
+    position: relative!important;
+    height: 3rem;
 
     @media(min-width:728px) {
         justify-content: flex-end;
@@ -646,13 +659,17 @@ li{
   max-width: 60rem;
   margin: 0 auto;
   max-width: 55rem;
-  margin-top: 36rem;
-  
+  margin-top: 38rem;
+
   &-filter{
       display: flex;
       width: 255px;
       justify-content: space-around;
       margin: auto;
+  }
+
+  &__infos{
+    text-align: center;
   }
 
 
