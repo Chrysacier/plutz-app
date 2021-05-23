@@ -1,14 +1,6 @@
 /* Exceptions 
 ================================================================================ */
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-.hidden{
-    display: none;
-}
-
-.logo__text{
+::-webkit-scrollbar, .hidden, .logo__text {
     display: none;
 }

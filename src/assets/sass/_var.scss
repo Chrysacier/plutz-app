@@ -1,20 +1,16 @@
 /* Variables 
 ================================================================================ */
-
 :root {
-    --color-bg:black;
+    --color-bg: black;
     --color-text: white;
     --color-primary: #717171;
     --color-secondary: #303030;
 }
 
-
-
-
 @font-face {
     font-family: "Bandeins Strange";
     src: url(../fonts/BandeinsStrange-Light.woff2) format("woff2"),
-         url(../fonts/BandeinsStrange-Light.otf) format("otf");
+        url(../fonts/BandeinsStrange-Light.otf) format("otf");
     font-weight: 300;
     font-style: normal;
 }
@@ -25,10 +21,11 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Bandeins Strange";
     src: url(../fonts/BandeinsStrange-Bold.woff2) format("woff2"),
-         url(../fonts/BandeinsStrange-Bold.otf) format("otf");
+        url(../fonts/BandeinsStrange-Bold.otf) format("otf");
     font-weight: 800;
     font-style: normal;
 }

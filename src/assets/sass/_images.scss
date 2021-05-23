@@ -1,158 +1,153 @@
 /* Images 
 ================================================================================ */
-.img{
+.img {
   width: 100%;
   position: relative;
 
-  &--planet-landing{
-    width: 9rem;
-    border: 1px solid var(--color-secondary);
-    padding: 2.5rem;    
-    border-radius: 50%; 
-    transition: .4s ease-out; 
-    
-    &:hover{
-      transform: scale(1.2);
-      border: 1px solid transparent;    
-        }
-
-    @media(min-width:728px){
-      width: 15rem;
-      padding: 3rem;
-    }
-
-    @media(min-width:1024px){
-      width: 11rem;
+  &--planet-landing {
+      width: 9rem;
+      border: 1px solid var(--color-secondary);
       padding: 2.5rem;
-    }
+      border-radius: 50%;
+      transition: .4s ease-out;
+
+      &:hover {
+          transform: scale(1.2);
+          border: 1px solid transparent;
+      }
+
+      @media(min-width:728px) {
+          width: 15rem;
+          padding: 3rem;
+      }
+
+      @media(min-width:1024px) {
+          width: 11rem;
+          padding: 2.5rem;
+      }
   }
 
-  &--planet-exp{
-    width: 140px;
-    height: 140px;
-    // width: 45vw;
-    // height: 45vw;
+  &--planet-exp {
+      width: 140px;
+      height: 140px;
 
-    @media(min-width:728px) {
-      width: 285px;
-      height: 285px;
-    }
-  } 
-
-  &--planet-border{
-    border: 1px solid var(--color-primary);
-    padding: 5.9vw;
-    border-radius: 50%;
-  }
-  
-  &--mercury{
-    width: 10%;
-
-    @media(min-width:1024px){
-      width: 5rem;    
-    }
+      @media(min-width:728px) {
+          width: 285px;
+          height: 285px;
+      }
   }
 
-  &--venus{
-    width: 30%;
-
-    @media(min-width:1024px){
-      width: 20rem;    
-    }
+  &--planet-border {
+      border: 1px solid var(--color-primary);
+      padding: 5.9vw;
+      border-radius: 50%;
   }
 
-  &--earth{
-    width: 35%;
+  &--mercury {
+      width: 10%;
 
-    @media(min-width:1024px){
-      width: 25rem;    
-    }
+      @media(min-width:1024px) {
+          width: 5rem;
+      }
   }
 
-  &--mars{
-    width: 20%;
+  &--venus {
+      width: 30%;
 
-    @media(min-width:1024px){
-      width: 10rem;    
-    }
+      @media(min-width:1024px) {
+          width: 20rem;
+      }
   }
 
-  &--jupiter{
-    width: 85%;
+  &--earth {
+      width: 35%;
 
-    @media(min-width:1024px){
-      width: 45rem;
-    }
+      @media(min-width:1024px) {
+          width: 25rem;
+      }
   }
 
-  &--saturn{
-    width: 65%;
+  &--mars {
+      width: 20%;
 
-    @media(min-width:1024px){
-      width: 35rem;
-    }
+      @media(min-width:1024px) {
+          width: 10rem;
+      }
   }
 
-  &--uranus{
-    width: 50%;
+  &--jupiter {
+      width: 85%;
 
-    @media(min-width:1024px){
-      width: 30rem;
-    }
+      @media(min-width:1024px) {
+          width: 45rem;
+      }
   }
 
-  &--neptune{
-    width: 65%;
+  &--saturn {
+      width: 65%;
 
-    @media(min-width:1024px){
-      width: 25rem;
-    }
+      @media(min-width:1024px) {
+          width: 35rem;
+      }
   }
 
-  &--intro{
-    position: absolute;  
-     top: 50%;
-    transform: translateY(-45%);
-    width: 62vh;   
-    max-width: 66rem;
-    left: -13rem;
+  &--uranus {
+      width: 50%;
 
-    @media(min-width:728px){
-      left: -10rem;
-    }
-
-    @media(min-width:900px){
-      transform: translatex(-52%);
-      bottom: 0;
-      width: 85vw;
-      max-width: inherit;
-      top: 25vh;
-      left: 51%;
-    }
-
-    @media(min-width:1200px){
-      width: 115rem;    
-      top: 15%;
-    }
+      @media(min-width:1024px) {
+          width: 30rem;
+      }
   }
 
-  &--how{
-    @media(min-width:1024px){
+  &--neptune {
+      width: 65%;
+
+      @media(min-width:1024px) {
+          width: 25rem;
+      }
+  }
+
+  &--intro {
       position: absolute;
-      left: -10rem;      
-      width: 50rem;
-      top: -22rem;
-    }   
+      top: 50%;
+      transform: translateY(-45%);
+      width: 62vh;
+      max-width: 66rem;
+      left: -13rem;
+
+      @media(min-width:728px) {
+          left: -10rem;
+      }
+
+      @media(min-width:900px) {
+          transform: translatex(-52%);
+          bottom: 0;
+          width: 85vw;
+          max-width: inherit;
+          top: 25vh;
+          left: 51%;
+      }
+
+      @media(min-width:1200px) {
+          width: 115rem;
+          top: 15%;
+      }
   }
 
-  &--planet-all{
-    margin-bottom: 8rem;
+  &--how {
+      @media(min-width:1024px) {
+          position: absolute;
+          left: -10rem;
+          width: 50rem;
+          top: -22rem;
+      }
+  }
+
+  &--planet-all {
+      margin-bottom: 8rem;
   }
 }
 
-
-
-picture{
+picture {
   z-index: -20
 }
-

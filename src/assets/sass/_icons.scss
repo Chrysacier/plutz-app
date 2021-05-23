@@ -1,12 +1,10 @@
-
 /* Icons 
 ================================================================================ */
-
-svg{
+svg {
     fill: white;
 }
 
-.logo{
+.logo {
     position: absolute;
     left: 2em;
     border: none;
@@ -17,120 +15,75 @@ svg{
     top: 50%;
     transform: translateY(-45%);
     height: 38px;
-  
-    
-    svg{
+
+    svg {
         width: 1.8em;
         height: 1.8em;
     }
 
-    &--exp{
+    &--exp {
         position: revert;
         display: block;
         width: 35px;
-        transform: inherit;   
+        transform: inherit;
 
-        @media (min-width:1024px){
-            margin: 0 auto;  
+        @media (min-width:1280px) {
+            margin: 0 auto;
         }
     }
 
-    &--landing{
+    &--landing {
         top: 6.9rem;
         background: none;
         left: 4.3rem;
-        
-        @media (min-width: 728px){
+
+        @media (min-width: 728px) {
             width: 12rem;
         }
-        
-        @media (min-width: 1200px){
+
+        @media (min-width: 1200px) {
             position: fixed;
             left: 4.5rem;
         }
 
-        svg{
+        svg {
             width: 12rem;
 
-            @media (min-width: 728px){
+            @media (min-width: 728px) {
                 width: 10rem;
             }
         }
     }
 
-    &--footer{
+    &--footer {
         position: absolute;
     }
 
-    &::after{
-        content: "";
-        position: absolute;
-        width: 92px;
-        height: 71px;
-        bottom: -12px;
-        left: -31px;
-        z-index: -1;
-    }
-
-    &__text{
+    &__text {
         text-indent: 100%;
         white-space: nowrap;
-        position: absolute;    
+        position: absolute;
     }
 }
 
-.btn{
-    svg{
-        fill: var(--color-primary);  
+.btn {
+    svg {
+        fill: var(--color-primary);
         transition: .3s all;
-
-        // &:focus-within {
-        //     fill: var(--color-text);  
-        // }
-        // &:active {
-        //     fill: var(--color-text);  
-        // }
-        // &:focus-visible {
-        //     fill: var(--color-text);  
-        // }
-        // &:visited {
-        //     fill: var(--color-text);  
-        // }
-        // &:target {
-        //     fill: var(--color-text);  
-        // }
     }
 
-    &__icon{
+    &__icon {
         width: 2.2rem;
         height: 2.2rem;
-    
-        // &--distance{
-        //     width: 2.8rem;
-        //     height: 2.8rem;  
+    }
 
-        //     @media (min-width:1024px){
-        //         width: 3.1rem;
-        //         height: 3.1rem;      
-        //     }
-        // }
-    
-        // &--mass{
-        //     position: relative;
-        //     top: .5rem;
-        //     width: 3.3rem;
-        //     height: 3.3rem;  
-
-        //     @media (min-width:1024px){
-        //         top: 0px;
-        //     }
-        // }
-    }  
-
+    &-icon--active {
+        fill: white;
+    }
 }
 
-.cap{
-    &::after{
+.cap {
+    &::after {
         background-image: url(../images/icons/logo-after-test.svg);
         width: .8rem;
         height: .8rem;
@@ -143,17 +96,16 @@ svg{
     }
 }
 
-.datavisu--footer{
-    .cap{
-        &::after{
-            opacity: .4; 
+.datavisu--footer {
+    .cap {
+        &::after {
+            opacity: .4;
             top: .7rem;
         }
     }
 }
 
-
-.how-intro__icons{
+.how-intro__icons {
     margin-bottom: 8rem;
     align-self: center;
     flex-direction: row;
@@ -161,74 +113,38 @@ svg{
     flex-wrap: wrap;
     align-items: baseline;
     place-content: space-between;
-    max-width: 30rem;    
-    
+    max-width: 30rem;
+
     @media (min-width: 500px) {
         width: 113%;
-        max-width: 55rem; 
+        max-width: 55rem;
         position: relative;
     }
-    
+
     @media (min-width: 900px) {
-        width: 40%;   
+        width: 40%;
         max-width: 30rem;
-        left: -5rem;   
+        left: -5rem;
     }
 
     @media (min-width: 1024px) {
-        top: -5rem;    
-    }
-
-    @media (min-width: 1325px) {
-        top: -6rem;    
+        top: -5rem;
     }
 }
 
-.how-type{
+.how-type {
     flex-direction: column;
 }
 
 
-
-.svg--dwm{
-    width: 39px;
-    height: 20px;
-}
-
-
-.link{
-    svg{
+.link {
+    svg {
         position: relative;
         left: 1px;
     }
 }
 
-.link--back{
-    svg{
-        position: relative;
-        left: 0;
-        transform: rotate(180deg);
-        margin-right: 1rem;
-    }
-}
-
-.btn-icon--active{
-    fill: white;
-}
-
-// .favicon{
-//     fill: black;
-// }
-
-// .rot-hover:hover{
-
-//           transition: 0.70s;
-//           transform: rotate(360deg);       
-//           transform-origin: center center; 
-// }
-
-
-.icon-how{
+.icon-how {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -243,47 +159,23 @@ svg{
         width: 50%;
     }
 
-    svg{
+    svg {
         width: 20vw;
         height: 6vw;
         max-width: 2.8rem;
         max-height: 2.8rem;
     }
 
-    &--mass{
-        svg{
-            height: 20vw;
-            @media (min-width: 1024px) {
-                    max-width: 4.8rem;
-                    max-height: 3.8rem;
-            }
-        }
-    }
-
-    &--distance{
-        svg{
-        height: 8vw;
-
-        @media (min-width: 1024px) {
-                max-width: 4.8rem;
-                max-height: 4rem;
-            }
-        }
-    }
-
-    span{
+    span {
         margin-top: .8rem;
         font-size: 1.3rem;
     }
 }
 
-.how-icon__list{
+.how-icon__list {
     @media (min-width: 500px) {
-    display: flex;    
-    align-items: baseline;
-    width: 100%;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
     }
-    // @media (min-width: 800px) {
-    //     flex-direction: column;    
-    // }
 }
