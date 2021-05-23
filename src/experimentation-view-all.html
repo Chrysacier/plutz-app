@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Plutz - Dataplay</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/main.min.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link class="favicon" rel="icon" type="image/svg" href="assets/images/icons/logo-symbole-test.svg">
-    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experimentation | Plutz - Dataplay | Design Web & Mobile</title>
+        
+        <!-- Primary Meta Tags -->
+    
+        <meta name="title" content="Plutz - Dataplay | Design Web & Mobile">
+        <meta name="description" content="Plutz allows you to compare various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp.">
+        
+        <!-- Open Graph / Facebook -->
+        
+        <!-- <meta property="og:url" content="http://angie-courtoy.be/projets/dataplay/"> -->
+        <!-- <meta property="og:url" content="http://chrysanthe-gomree.be/projets/dataplay/"> -->
+        <!-- <meta property="og:url" content="http://florent-chaltin.be/projets/dataplay/"> -->
+        <!-- <meta property="og:url" content="http://carolinedaoud.be/projets/dataplay/"> -->
+        <meta property="og:title" content="Plutz - Dataplay | Design Web & Mobile">
+        <meta property="og:description" content="Plutz allows you to compare various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp.">
+        <!-- <meta property="og:image" content="http://angie-courtoy.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta property="og:image" content="http://chrysanthe-gomree.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta property="og:image" content="http://florent-chaltin.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta property="og:image" content="http://carolinedaoud.be/projets/dataplay/assets/images/meta.png"> -->
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- <meta name="twitter:url" content="http://angie-courtoy.be/projets/dataplay/"> -->
+        <!-- <meta name="twitter:url" content="http://chrysanthe-gomree.be/projets/dataplay/"> -->
+        <!-- <meta name="twitter:url" content="http://florent-chaltin.be/projets/dataplay/"> -->
+        <!-- <meta name="twitter:url" content="http://carolinedaoud.be/projets/dataplay/"> -->
+        <meta name="twitter:title" content="Plutz - Dataplay | Design Web & Mobile">
+        <meta name="twitter:description" content="Plutz allows you to compare various data about the planets in the solar system in order to rediscover and visualize numbers that can be difficult to grasp">
+        <!-- <meta name="twitter:image" content="http://angie-courtoy.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta name="twitter:image" content="http://chrysanthe-gomree.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta name="twitter:image" content="http://florent-chaltin.be/projets/dataplay/assets/images/meta.png"> -->
+        <!-- <meta name="twitter:image" content="http://carolinedaoud.be/projets/dataplay/assets/images/meta.png"> -->
+    
+    
+        <link class="favicon" rel="icon" type="image/svg" href="assets/images/icons/favicon.svg">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+        <script src="assets/js/main.min.js" defer></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    </head>
 
 <body>
     <div class="container">
@@ -24,8 +59,8 @@
                 </svg>
             </a>
             <nav class="nav">
-                <ul class="nav-icons">
-                    <li class="nav-icons__item nav-icons__item--type">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--type">
                         <button class="btn btn--all btn--type btn-data" data-type="Type">
                             <span class="btn-data__text btn-data__text--type">Type</span>
                             <svg width="35" height="37" viewBox="0 0 35 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +68,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--distance">
+                    <li class="nav__item nav__item--distance">
                         <button class="btn btn--all btn--distance btn-data" data-type="Distance">
                             <span class="btn-data__text btn-data__text--distance">Distance</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +76,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--diameter">
+                    <li class="nav__item nav__item--diameter">
                         <button class="btn btn--all btn--diameter btn-data" data-type="Diameter">
                             <span class="btn-data__text btn-data__text--diameter">Diameter</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +84,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--mass">
+                    <li class="nav__item nav__item--mass">
                         <button class="btn btn--all btn--mass btn-data" data-type="Mass">
                             <span class="btn-data__text btn-data__text--mass">Mass</span>
                             <svg width="35" height="37" viewBox="0 0 35 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +95,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--rotation">
+                    <li class="nav__item nav__item--rotation">
                         <button class="btn btn--all btn--rotation btn-data" data-type="Rotation_Period">
                             <span class="btn-data__text btn-data__text--rotation">Rotation</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +108,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--gravity">
+                    <li class="nav__item nav__item--gravity">
                         <button class="btn btn--all btn--gravity btn-data" data-type="Gravity">
                             <span class="btn-data__text btn-data__text--gravity">Gravity</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +118,7 @@
                             </svg>
                         </Button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--temperature">
+                    <li class="nav__item nav__item--temperature">
                         <button class="btn btn--all btn--temperature btn-data" data-type="Mean_Temperature">
                             <span class="btn-data__text btn-data__text--temperature">Temperature</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +126,7 @@
                             </svg>
                         </button>
                     </li>
-                    <li class="nav-icons__item nav-icons__item--satellites">
+                    <li class="nav__item nav__item--satellites">
                         <button class="btn btn--all btn--satellites btn-data" data-type="Number_of_satellites">
                             <span class="btn-data__text btn-data__text--satellites">Satellites</span>
                             <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,9 +150,7 @@
                     <li class="planet-bullet"><button class="btn btn--filter btn--filter-active" data-planet="Neptune">N</button></li>
                 </ul>
             </div>
-            <!-- <a class="scroll link" href="">Scroll 						
-					<svg fill="none" height="10" width="22" class="arrow-back" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M17.13.443l4.137 4.137a.65.65 0 010 .92l-4.136 4.136a.65.65 0 01-.92-.92L19.24 5.69H.808v-1.3h18.43l-3.026-3.027a.65.65 0 01.919-.92z"/></svg> 			
-				</a> -->
+
             <div class="planet-all">
                 <a class="planet-all__item planet-all__item--mercury" href="experimentation.html" data-planet="Mercury">
                     <img class="img img--planet-all img--mercury" src="assets/images/mercury.png" srcset="assets/images/mercury@2x.png 2x" alt="Planet Mercury">

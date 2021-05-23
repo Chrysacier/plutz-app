@@ -9,6 +9,10 @@ body {
 a {
     text-decoration: none;
     color: var(--color-text);
+
+    &:focus{
+        outline: none;
+    }
 }
 
 ul {
@@ -66,6 +70,7 @@ li {
             margin-left: 14rem;
             position: relative;
             justify-content: inherit;
+            max-width: none;
         }
     }
 }
@@ -76,7 +81,7 @@ li {
         content: "";
         width: 1px;
         background-color: var(--color-secondary);
-        opacity: .7;
+        opacity: .6;
         position: fixed;
         top: 0;
         left: 33%;
@@ -92,20 +97,20 @@ li {
         top: 0;
         right: 33%;
         z-index: -10;
-        opacity: .7;
+        opacity: .6;
     }
 
     @media(min-width:1024px) {
         &::before {
             left: 25%;
             z-index: -10;
-            opacity: .7;
+            opacity: .6;
         }
 
         &::after {
             top: 0;
             right: 25%;
-            opacity: .7;
+            opacity: .6;
         }
     }
 
@@ -120,7 +125,7 @@ li {
                 top: 0;
                 left: 50%;
                 z-index: -10;
-                opacity: .7;
+                opacity: .6;
             }
         }
     }
@@ -131,6 +136,10 @@ li {
 .planet-bullet {
     width: 30px;
 
+    :hover{
+        color: green;
+    }
+
     +span {
         color: var(--color-secondary);
     }
@@ -140,9 +149,11 @@ li {
         color: var(--color-text);
     }
 
-    &:hover+span {
+    &:hover+span, 
+    &:focus+span {
         font-weight: 700;
         color: var(--color-primary);
+        outline: none;
     }
 }
 
@@ -223,12 +234,20 @@ li {
         &:last-of-type {
             margin-bottom: 0rem;
         }
+
+        &:hover > .img--planet-landing, 
+        &:focus > .img--planet-landing{
+            transform: scale(1.2);
+            border: 1px solid transparent;
+
+        }
     }
 
     &-text {
         display: flex;
         flex-direction: column;
         margin-left: 2.5rem;
+
 
         @media(min-width: 728px) {
             margin-left: 5.5rem;
@@ -238,6 +257,15 @@ li {
             margin-top: 3.5rem;
             align-items: center;
             margin-left: 0px;
+        }
+
+        .link{
+            transition: .3s all;
+
+            &:hover, 
+            &:focus {
+                color: var(--color-primary)
+            }
         }
     }
 }
@@ -268,7 +296,7 @@ li {
             justify-content: center;
             align-items: center;
             padding: 0px 9.5rem;
-            min-width: 14vw;
+            min-width: 16vw;
             place-content: flex-end;
         }
 
@@ -280,20 +308,25 @@ li {
             }
         }
 
-        &--neptune {
-            border: none;
+        &--earth {
+            min-width: 20vw;
         }
 
         &--jupiter {
-            min-width: 30vw;
+            min-width: 35vw;
         }
 
         &--saturn {
-            min-width: 23vw;
+            min-width: 27vw;
         }
 
         &--uranus {
-            min-width: 20vw;
+            min-width: 24vw;
+        }
+
+        &--neptune {
+            min-width: 22vw;
+            border: none;
         }
     }
 
@@ -311,10 +344,6 @@ li {
             transform: translateY(-50%);
         }
     }
-}
-
-.link-view-specific {
-    padding: 17rem 5rem;
 }
 
 .link--back {
@@ -361,17 +390,15 @@ li {
     }
 }
 
-.how-intro {
-    max-width: 65rem;
+.how-content{
+        max-width: 65rem;
 
-    &__content {
         @media (min-width:900px) {
             width: 70%;
             padding-left: 3rem;
             box-sizing: border-box;
             max-width: 68rem;
         }
-    }
 }
 
 .swiper{
@@ -462,6 +489,12 @@ li {
             display: flex !important;
             align-items: center !important;
             padding: 1rem;
+
+            &:hover, 
+            &:focus{
+                opacity: 1;
+                outline: none;
+            }
         }
     }
 
@@ -512,10 +545,10 @@ li {
         align-items: flex-start;
         margin-left: 0;
         margin-top: 0;
-        justify-content: center;
         margin: 0;
         width: 33vw;
         max-width: 42rem;
+        margin-top: 32vh;
     }
 
     &::before {
@@ -531,22 +564,54 @@ li {
         transform: rotate(-90deg);
 
         @media(min-width:1280px) {
-            top: calc(15% + 5.9vw);
-            left: 50%;
-            width: 250px;
-            height: 500px;
-            opacity: .5;
+            top: calc(15% + -13.1vw);
+            left: 40%;
+            width: 52rem;
+            height: 96rem;
+            opacity: 0.35;
         }
     }
+}
+
+
+.planet[data-planet="Mercury"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, #8A806B 0%, rgba(106, 93, 73, 0.8) 85.87%);
+    opacity: 0.4;
+}
+.planet[data-planet="Venus"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+}
+.planet[data-planet="Mars"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(227, 112, 67, 0.8) 0%, rgba(218, 107, 63, 0.6) 85.87%);
+}
+.planet[data-planet="Jupiter"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, #8C623E 0%, rgba(232, 201, 174, 0.6) 85.87%);
+}
+.planet[data-planet="Saturn"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, #a5a079 0%, #778767b8 85.87%);
+}
+.planet[data-planet="Uranus"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, rgba(174, 227, 233, 0.6) 0%, rgba(141, 183, 188, 0.51) 85.87%);
+}
+.planet[data-planet="Neptune"]::before{
+    background: radial-gradient(50% 50% at 50% 50%, #63b8e7 0%, #2433a3a1 85.87%);
 }
 
 .btn{
     &--filter {
         display: flex;
+
+        &:hover{
+            color: red;
+        }
     }
 
     &--type:active+span {
         display: block;
+    }
+
+    &:focus{
+        outline: none;
     }
 }
 
@@ -561,11 +626,13 @@ li {
         left: 7px;
     }
 
-    &:hover {
+    &:hover, 
+    &:focus {
         svg {
             fill: var(--color-text);
             left: 12px;
             transition: 0.3s;
+            outline: none;
         }
     }
 
@@ -574,19 +641,22 @@ li {
         margin: 0;
         top: 6rem;
         top: 18.5rem;
+        left: 54px;
 
         svg {
             left: -9px;
             transform: rotate(180deg);
         }
 
-        &:hover {
+        &:hover, 
+        &:focus {
             svg {
                 left: -14px;
+                outline: none;
             }
         }
 
-        @media(min-width:1024px) {
+        @media(min-width:1280px) {
             margin-left: 0px;
             left: 21rem;
             top: 6rem;
@@ -606,28 +676,4 @@ li {
     max-width: 105rem;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-
-.planet[data-planet="Mercury"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, #8A806B 0%, rgba(106, 93, 73, 0.8) 85.87%);
-}
-.planet[data-planet="Venus"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
-}
-.planet[data-planet="Mars"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(227, 112, 67, 0.8) 0%, rgba(218, 107, 63, 0.6) 85.87%);
-}
-.planet[data-planet="Jupiter"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, #8C623E 0%, rgba(232, 201, 174, 0.6) 85.87%);
-}
-.planet[data-planet="Saturn"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, #a5a079 0%, #778767b8 85.87%);
-}
-.planet[data-planet="Uranus"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(174, 227, 233, 0.6) 0%, rgba(141, 183, 188, 0.51) 85.87%)
-}
-.planet[data-planet="Neptune"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, #63b8e7 0%, #2433a3a1 85.87%);
 }

@@ -26,6 +26,7 @@ svg {
         display: block;
         width: 35px;
         transform: inherit;
+        height: 3.4rem;
 
         @media (min-width:1280px) {
             margin: 0 auto;
@@ -105,7 +106,7 @@ svg {
     }
 }
 
-.how-intro__icons {
+.how-icons {
     margin-bottom: 8rem;
     align-self: center;
     flex-direction: row;
@@ -130,52 +131,39 @@ svg {
     @media (min-width: 1024px) {
         top: -5rem;
     }
-}
 
-.how-type {
-    flex-direction: column;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        margin-bottom: 5rem;
+    
+        @media (min-width: 500px) {
+            width: 25%;
+        }
+    
+        @media (min-width: 900px) {
+            width: 50%;
+        }
+    
+        svg {
+            width: 20vw;
+            height: 6vw;
+            max-width: 2.8rem;
+            max-height: 2.8rem;
+        }
+    
+        span {
+            margin-top: .8rem;
+            font-size: 1.3rem;
+        }
+    }
 }
-
 
 .link {
     svg {
         position: relative;
         left: 1px;
-    }
-}
-
-.icon-how {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
-    margin-bottom: 5rem;
-
-    @media (min-width: 500px) {
-        width: 25%;
-    }
-
-    @media (min-width: 900px) {
-        width: 50%;
-    }
-
-    svg {
-        width: 20vw;
-        height: 6vw;
-        max-width: 2.8rem;
-        max-height: 2.8rem;
-    }
-
-    span {
-        margin-top: .8rem;
-        font-size: 1.3rem;
-    }
-}
-
-.how-icon__list {
-    @media (min-width: 500px) {
-        display: flex;
-        align-items: baseline;
-        width: 100%;
     }
 }

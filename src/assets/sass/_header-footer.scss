@@ -37,14 +37,15 @@
         transition: .5s all;
     
         &__text {
-            display: none;
+            // display: none;
             order: 2;
             font-size: 1.3rem;
             letter-spacing: .08rem;
             position: absolute;
             top: 3.5rem;
-            color: var(--color-primary);
+            opacity: 0;
             transition: .5s all;
+            color: var(--color-primary);
     
             @media (min-width: 1280px) {
                 top: 2.8em;
@@ -55,17 +56,32 @@
             transition: .5s all;
         }
     
-        &:hover>&__text {
-            display: block;
+        &:hover>&__text, 
+        &:focus>&__text {
+            // display: block;
+            opacity: 1;
+            outline: none;
         }
     
         &:focus-within>&__text {
-            display: block;
             color: var(--color-text);
+            opacity: 1;
         }
     
         &:focus-within svg {
             fill: var(--color-text);
+
+        }
+    }
+
+    &--type{
+        padding-left: 0px;
+    }
+
+    &--satellites{
+        padding-right: 7rem;
+        @media (min-width: 728px) {
+            padding-right: 0px;
         }
     }
 }
@@ -121,15 +137,22 @@
     height: 14rem;
     margin-left: 30px;
 
-    @media (min-width:800px) {
-        margin-left: 0px;
+    @media (min-width:728px) {
+        width: calc(100vw - 9rem);
         justify-content: center;
+        margin-left: 0;
+    }
+
+    @media (min-width:850px) {
+            margin-left: -9rem;
+            width: 100vw;
     }
 
     @media (min-width:1280px) {
         width: 14rem;
         overflow: auto;
         height: calc(100% - 38px);
+        margin-left: 0;
     }
 
     &::before {
@@ -139,19 +162,20 @@
         right: 0;
         top: 0;
         bottom: 0;
-        width: 205px;
-        background: -webkit-gradient(linear, right top, left top, from(#000000), to(#0000001f));
+        width: 175px;
+        background: -webkit-gradient(linear, right top, left top, from(#000000), to(#00000059));
         pointer-events: none;
+        filter: blur(7px);
 
         @media (min-width:728px) {
             background: none;
         }
     }
 
-    &-icons {
+    &__list {
         display: flex;
         margin: 0px;
-        top: -2px;
+        top: 2px;
         position: relative;
         align-items: baseline;
         padding-right: 13rem;
@@ -191,6 +215,7 @@
         height: 1px;
         background-color: var(--color-secondary);
         left: -5.5rem;
+        opacity: .6;
     }
 
     &__infos {
@@ -211,6 +236,7 @@
             height: 1px;
             background-color: var(--color-secondary);
             bottom: -4rem;
+            opacity: .6;
         }
 
         &__copyright {
@@ -223,7 +249,8 @@
     a {
         transition: .3s all;
 
-        &:hover {
+        &:hover, 
+        &:focus {
             color: var(--color-primary);
         }
     }
