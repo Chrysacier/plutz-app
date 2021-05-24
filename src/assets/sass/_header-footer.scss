@@ -18,17 +18,17 @@
     }
 
     &--filter {
-        color: white;
         width: 30px;
         padding: 10px;
-        opacity: .2;
+        color: var(--color-secondary);
 
         @media (min-width: 1280px) {
             width: 50px;
         }
 
         &-active {
-            opacity: 1;
+            color: white;
+
         }
     }
 
@@ -55,7 +55,27 @@
         >&__text {
             transition: .5s all;
         }
-    
+        >svg>path {
+            transition: .5s all;
+        }
+
+        &--active span{
+            color: var(--color-text);
+            opacity: 1;
+            outline: none; 
+        }
+        &--active svg>path{
+            fill: var(--color-text);
+            transition: .5s all;
+
+        }
+        &:hover>&__text{
+            opacity: 1;
+            outline: none;
+            
+        }
+
+        /*
         &:hover>&__text, 
         &:focus>&__text {
             // display: block;
@@ -72,6 +92,7 @@
             fill: var(--color-text);
 
         }
+        */
     }
 
     &--type{

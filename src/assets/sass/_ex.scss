@@ -4,3 +4,17 @@
 ::-webkit-scrollbar, .hidden, .logo__text {
     display: none;
 }
+
+.team__list--desktop{
+    display: none;
+
+    @media (min-width: 640px) {
+        display: block;
+    }
+}
+
+.team__list--mobile{
+    @media (min-width: 640px) {
+        display: none;
+    }
+}

@@ -4,6 +4,7 @@ body {
     background-color: black;
     color: white;
     font-weight: 300;
+    
 }
 
 a {
@@ -41,6 +42,12 @@ li {
 
     @media(min-width:1024px) {
         margin-bottom: 10rem;
+    }
+
+    &--landing{
+        @media(min-width:1024px) {
+            margin-bottom: 30rem;
+        }
     }
 
     &--exp {
@@ -136,10 +143,6 @@ li {
 .planet-bullet {
     width: 30px;
 
-    :hover{
-        color: green;
-    }
-
     +span {
         color: var(--color-secondary);
     }
@@ -152,7 +155,7 @@ li {
     &:hover+span, 
     &:focus+span {
         font-weight: 700;
-        color: var(--color-primary);
+        // color: var(--color-primary);
         outline: none;
     }
 }
@@ -379,7 +382,7 @@ li {
 .section--how {
     display: flex;
     flex-direction: column;
-    max-width: 120rem;
+    max-width: 88rem;
 
     @media (min-width:900px) {
         flex-direction: row;
@@ -548,7 +551,7 @@ li {
         margin: 0;
         width: 33vw;
         max-width: 42rem;
-        margin-top: 32vh;
+        margin-top: 36vh;
     }
 
     &::before {
@@ -602,7 +605,7 @@ li {
         display: flex;
 
         &:hover{
-            color: red;
+            color: var(--color-text);
         }
     }
 

@@ -7,7 +7,7 @@ let exp_planet = document.querySelector(".planet");
 let planet_infos = document.querySelector(".planet__infos");
 let planet_all_item = document.querySelectorAll(".planet-all__item");
 let planet_data = document.querySelectorAll(".planet-data");
-let btns_icon = document.querySelectorAll(".btn__icon");
+let btns_icon = document.querySelectorAll(".btn-data");
 let previous_data = "Name";
 let planetdata;
 let filter_index = 0;
@@ -48,7 +48,7 @@ buttons_exp.forEach(button => {
         } else if (btn_data == "Diameter") {
             measure = "km";
         } else if (btn_data == "Mass") {
-            measure = "x10.24 kg";
+            measure = "x10<sup>24</sup> kg";
         } else if (btn_data == "Rotation_Period") {
             measure = "hours";
         } else if (btn_data == "Gravity") {
@@ -67,14 +67,20 @@ buttons_exp.forEach(button => {
                 planet_infos.innerHTML = `${planets.Informations}`;
                 previous_data = "Name";
                 btns_icon.forEach(btn_icon => {
-                    btn_icon.classList.remove("btn-icon--active");
+                    if(btn_icon.getAttribute("data-type") == btn_data){
+                        btn_icon.classList.remove("btn-data--active");
+                    }
                 });
             } else {
                 planet_title.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`;
                 planet_infos.innerHTML = `${planets['Facts'][0][btn_data]}`;
                 btns_icon.forEach(btn_icon => {
                     let btn_icon_data = btn_icon.getAttribute("data-type");
-                    btn_icon.classList.add("btn-icon--active");
+                    if(btn_icon.getAttribute("data-type") == btn_data){
+                        btn_icon.classList.add("btn-data--active");
+                    }else{
+                        btn_icon.classList.remove("btn-data--active");
+                    }
                 });
                 previous_data = btn_data;
             }
@@ -93,7 +99,7 @@ buttons_all.forEach(button => {
         } else if (btn_data == "Diameter") {
             measure = "km";
         } else if (btn_data == "Mass") {
-            measure = "x10<sup kg";
+            measure = "x10<sup>24</sup> kg";
         } else if (btn_data == "Rotation_Period") {
             measure = "hours";
         } else if (btn_data == "Gravity") {
@@ -115,11 +121,23 @@ buttons_all.forEach(button => {
                         if (previous_data == btn_data) {
                             planet_data.forEach(planet_data_mono => {
                                 planet_data_mono.classList.add("hidden");
+                                btns_icon.forEach(btn_icon => {
+                                    if(btn_icon.getAttribute("data-type") == btn_data){
+                                        btn_icon.classList.remove("btn-data--active");
+                                    }                                
+                                });
                             });
                             check = true;
                             previous_data = "None";
                         } else if (previous_data != btn_data && check != true) {
                             planet_data_mono.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`;
+                            btns_icon.forEach(btn_icon => {
+                                if(btn_icon.getAttribute("data-type") == btn_data){
+                                    btn_icon.classList.add("btn-data--active");
+                                }else{
+                                    btn_icon.classList.remove("btn-data--active");
+                                }
+                            });
                             if (current_planet_data == "Neptune") {
                                 previous_data = btn_data;
                             }
@@ -246,11 +264,11 @@ if (swiper_container) {
             } else {
                 let measure = " ";
                 if (previous_data == "Distance") {
-                    measure = "millions km";
+                    measure = "km";
                 } else if (previous_data == "Diameter") {
                     measure = "km";
                 } else if (previous_data == "Mass") {
-                    measure = "x10.24 kg";
+                    measure = "x10<sup>24</sup> kg";
                 } else if (previous_data == "Rotation_Period") {
                     measure = "hours";
                 } else if (previous_data == "Gravity") {
@@ -281,3 +299,38 @@ new kursor({
     removeDefaultCursor: true,
     color: '#ffffff'
 });
+
+// view all drag scroll
+
+
+const slider_all = document.querySelector('.planet-all');
+
+if(slider_all){
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider_all.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider_all.classList.add('active');
+    startX = e.pageX - slider_all.offsetLeft;
+    scrollLeft = slider_all.scrollLeft;
+    });
+    slider_all.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider_all.classList.remove('active');
+    });
+    slider_all.addEventListener('mouseup', () => {
+    isDown = false;
+    slider_all.classList.remove('active');
+    });
+    slider_all.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider_all.offsetLeft;
+    const walk = (x - startX) * 2; //scroll speed
+    slider_all.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+    });
+    
+}

@@ -149,138 +149,138 @@ picture {
 
 .img--planet-all{
 //     // width: 6rem;
-//     border: 1px solid transparent;
-//     padding: 4rem;
-//     border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 4rem;
+    border-radius: 50%;
     transition: .4s ease-out
 }
 
-// .planet-all__item:hover > .img--planet-all{
-//     border: 1px solid var(--color-secondary);
-//     border-radius: 50%;
-//     padding: 4rem;
-// }
+.planet-all__item:hover > .img--planet-all{
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    padding: 4rem;
+}
 
 .planet-all__item--mercury:hover > .img--mercury, 
 .planet-all__item--mercury:focus > .img--mercury {
-        width: 6.5rem;
+        width: 7.5rem;
         outline: none;
 }
 
 .planet-all__item--venus:hover > .img--venus, 
 .planet-all__item--venus:focus > .img--venus {
-        width: 22rem;
+        width: 23rem;
         outline: none;
 }
 
 .planet-all__item--earth:hover > .img--earth,
 .planet-all__item--earth:focus > .img--earth{
-        width: 27rem;
+        width: 28rem;
         outline: none;
 }
 
 .planet-all__item--mars:hover > .img--mars, 
 .planet-all__item--mars:focus > .img--mars{
-        width: 12rem;
+        width: 13rem;
         outline: none;
 }
 
 .planet-all__item--jupiter:hover > .img--jupiter,
 .planet-all__item--jupiter:focus > .img--jupiter {
-        width: 47rem;
+        width: 48rem;
         outline: none;
 }
 
 .planet-all__item--saturn:hover > .img--saturn,
 .planet-all__item--saturn:focus > .img--saturn {
-        width: 37rem;
+        width: 38rem;
         outline: none;
 }
 
 .planet-all__item--uranus:focus > .img--uranus,
 .planet-all__item--uranus:hover > .img--uranus {
-        width: 32rem;
+        width: 33rem;
         outline: none;
 }
 
 .planet-all__item--neptune:hover > .img--neptune,
 .planet-all__item--neptune:focus > .img--neptune {
-        width: 29rem;
+        width: 30rem;
         outline: none;
 }
 
-.planet-all__item:hover:after, 
-.planet-all__item:focus:after {
-    content: "";
-    position: relative;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    width: 35rem;
-    height: 16rem;
-    top: -40vh;
-    z-index: -1;
-    filter: blur(124px);
-    transform: rotate(-90deg);
-    outline: none;
-}
+// .planet-all__item:hover:after, 
+// .planet-all__item:focus:after {
+//     content: "";
+//     position: relative;
+//     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+//     width: 35rem;
+//     height: 16rem;
+//     top: -40vh;
+//     z-index: -1;
+//     filter: blur(124px);
+//     transform: rotate(-90deg);
+//     outline: none;
+// }
 
 
-.planet-all__item--mercury:hover::after,
-.planet-all__item--mercury:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, #8A806B 0%, rgba(106, 93, 73, 0.8) 85.87%);
-    outline: none;
-}
+// .planet-all__item--mercury:hover::after,
+// .planet-all__item--mercury:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, #8A806B 0%, rgba(106, 93, 73, 0.8) 85.87%);
+//     outline: none;
+// }
 
-.planet-all__item--venus:hover::after,
-.planet-all__item--venus:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
-    outline: none;
-}
+// .planet-all__item--venus:hover::after,
+// .planet-all__item--venus:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+//     outline: none;
+// }
 
-.planet-all__item--earth:focus::after,
-.planet-all__item--earth:hover::after {
-    background: linear-gradient(0deg, #566cab, #323B55);
-    outline: none;
-}
+// .planet-all__item--earth:focus::after,
+// .planet-all__item--earth:hover::after {
+//     background: linear-gradient(0deg, #566cab, #323B55);
+//     outline: none;
+// }
 
-.planet-all__item--mars:focus::after,
-.planet-all__item--mars:hover::after {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(227, 112, 67, 0.8) 0%, rgba(218, 107, 63, 0.6) 85.87%);
-    opacity: 0.8;
-    outline: none;
-}
+// .planet-all__item--mars:focus::after,
+// .planet-all__item--mars:hover::after {
+//     background: radial-gradient(50% 50% at 50% 50%, rgba(227, 112, 67, 0.8) 0%, rgba(218, 107, 63, 0.6) 85.87%);
+//     opacity: 0.8;
+//     outline: none;
+// }
 
-.planet-all__item--jupiter:hover::after,
-.planet-all__item--jupiter:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, #8C623E 0%, rgba(232, 201, 174, 0.6) 85.87%);
-    // width: 45rem;
-    // height: 66rem;
-    top: -30vh;
-    opacity: 1;
-    outline: none;
-}
+// .planet-all__item--jupiter:hover::after,
+// .planet-all__item--jupiter:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, #8C623E 0%, rgba(232, 201, 174, 0.6) 85.87%);
+//     // width: 45rem;
+//     // height: 66rem;
+//     top: -30vh;
+//     opacity: 1;
+//     outline: none;
+// }
 
-.planet-all__item--saturn:hover::after,
-.planet-all__item--saturn:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, #a5a079 0%, #778767b8 85.87%);
-    // width: 45rem;
-    // height: 66rem;
-    top: -30vh;
-    opacity: 0.8;
-    outline: none;
-}
+// .planet-all__item--saturn:hover::after,
+// .planet-all__item--saturn:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, #a5a079 0%, #778767b8 85.87%);
+//     // width: 45rem;
+//     // height: 66rem;
+//     top: -30vh;
+//     opacity: 0.8;
+//     outline: none;
+// }
 
-.planet-all__item--uranus:hover::after,
-.planet-all__item--uranus:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(174, 227, 233, 0.6) 0%, rgba(141, 183, 188, 0.51) 85.87%);
-    // width: 45rem;
-    // height: 26rem;
-    top: -37vh;
-    opacity: 0.8;
-    outline: none;
-}
+// .planet-all__item--uranus:hover::after,
+// .planet-all__item--uranus:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, rgba(174, 227, 233, 0.6) 0%, rgba(141, 183, 188, 0.51) 85.87%);
+//     // width: 45rem;
+//     // height: 26rem;
+//     top: -37vh;
+//     opacity: 0.8;
+//     outline: none;
+// }
 
-.planet-all__item--neptune:hover::after,
-.planet-all__item--neptune:focus::after {
-    background: radial-gradient(50% 50% at 50% 50%, #63b8e7 0%, #2433a3a1 85.87%);
-    outline: none;
-}
+// .planet-all__item--neptune:hover::after,
+// .planet-all__item--neptune:focus::after {
+//     background: radial-gradient(50% 50% at 50% 50%, #63b8e7 0%, #2433a3a1 85.87%);
+//     outline: none;
+// }
