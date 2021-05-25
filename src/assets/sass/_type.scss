@@ -126,6 +126,9 @@ body {
     &--footer {
         font-size: 1.4rem;
     }
+    &--disabled{
+        pointer-events: none;
+    }
 }
 
 .datavisu {

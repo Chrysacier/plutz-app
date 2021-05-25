@@ -24,6 +24,22 @@ li {
     list-style-type: none;
 }
 
+.intro-bjr{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
 .all {
     margin: 0rem 4.3rem;
 
@@ -377,6 +393,9 @@ li {
             }
         }
     }
+    @media (min-width:1280px) {
+        width: 30rem;
+    }
 }
 
 .section--how {
@@ -460,8 +479,10 @@ li {
     
         @media(min-width:728px) {
             width: 49rem !important;
-            height: 49rem !important;
+            // height: 49rem !important;
+            height: 45rem !important;
         }
+
     }
     
     &-pagination {
@@ -535,8 +556,8 @@ li {
 
     &-filter {
         display: flex;
-        width: 255px;
-        justify-content: space-around;
+        width: 100%;
+        justify-content: space-evenly;
         margin: auto;
     }
 
@@ -583,6 +604,12 @@ li {
 }
 .planet[data-planet="Venus"]::before{
     background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.7))); 
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%);
+    background: -o-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+    background: -ms-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+  
 }
 .planet[data-planet="Mars"]::before{
     background: radial-gradient(50% 50% at 50% 50%, rgba(227, 112, 67, 0.8) 0%, rgba(218, 107, 63, 0.6) 85.87%);

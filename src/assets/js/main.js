@@ -13,6 +13,8 @@ let planetdata;
 let filter_index = 0;
 let previous_filter_index = 0;
 let check = false;
+let planets_tab = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ]
+let data_tab = ["Distance", "Diametre", "Mass", "Rotation_Period", "Gravity", "Mean_Temperature", "Number_of_satellites"]
 const json = fetch('assets/js/data.json').then(function(response) {
     return response.json();
 }).then(function(data) {
@@ -21,6 +23,23 @@ const json = fetch('assets/js/data.json').then(function(response) {
 });
 
 function view_all_data() {
+    if(exp_planet){
+        if(localStorage.getItem("data-planet")){
+            let stored_planet = localStorage.getItem("data-planet");
+            exp_planet.setAttribute("data-planet", stored_planet)
+
+            let clicked_planet = localStorage.getItem("data-planet")
+            let planet_filter = planetdata.filter((planets) => {
+                return planets.Name.toLowerCase().includes(clicked_planet.toLocaleLowerCase());
+            });
+            planet_filter.forEach(planets => {
+                planet_title.innerHTML = `${planets.Name}`;
+                planet_infos.innerHTML = `${planets.Informations}`;
+            });
+        }
+    
+    }
+    
     planet_all_item.forEach(planet_one_item => {
         let solo_planet_data = planet_one_item.getAttribute("data-planet");
         let planet_filter = planetdata.filter((planets) => {
@@ -44,7 +63,7 @@ buttons_exp.forEach(button => {
         let clicked_planet = exp_planet.getAttribute('data-planet');
         let measure = " ";
         if (btn_data == "Distance") {
-            measure = "km";
+            measure = "million km";
         } else if (btn_data == "Diameter") {
             measure = "km";
         } else if (btn_data == "Mass") {
@@ -95,7 +114,7 @@ buttons_all.forEach(button => {
         let btn_data = button.getAttribute("data-type");
         let measure = " ";
         if (btn_data == "Distance") {
-            measure = "km";
+            measure = "million km";
         } else if (btn_data == "Diameter") {
             measure = "km";
         } else if (btn_data == "Mass") {
@@ -212,10 +231,21 @@ buttons_filter.forEach(button_filter => {
         });
     });
 });
+
+planet_all_item.forEach(planet_item => {
+    planet_item.addEventListener('click', (e) =>{
+        let planet_item_data = planet_item.getAttribute("data-planet");
+        localStorage.setItem("data-planet", planet_item_data);
+    });
+   
+});
+
 var menu = ['M', 'V', 'E', 'M', 'J', 'S', 'U', 'N'];
 let swiper_container = document.querySelector(".swiper-container");
 if (swiper_container) {
+    
     var mySwiper = new Swiper('.swiper-container', {
+        
         breakpoints: {
             1280: {
                 direction: 'vertical',
@@ -232,7 +262,14 @@ if (swiper_container) {
                 return '<span class="' + className + '">' + (menu[index]) + '</span>';
             },
         },
-    })
+    });
+    for (let index = 0; index < planets_tab.length; index++) {
+        let current_planet = planets_tab[index];
+        if(current_planet == localStorage.getItem("data-planet")){
+            mySwiper.slideTo(index)
+        }
+        
+    }
     mySwiper.on('activeIndexChange', function() {
         let slide_active = document.querySelector(".swiper-slide-active");
         let slide_active_data = slide_active.getAttribute("data-swiper-slide-index");
@@ -264,7 +301,7 @@ if (swiper_container) {
             } else {
                 let measure = " ";
                 if (previous_data == "Distance") {
-                    measure = "km";
+                    measure = "million km";
                 } else if (previous_data == "Diameter") {
                     measure = "km";
                 } else if (previous_data == "Mass") {
@@ -311,26 +348,50 @@ if(slider_all){
     let scrollLeft;
 
     slider_all.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider_all.classList.add('active');
-    startX = e.pageX - slider_all.offsetLeft;
-    scrollLeft = slider_all.scrollLeft;
+        isDown = true;
+        slider_all.classList.add('active');
+        startX = e.pageX - slider_all.offsetLeft;
+        scrollLeft = slider_all.scrollLeft;
     });
     slider_all.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider_all.classList.remove('active');
+        isDown = false;
+        slider_all.classList.remove('active');
     });
     slider_all.addEventListener('mouseup', () => {
-    isDown = false;
-    slider_all.classList.remove('active');
+        isDown = false;
+        planet_all_item.forEach(planet_item => {
+            planet_item.classList.remove("link--disabled");
+        });
+        slider_all.classList.remove('active');
     });
     slider_all.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider_all.offsetLeft;
-    const walk = (x - startX) * 2; //scroll speed
-    slider_all.scrollLeft = scrollLeft - walk;
-    console.log(walk);
+        if(!isDown) return;
+        e.preventDefault();
+        planet_all_item.forEach(planet_item => {
+            planet_item.classList.add("link--disabled");
+        });
+        const x = e.pageX - slider_all.offsetLeft;
+        const walk = (x - startX) * 2; //scroll speed
+        slider_all.scrollLeft = scrollLeft - walk;
+        console.log(walk);
     });
     
 }
+
+
+
+var el = document.querySelector('.planet-all');
+// get scroll position in px
+if (el){
+    el.addEventListener('wheel', translate);
+
+    function translate(e) {
+        const delta = e.deltaY;
+        const currentScroll = el.scrollLeft;
+        console.log(el)
+        el.scrollTo(currentScroll + delta, 0)
+        e.preventDefault();
+    }
+}
+
+
