@@ -6,8 +6,12 @@ html {
     scroll-behavior: smooth
 }
 
-.html-exp {
-    overflow: hidden;
+.html-exp-solo {
+    overflow-x: hidden;
+
+    @media(min-width: 1280px) {
+        overflow: hidden;
+    }
 }
 
 body {

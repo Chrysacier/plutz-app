@@ -1,5 +1,15 @@
-/* Layout 
+:hover/* Layout 
 ================================================================================ */
+::-moz-selection {
+    color: white;
+    background: rgba(115, 85, 113, .5);
+}
+
+::selection {
+    color: white;
+    background: rgba(115, 85, 113, .5);
+}
+
 body {
     background-color: black;
     color: white;
@@ -69,6 +79,7 @@ li {
     &--exp {
         margin: 18rem 4.3rem 0rem;
         justify-content: center;
+        margin-bottom: 10rem;
 
         @media(min-width:1280px) {
             margin-top: 0px;
@@ -87,6 +98,7 @@ li {
         margin: 14rem 0px 0px;
         display: flex;
         justify-content: center;
+        margin-bottom: 0px;
 
         @media(min-width:1280px) {
             margin-top: 0px;
@@ -99,7 +111,7 @@ li {
 }
 
 .lines {
-    &::before {
+    &::before, &::after {
         height: 100vh;
         content: "";
         width: 1px;
@@ -112,15 +124,8 @@ li {
     }
 
     &::after {
-        content: "";
-        height: 100vh;
-        width: 1px;
-        background-color: var(--color-secondary);
-        position: fixed;
-        top: 0;
+        left: inherit;
         right: 33%;
-        z-index: -10;
-        opacity: .6;
     }
 
     @media(min-width:1024px) {
@@ -300,6 +305,9 @@ li {
         flex-direction: row;
         overflow-x: scroll;
         height: 100vh;
+        &:hover ~  .text-cursor{
+            opacity: 1;
+        }
     }
 
     &__item {
@@ -422,7 +430,12 @@ li {
             max-width: 68rem;
         }
 }
-
+.text-cursor{
+    opacity: 0;
+    position: absolute;
+    z-index: 50;
+    font-size: 13px;
+}
 .swiper{
     &-container {
         height: 35rem;
@@ -450,8 +463,13 @@ li {
             display: block;
             order: 2;
             overflow: inherit !important;
+            &:hover ~  .text-cursor{
+                opacity: 1;
+            }
         }
+        
     }
+    
 
     &-wrapper {
         align-items: center !important;
@@ -584,14 +602,14 @@ li {
         top: 45rem;
         background: linear-gradient(0deg, #566cab, #323B55);
         z-index: -1;
-        filter: blur(124px);
+        // filter: blur(124px);
         transform: rotate(-90deg);
 
         @media(min-width:1280px) {
             top: calc(15% + -13.1vw);
             left: 40%;
-            width: 52rem;
-            height: 96rem;
+            width: 70rem;
+            height: 120rem;
             opacity: 0.35;
         }
     }
@@ -603,12 +621,24 @@ li {
     opacity: 0.4;
 }
 .planet[data-planet="Venus"]::before{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%); 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.7))); 
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%);
-    background: -o-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
-    background: -ms-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+    // background: radial-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+    // background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%); 
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.7))); 
+    // background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.7) 100%);
+    // background: -o-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+    // background: -ms-linear-gradient(50% 50% at 50% 50%, rgba(188, 147, 91, 0.61) 0%, rgba(179, 126, 82, 0.68) 85.87%);
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc9329+0,b37e52+100&0.36+0,0.4+99 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc9329+0,b37e52+100&0.36+0,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff3838+0,b37e52+100&0.36+59,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc935b+0,b37e52+100&0.36+59,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc935b+0,b37e52+100&1+0,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc935b+0,b37e52+100&1+26,1+26,0.7+62,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc935b+0,b37e52+100&1+11,1+11,0+100 */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bc935b+0,bc935b+11&1+11,1+11,0+74 */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(188,147,91,1) 0%, rgba(188,147,91,1) 11%, rgba(188,147,91,0) 74%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(188,147,91,1) 0%,rgba(188,147,91,1) 11%,rgba(188,147,91,0) 74%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(188,147,91,1) 0%,rgba(188,147,91,1) 11%,rgba(188,147,91,0) 74%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   
 }
 .planet[data-planet="Mars"]::before{

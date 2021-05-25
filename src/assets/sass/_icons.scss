@@ -15,6 +15,8 @@ svg {
     top: 50%;
     transform: translateY(-45%);
     height: 38px;
+    overflow: visible;
+
 
     svg {
         width: 1.8em;
@@ -27,6 +29,11 @@ svg {
         width: 35px;
         transform: inherit;
         height: 3.4rem;
+        transition: .6s all;
+
+        &:hover{
+            transform: scale(1.15);
+        }
 
         @media (min-width:1280px) {
             margin: 0 auto;
@@ -84,6 +91,7 @@ svg {
 }
 
 .cap {
+    padding-right: 25px;
     &::after {
         background-image: url(../images/icons/logo-after-test.svg);
         width: .8rem;
@@ -99,6 +107,8 @@ svg {
 
 .datavisu--footer {
     .cap {
+        padding-right: 20px;
+
         &::after {
             opacity: .4;
             top: .7rem;
@@ -172,3 +182,75 @@ svg {
         left: 1px;
     }
 }
+
+
+.type-rotate:hover path{
+   transform:rotate(180deg);
+}
+
+.type-rotate path{
+    transform-origin:center;
+    transition-duration: 2s;
+}
+
+.diameter-rotate:hover{
+    transform:rotate(100deg);
+    transition: 0.5s;
+}
+
+.mass-rotate:hover, .satellites-rotate:hover{
+    transform:rotate(-30deg);
+    transition: 0.5s;
+}
+
+.rotation-rotate{
+    transition: 0.2s all;
+}
+
+.rotation-rotate:hover{
+    transform-origin: center;
+    transform:rotate(360deg);
+}
+
+.gravity:hover > .middle-line{
+    animation: salut 2s;
+    transition: 2s all;
+}
+
+@keyframes salut {
+
+    to {
+        transform: translateY(6px);
+    }
+
+}
+
+.gravity:hover > .extreme-line{
+    animation: aurevoir 2s;
+    transition: 2s;
+}
+
+@keyframes aurevoir {
+
+    to {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+.temperature:not(:hover) .bisou{
+    y: 33px;
+}
+
+
+.bisou{
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
