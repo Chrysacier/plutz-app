@@ -42,3 +42,68 @@
         overflow: visible;
     }    
 }    
+
+.type-rotate:hover path{
+    transform:rotate(180deg);
+ }
+ 
+ .type-rotate path{
+     transform-origin:center;
+     transition-duration: 2s;
+ }
+ 
+ .diameter-rotate:hover{
+     transform:rotate(100deg);
+     transition: 0.5s;
+ }
+ 
+ .mass-rotate:hover, .satellites-rotate:hover{
+     transform:rotate(-30deg);
+     transition: 0.5s;
+ }
+ 
+ .rotation-rotate{
+     transition: 0.2s all;
+ }
+ 
+ .rotation-rotate:hover{
+     transform-origin: center;
+     transform:rotate(360deg);
+ }
+ 
+ .gravity:hover > .middle-line{
+     animation: salut 2s;
+     transition: 2s all;
+ }
+ 
+ @keyframes salut {
+ 
+     to {
+         transform: translateY(6px);
+     }
+ 
+ }
+ 
+ .gravity:hover > .extreme-line{
+     animation: aurevoir 2s;
+     transition: 2s;
+ }
+ 
+ @keyframes aurevoir {
+ 
+     to {
+         transform: translateY(-3px);
+     }
+ 
+ }
+ 
+ 
+ .temperature:not(:hover) .bisou{
+     transform: translateY(33px);
+ }
+ 
+ 
+ .bisou{
+     transition: 0.5s;
+ }
+ 
