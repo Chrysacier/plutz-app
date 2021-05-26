@@ -4,7 +4,7 @@
 .btn {
     background-color: transparent;
     border: none;
-    padding: 0 2.3rem;
+    padding: 0 2rem;
     cursor: pointer;
     width: 100%;
     align-items: center;
@@ -20,7 +20,7 @@
     &--filter {
         width: 30px;
         padding: 10px;
-        color: var(--color-secondary);
+        color: var(--color-primary);
 
         @media (min-width: 1280px) {
             width: 40px;
@@ -68,7 +68,6 @@
         &--active svg>path{
             fill: var(--color-text);
             transition: .5s all;
-
         }
 
 
@@ -101,13 +100,6 @@
     &--type{
         padding-left: 0px;
     }
-
-    &--satellites{
-        padding-right: 3rem;
-        @media (min-width: 728px) {
-            padding-right: 0px;
-        }
-    }
 }
 
 .header {
@@ -115,7 +107,7 @@
     margin-left: auto;
     left: 0;
     margin-right: auto;
-    max-width: 101rem;
+    max-width: 120rem;
     box-sizing: border-box;
 
     &--exp {
@@ -126,7 +118,7 @@
         padding-left: 40px;
         background-color: var(--color-bg);
         border-bottom: 1px solid var(--color-primary);
-        z-index: 20;
+        z-index: 220;
         width: 100vw;
 
         @media (min-width:1280px) {
@@ -160,13 +152,14 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
-    height: 14rem;
+    height: 10rem;
     margin-left: 30px;
 
     @media (min-width:728px) {
         width: calc(100vw - 9rem);
         justify-content: center;
         margin-left: 0;
+        height: 14rem;
     }
 
     @media (min-width:850px) {
@@ -189,9 +182,8 @@
         top: 0;
         bottom: 0;
         width: 100px;
-        background: -webkit-gradient(linear, right top, left top, from(#000000), to(#00000028));
+        background: -webkit-gradient(linear, right top, left top, from(#000000), to(#0000000f));
         pointer-events: none;
-        filter: blur(7px);
 
         @media (min-width:728px) {
             background: none;
@@ -220,18 +212,17 @@
     }
 }
 .hide-scroll{
-    @media (min-width:1280px) {
+    // @media (min-width:1280px) {
         opacity: 1;
         transition-duration: 0.3s;
-    }
-
+    // }
 
 }
 .hide-scroll--hidden{
-    @media (min-width:1280px) {
+    // @media (min-width:1280px) {
         opacity: 0;
         transition-duration: 0.3s;
-    }
+    // }
 }
 
 .footer {
@@ -254,8 +245,12 @@
         width: 100vw;
         height: 1px;
         background-color: var(--color-secondary);
-        left: -5.5rem;
+        left: -4.3rem;        
         opacity: .6;
+
+        @media (min-width:1024px) {
+            left: -5.3rem;
+        }
     }
 
     &__infos {
@@ -307,9 +302,16 @@
 
 .credits {
     margin-bottom: 3rem;
+    max-width: 30rem;
+    margin-right: 3%;
 
-    @media (min-width:400px) {
-        margin-right: 10%;
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        width: 50%;
     }
 }
 

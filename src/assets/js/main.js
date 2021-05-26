@@ -62,7 +62,6 @@ buttons_exp.forEach(button => {
         let btn_data = button.getAttribute("data-type");
         let clicked_planet = exp_planet.getAttribute('data-planet');
         let measure = getMeasure(btn_data);
-
         let planet_filter = planetdata.filter((planets) => {
             return planets.Name.toLowerCase().includes(clicked_planet.toLocaleLowerCase());
         });
@@ -76,7 +75,7 @@ buttons_exp.forEach(button => {
                         btn_icon.classList.remove("btn-data--active");
                     }
                 });
-            } else {
+            }else{
                 planet_title.innerHTML = `${planets[btn_data]} <span class="planet-data--unit">${measure}</span>`;
                 planet_infos.innerHTML = `${planets['Facts'][0][btn_data]}`;
                 btns_icon.forEach(btn_icon => {
@@ -291,8 +290,6 @@ if (swiper_container) {
             mySwiper.mousewheel.disable();
         }
     }
-    
-
     reportWindowSize();
 }
 new kursor({
@@ -302,8 +299,6 @@ new kursor({
 });
 
 // view all drag scroll
-
-
 const slider_all = document.querySelector('.planet-all');
 
 if(slider_all){
@@ -337,7 +332,6 @@ if(slider_all){
         const x = e.pageX - slider_all.offsetLeft;
         const walk = (x - startX) * 2; //scroll speed
         slider_all.scrollLeft = scrollLeft - walk;
-        console.log(walk);
     });
     
 }
@@ -364,14 +358,10 @@ if (el){
 let text_cursor = document.querySelector(".text-cursor")
 const onMouseMove = (e) =>{
     if(exp_planet){
-        console.log("1")
         text_cursor.style.left = e.pageX+10 + 'px';
         text_cursor.style.top = e.pageY+10 + 'px';
     
     }else if(document.querySelector(".planet-all")){
-        console.log("1")
-        console.log(planet_all_item)
-
         text_cursor.style.left = e.pageX-120 + 'px';
         text_cursor.style.top = e.pageY + 'px';
     }
@@ -382,7 +372,7 @@ let oldscroll = 0
 let logo_letters = document.querySelectorAll(".hide-scroll")
 window.addEventListener("scroll", (e) =>{
 
-   if (oldscroll < window.scrollY){
+   if (window.scrollY != 0){
         logo_letters.forEach(logo_letter => {
             logo_letter.classList.add("hide-scroll--hidden");
         });

@@ -16,6 +16,7 @@ svg {
     transform: translateY(-45%);
     height: 38px;
     overflow: visible;
+    display: flex;
 
 
     svg {
@@ -29,7 +30,7 @@ svg {
         width: 35px;
         transform: inherit;
         height: 3.4rem;
-        transition: .6s all;
+        transition: .8s all;
 
         &:hover{
             transform: scale(1.15);
@@ -43,23 +44,29 @@ svg {
     &--landing {
         top: 6.9rem;
         background: none;
-        left: 4.3rem;
+        left: 4rem;
+        width: 15rem;
+        position: fixed;
+        z-index: 500;
 
         @media (min-width: 728px) {
-            width: 12rem;
+            left: 5.4rem;
         }
 
-        @media (min-width: 1200px) {
-            position: fixed;
-            left: 4.5rem;
-        }
-
-        svg {
-            width: 12rem;
-
-            @media (min-width: 728px) {
-                width: 10rem;
+        &:hover{
+            .star{
+                transform: scale(1.1);
             }
+        }
+
+        .star{
+            width: 34px;
+            margin-right: 1.5rem;
+            transition: .8s all;
+        }
+
+        .plutz{
+            width: 7.1rem;
         }
     }
 
@@ -85,8 +92,45 @@ svg {
         height: 2.2rem;
     }
 
-    &-icon--active {
+    &-data--active{
         fill: white;
+    }
+
+    &-data--active .arrow{
+        fill: white;
+    }
+
+    &-icon--active .arrow{
+        fill: white;
+    }
+
+    &-data--active:hover .jauge{
+        fill: white;
+    }
+
+    &-icon--active:hover .jauge {
+        fill: white;
+    }
+
+    &--temperature{
+        position: relative;
+        top: -6px;      
+        height: 3.5rem;    
+        
+        @media (min-width: 1280px) {
+            top: 0px;  
+        }
+        
+        span{
+            position: absolute;
+            top: 34px;
+
+            @media (min-width: 1280px) {
+                top: 3.4rem;
+            }
+    
+        }
+        
     }
 }
 
@@ -158,15 +202,17 @@ svg {
             width: 50%;
         }
 
-        &--temperature, &--satellites{
-            margin-bottom: 0;
+        @media (min-width: 1280px) {
+            &--satellites, &--temperature{
+                margin-bottom: 0px;
+            }        
         }
-    
+
         svg {
-            width: 20vw;
-            height: 6vw;
-            max-width: 2.8rem;
-            max-height: 2.8rem;
+            width: 22vw;
+            height: 14vw;            
+            max-width: 3.9rem;
+            max-height: 3.9rem;
         }
     
         span {
@@ -174,6 +220,8 @@ svg {
             font-size: 1.3rem;
         }
     }
+
+    
 }
 
 .link {

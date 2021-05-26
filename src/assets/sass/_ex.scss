@@ -18,3 +18,29 @@
         display: none;
     }
 }
+
+.hide-mobile{
+    display: none;
+
+    @media (min-width: 900px) {
+        display: block;
+    }
+}
+
+.hide-desktop{
+    @media (min-width: 900px) {
+        display: none;
+    }
+}
+
+.tablet{
+    display: none;
+
+    @media (min-width: 728px) {
+        display: block;
+    }
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}

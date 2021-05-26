@@ -1,9 +1,13 @@
 @keyframes dash {
-    from {
+    0% {
         stroke: var(--color-secondary);
     }
 
-    to {
+    25% {
+    stroke: var(--color-secondary);
+    }
+
+    100% {
     stroke-dashoffset: 0;
     stroke: var(--color-text);
     }
@@ -29,10 +33,9 @@
 }
 
 .intro-bjr{
-    animation: intro-bjr 1s 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: intro-bjr 1.5s 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
     transition: .2s;
     pointer-events: none;
-
 
     svg{
         padding: 4rem;
@@ -41,69 +44,298 @@
         height: 18rem;
         overflow: visible;
     }    
-}    
+}  
 
-.type-rotate:hover path{
-    transform:rotate(180deg);
- }
+.btn{
+    &-anim {
+       
+        &--type{
+           
+            svg{
+                transform-origin:center;
+                        transition: 1s all;
+            }
+        
+            &:hover svg{
+                @media (min-width:1280px) {
+                    transform:rotate(-60deg);
+                }
+             }
+        }
+
+        
+        &--distance{
+            .arrow{
+                transition: 1s all;
+                transform-origin: center;
+            }
+    
+            :hover{
+                .arrow{
+                    @media (min-width:1280px) {
+                        transform: scaleX(1.5);
+                    }
+                }
+            }
+        }
+        
+        &--diameter{
+            svg{
+                transition: 1s all;
+            }
+        
+            &:hover svg{
+                @media (min-width:1280px) {
+                    transform:rotate(45deg);
+                }
+            }
+        }
+    
+        &--mass{
+            svg{
+                transition: 1s all;
+            }
+        
+            &:hover svg{
+                @media (min-width:1280px) {
+                    transform:rotate(-30deg);
+                }
+            }
+        }
+    
+        &--rotation{
+            svg{
+               transform-origin: center;
+               transition: 1s all;
+            }
+    
+            &:hover svg{
+                @media (min-width:1280px) {
+                    transform:rotate(120deg);    
+                }
+            }
+        }
+    
+        &--gravity{
+
+            svg .extreme, svg.middle-line{
+                transition: 8s all;
+            }
+    
+            &:hover{
+    
+                svg > .middle-line{
+                    @media (min-width:1280px) {
+                        transform: translateY(4px);
+                    }
+                }
+    
+                svg > .extreme-line{
+                    @media (min-width:1280px) {
+                        transform: translateY(-4px);
+                    }
+                }
+            }
+        }
+    
+        &--temperature{
+
+            .jauge{
+                display: none;
+
+                @media (min-width:1280px) {
+                    display: block;
+                }
+            }
+    
+            &:not(:hover){
+                .jauge{
+                    @media (min-width:1280px) {
+                        transform: translateY(33px);
+                        // y: 33px;
+                    }
+                }
+            } 
+    
+            .jauge{
+               transition: 1s all;
+               fill: var(--color-primary);
+            }
+        }
+    
+        &--satellites{
+            svg{
+            transition: 1s all;
+        }
+
+            &:hover svg{
+                @media (min-width:1280px) {
+                    transform:rotate(-90deg);
+                }
+            }
+        }    
+    }
+}
+
+.btn-anim--landing svg{
+   .middle-line{
+    transition: 1s all; 
+    } 
+
+    .extreme-line{
+        transition: 1s all;
+    }
+}
+
+.how-icons__item--temperature .jauge{
+    fill: var(--color-text);
+}
+
+
+ .planet-all__item{
+    position: relative;
+
+    &:hover:after{
+       @media(min-width:1280px) {
+           content: "";
+           position: absolute;
+           border-radius: 50%;
+           left: 50%;
+           z-index: -10;
+           top: 50%;
+           border: 1px solid;
+           transform: translateY(-50%) translateX(-50%);
+           color: var(--color-secondary);
+       }
+   }
+
+   &--mercury:hover:after{
+      animation: mercury-circle-hover .6s ease-out forwards;
+    }
+
+    &--venus:hover:after{
+        animation: venus-circle-hover .6s ease-out forwards;
+    }
+
+    &--earth:hover:after{
+        animation: earth-circle-hover .6s ease-out forwards;
+    }
+
+    &--mars:hover:after{
+        animation: mars-circle-hover .6s ease-out forwards;
+    }
+
+    &--jupiter:hover:after{
+        animation: jupiter-circle-hover .6s ease-out forwards;
+    }
+
+    &--saturn:hover:after{
+        animation: saturn-circle-hover .6s ease-out forwards;
+    }
+
+    &--uranus:hover:after{
+        animation: uranus-circle-hover .6s ease-out forwards;
+    }
+    
+    &--neptune:hover:after{
+        animation: neptune-circle-hover .6s ease-out forwards;
+    }
+}
  
- .type-rotate path{
-     transform-origin:center;
-     transition-duration: 2s;
- }
- 
- .diameter-rotate:hover{
-     transform:rotate(100deg);
-     transition: 0.5s;
- }
- 
- .mass-rotate:hover, .satellites-rotate:hover{
-     transform:rotate(-30deg);
-     transition: 0.5s;
- }
- 
- .rotation-rotate{
-     transition: 0.2s all;
- }
- 
- .rotation-rotate:hover{
-     transform-origin: center;
-     transform:rotate(360deg);
- }
- 
- .gravity:hover > .middle-line{
-     animation: salut 2s;
-     transition: 2s all;
- }
- 
- @keyframes salut {
- 
-     to {
-         transform: translateY(6px);
-     }
- 
- }
- 
- .gravity:hover > .extreme-line{
-     animation: aurevoir 2s;
-     transition: 2s;
- }
- 
- @keyframes aurevoir {
- 
-     to {
-         transform: translateY(-3px);
-     }
- 
- }
- 
- 
- .temperature:not(:hover) .bisou{
-     transform: translateY(33px);
- }
- 
- 
- .bisou{
-     transition: 0.5s;
- }
- 
+
+
+@keyframes mercury-circle-hover {
+    0% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    100% {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@keyframes venus-circle-hover {
+    0% {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    100% {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@keyframes earth-circle-hover {
+    0% {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    100% {
+        width: 35rem;
+        height: 35rem;
+    }
+}
+
+@keyframes mars-circle-hover {
+    0% {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    100% {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@keyframes jupiter-circle-hover {
+    0% {
+        width: 45rem;
+        height: 45rem;
+    }
+
+    100% {
+        width: 55rem;
+        height: 55rem;
+    }
+}
+
+@keyframes saturn-circle-hover {
+    0% {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    100% {
+        width: 45rem;
+        height: 45rem;
+    }
+}
+
+@keyframes uranus-circle-hover {
+    0% {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    100% {
+        width: 40rem;
+        height: 40rem;
+    }
+}
+
+@keyframes neptune-circle-hover {
+    0% {
+        width: 27rem;
+        height: 27rem;
+    }
+
+    100% {
+        width: 37rem;
+        height: 37rem;
+    }
+}
