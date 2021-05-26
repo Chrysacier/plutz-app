@@ -203,4 +203,7 @@ small {
 
 .btn--filter {
     font-size: 1.5rem;
+    @media(min-width: 728px) {
+        font-size: 1.7rem;
+    }
 }

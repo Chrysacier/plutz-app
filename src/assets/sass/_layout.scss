@@ -79,7 +79,7 @@ li {
     }
 
     &--exp {
-        margin: 18rem 4.3rem 0rem;
+        margin: 17rem 4.3rem 0rem;
         justify-content: center;
         margin-bottom: 10rem;
 
@@ -221,7 +221,7 @@ li {
     left: calc(33% - 8.5rem);
 
     @media(min-width:728px) {
-        left: calc(33% - 14.5rem);
+        left: calc(33% - 11.5rem);        
         display: flex;
         flex-wrap: wrap;
     }
@@ -244,8 +244,8 @@ li {
         @media(min-width: 728px) {
             margin-bottom: 12rem;
             flex-direction: column;
-            width: 50%;
             text-align: center;
+            margin-right: calc(33% - 8.9rem);
         }
 
         @media(min-width: 1024px) {
@@ -265,6 +265,10 @@ li {
 
         &:last-of-type {
             margin-bottom: 0rem;
+
+            @media(min-width: 728px) {
+                margin-bottom: 3rem;
+            }
         }
 
         &:hover > .img--planet-landing, 
@@ -273,6 +277,12 @@ li {
             @media(min-width: 1280px) {
                 transform: scale(1.1);
                 border: 1px solid transparent;
+            }
+        }
+
+        &--earth, &--mars{
+            @media(min-width: 728px) {
+                margin-bottom: 3rem;
             }
         }
     }
@@ -284,7 +294,8 @@ li {
 
 
         @media(min-width: 728px) {
-            margin-left: 5.5rem;
+            margin-left: 0px;
+            margin-top: 2.5rem;
         }
 
         @media(min-width: 1024px) {
@@ -458,11 +469,11 @@ li {
         top: 25rem;        
         display: flex;
         align-items: center;
-        margin-top: 3rem;
-
+        
         @media(min-width:728px) {
             height: 60rem;
             top: 16rem;
+            margin-top: 3rem;
         }
 
         @media(min-width:1280px) {
@@ -741,8 +752,13 @@ li {
         position: absolute;
         margin: 0;
         top: 6rem;
-        top: 18.5rem;
+        top: 16.5rem;
         left: 54px;
+
+        @media(min-width:728px) {
+            top: 18.5rem;
+        }
+
 
         svg {
             left: -9px;
@@ -777,4 +793,8 @@ li {
     max-width: 105rem;
     margin-left: auto;
     margin-right: auto;
+
+    .link{
+        z-index: 200;
+    }
 }

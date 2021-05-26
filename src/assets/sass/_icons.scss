@@ -114,12 +114,7 @@ svg {
 
     &--temperature{
         position: relative;
-        top: -6px;      
         height: 3.5rem;    
-        
-        @media (min-width: 1280px) {
-            top: 0px;  
-        }
         
         span{
             position: absolute;
@@ -216,7 +211,7 @@ svg {
         }
     
         span {
-            margin-top: .8rem;
+            // margin-top: .8rem;
             font-size: 1.3rem;
         }
     }

@@ -4,7 +4,7 @@
 .btn {
     background-color: transparent;
     border: none;
-    padding: 0 2rem;
+    padding: 0 1.2rem;
     cursor: pointer;
     width: 100%;
     align-items: center;
@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
     transition: .3s all;
+
+    @media (min-width: 728px) {
+        padding: 0 2rem;
+    }
 
     @media (min-width: 1280px) {
         padding: 0px;
@@ -152,7 +156,7 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
-    height: 10rem;
+    height: 12rem;
     margin-left: 30px;
 
     @media (min-width:728px) {
@@ -255,12 +259,15 @@
 
     &__infos {
         position: relative;
-        margin-bottom: 6rem;
+        margin-bottom: 9rem;
         padding-top: 5rem;
         display: flex;
         flex-wrap: wrap;
 
-        @media (min-width:1200px) {
+        @media (min-width:728px) {
+            margin-bottom: 6rem;
+        }
+        @media (min-width:1280px) {
             padding-top: 28vh;
         }
 
@@ -270,8 +277,12 @@
             width: -webkit-fill-available;
             height: 1px;
             background-color: var(--color-secondary);
-            bottom: -4rem;
+            bottom: -7rem;
             opacity: .6;
+
+            @media (min-width:728px) {
+                bottom: -4rem;
+            }
         }
 
         &__copyright {
@@ -298,6 +309,10 @@
     @media (min-width: 400px) {
         margin-right: 10%;
     }
+
+    @media (min-width: 728px) {
+        margin-bottom: 0px;
+    }
 }
 
 .credits {
@@ -312,6 +327,10 @@
 
     &__item{
         width: 50%;
+    }
+
+    @media (min-width: 728px) {
+        margin-bottom: 0px;
     }
 }
 
