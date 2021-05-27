@@ -1,5 +1,6 @@
 /* Type
 ================================================================================ */
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -37,7 +38,7 @@ body {
         font-size: 8.8rem;
     }
 
-    @media(min-width: 1200px) {
+    @media(min-width: 1280px) {
         font-size: 10.5rem;
         line-height: .9;
     }
@@ -46,16 +47,20 @@ body {
         padding: 43px 0px;
 
         &-slider {
-            font-size: 6.7rem;
+            font-size: 6.2rem;
             margin-top: 3rem;
             margin-bottom: 0px;
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
 
             @media (min-width:728px) {
                 font-size: 8.7rem;
             }
-            
+
             @media (min-width:1280px) {
                 font-size: 7.7rem;
+                text-align: left;
             }
         }
 
@@ -64,7 +69,7 @@ body {
             font-weight: 300;
             font-size: 1.9rem;
             letter-spacing: .3rem;
-    
+
             @media (min-width:1024px) {
                 font-size: 1.7rem;
                 margin-top: 0rem;
@@ -77,11 +82,11 @@ body {
             font-weight: 700;
             margin-bottom: .5rem;
             text-transform: uppercase;
-    
+
             @media (min-width:728px) {
                 font-size: 2.5rem;
             }
-    
+
             @media (min-width:1024px) {
                 font-size: 2.2rem;
             }
@@ -121,7 +126,7 @@ body {
                 margin-bottom: 32rem;
             }
 
-            @media(min-width: 1200px) {
+            @media(min-width: 1280px) {
                 font-size: 6.4rem;
             }
         }
@@ -138,7 +143,8 @@ body {
     &--footer {
         font-size: 1.4rem;
     }
-    &--disabled{
+
+    &--disabled {
         pointer-events: none;
     }
 }
@@ -146,7 +152,7 @@ body {
 .datavisu {
     display: none;
 
-    @media(min-width: 1200px) {
+    @media(min-width: 1280px) {
         z-index: 20;
         display: inherit;
         transform: rotate(90deg);
@@ -157,7 +163,7 @@ body {
     }
 
     &--footer {
-        @media(min-width: 1200px) {
+        @media(min-width: 1280px) {
             transform: rotate(0deg);
             right: inherit;
             top: 4rem;
@@ -176,13 +182,13 @@ body {
     font-size: 1.3rem;
 }
 
-.planet{
-        &-data {
-            margin-bottom: 1rem;
-            font-size: 4.4rem;
-            font-weight: 800;
-            width: max-content;
-            margin-top: 0px;
+.planet {
+    &-data {
+        margin-bottom: 1rem;
+        font-size: 4.4rem;
+        font-weight: 800;
+        width: max-content;
+        margin-top: 0px;
 
         &--unit {
             font-size: 1.5rem;
@@ -203,6 +209,7 @@ small {
 
 .btn--filter {
     font-size: 1.5rem;
+
     @media(min-width: 728px) {
         font-size: 1.7rem;
     }

@@ -1,5 +1,6 @@
 /* Icons 
 ================================================================================ */
+
 svg {
     fill: white;
 }
@@ -18,7 +19,6 @@ svg {
     overflow: visible;
     display: flex;
 
-
     svg {
         width: 1.8em;
         height: 1.8em;
@@ -32,7 +32,7 @@ svg {
         height: 3.4rem;
         transition: .8s all;
 
-        &:hover{
+        &:hover {
             transform: scale(1.15);
         }
 
@@ -53,19 +53,19 @@ svg {
             left: 5.4rem;
         }
 
-        &:hover{
-            .star{
+        &:hover {
+            .star {
                 transform: scale(1.1);
             }
         }
 
-        .star{
+        .star {
             width: 34px;
             margin-right: 1.5rem;
             transition: .8s all;
         }
 
-        .plutz{
+        .plutz {
             width: 7.1rem;
         }
     }
@@ -92,19 +92,19 @@ svg {
         height: 2.2rem;
     }
 
-    &-data--active{
+    &-data--active {
         fill: white;
     }
 
-    &-data--active .arrow{
+    &-data--active .arrow {
         fill: white;
     }
 
-    &-icon--active .arrow{
+    &-icon--active .arrow {
         fill: white;
     }
 
-    &-data--active:hover .jauge{
+    &-data--active:hover .jauge {
         fill: white;
     }
 
@@ -112,25 +112,33 @@ svg {
         fill: white;
     }
 
-    &--temperature{
+    &--temperature {
         position: relative;
-        height: 3.5rem;    
-        
-        span{
+        height: 3.5rem;
+
+        span {
             position: absolute;
             top: 34px;
 
             @media (min-width: 1280px) {
                 top: 3.4rem;
             }
-    
         }
-        
+    }
+
+    &--all{
+        position: relative;
+        top: 3px;
+    }
+
+    &-all--temperature{
+        top: -6px;
     }
 }
 
 .cap {
     padding-right: 25px;
+
     &::after {
         background-image: url(../images/icons/logo-after-test.svg);
         width: .8rem;
@@ -181,42 +189,41 @@ svg {
     // @media (min-width: 1024px) {
     //     top: -5rem;
     // }
-
     &__item {
         display: flex;
         flex-direction: column;
         width: 50%;
         align-items: center;
         margin-bottom: 5rem;
-    
+
         @media (min-width: 500px) {
             width: 25%;
         }
-    
+
         @media (min-width: 900px) {
             width: 50%;
         }
 
-        @media (min-width: 1280px) {
-            &--satellites, &--temperature{
+        @media (min-width: 900px) {
+
+            &--satellites,
+            &--temperature {
                 margin-bottom: 0px;
-            }        
+            }
         }
 
         svg {
             width: 22vw;
-            height: 14vw;            
+            height: 14vw;
             max-width: 3.9rem;
             max-height: 3.9rem;
         }
-    
+
         span {
             // margin-top: .8rem;
             font-size: 1.3rem;
         }
     }
-
-    
 }
 
 .link {
@@ -225,12 +232,3 @@ svg {
         left: 1px;
     }
 }
-
-
-
-
-
-
-
-
-

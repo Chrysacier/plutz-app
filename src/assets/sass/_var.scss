@@ -1,5 +1,6 @@
 /* Variables 
 ================================================================================ */
+
 :root {
     --color-bg: black;
     --color-text: white;
@@ -17,7 +18,8 @@
 
 @font-face {
     font-family: "Bandeins Strange";
-    src: url(../fonts/BandeinsStrange-SemiBold.woff2) format("woff2");
+    src: url(../fonts/BandeinsStrange-SemiBold.woff2) format("woff2"),
+        url(../fonts/BandeinsStrange-SemiBold.otf) format("otf");
     font-weight: 700;
     font-style: normal;
 }

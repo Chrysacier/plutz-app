@@ -1,19 +1,22 @@
+/* Animations 
+================================================================================ */
+
 @keyframes dash {
     0% {
         stroke: var(--color-secondary);
     }
 
     25% {
-    stroke: var(--color-secondary);
+        stroke: var(--color-secondary);
     }
 
     100% {
-    stroke-dashoffset: 0;
-    stroke: var(--color-text);
+        stroke-dashoffset: 0;
+        stroke: var(--color-text);
     }
 }
 
-.circle-bjr{
+.circle-bjr {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 2s ease-out;
@@ -25,231 +28,215 @@
 }
 
 @keyframes intro-bjr {
-
     to {
         opacity: 0;
     }
-
 }
 
-.intro-bjr{
+.intro-bjr {
     animation: intro-bjr 1.5s 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
     transition: .2s;
     pointer-events: none;
 
-    svg{
+    svg {
         padding: 4rem;
         fill: none;
         width: 18rem;
         height: 18rem;
         overflow: visible;
-    }    
-}  
+    }
+}
 
-.btn{
+.btn {
     &-anim {
-       
-        &--type{
-           
-            svg{
-                transform-origin:center;
-                        transition: 1s all;
+        &--type {
+            svg {
+                transform-origin: center;
+                transition: 1s all;
             }
-        
-            &:hover svg{
+
+            &:hover svg {
                 @media (min-width:1280px) {
-                    transform:rotate(-60deg);
+                    transform: rotate(-60deg);
                 }
-             }
+            }
         }
 
-        
-        &--distance{
-            .arrow{
+        &--distance {
+            .arrow {
                 transition: 1s all;
                 transform-origin: center;
             }
-    
-            :hover{
-                .arrow{
+
+            :hover {
+                .arrow {
                     @media (min-width:1280px) {
                         transform: scaleX(1.5);
                     }
                 }
             }
         }
-        
-        &--diameter{
-            svg{
-                transition: 1s all;
-            }
-        
-            &:hover svg{
-                @media (min-width:1280px) {
-                    transform:rotate(45deg);
-                }
-            }
-        }
-    
-        &--mass{
-            svg{
-                transition: 1s all;
-            }
-        
-            &:hover svg{
-                @media (min-width:1280px) {
-                    transform:rotate(-30deg);
-                }
-            }
-        }
-    
-        &--rotation{
-            svg{
-               transform-origin: center;
-               transition: 1s all;
-            }
-    
-            &:hover svg{
-                @media (min-width:1280px) {
-                    transform:rotate(120deg);    
-                }
-            }
-        }
-    
-        &--gravity{
 
-            svg .extreme, svg.middle-line{
+        &--diameter {
+            svg {
+                transition: 1s all;
+            }
+
+            &:hover svg {
+                @media (min-width:1280px) {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &--mass {
+            svg {
+                transition: 1s all;
+            }
+
+            &:hover svg {
+                @media (min-width:1280px) {
+                    transform: rotate(-30deg);
+                }
+            }
+        }
+
+        &--rotation {
+            svg {
+                transform-origin: center;
+                transition: 1s all;
+            }
+
+            &:hover svg {
+                @media (min-width:1280px) {
+                    transform: rotate(120deg);
+                }
+            }
+        }
+
+        &--gravity {
+
+            svg .extreme,
+            svg.middle-line {
                 transition: 8s all;
             }
-    
-            &:hover{
-    
-                svg > .middle-line{
+
+            &:hover {
+                svg>.middle-line {
                     @media (min-width:1280px) {
                         transform: translateY(4px);
                     }
                 }
-    
-                svg > .extreme-line{
+
+                svg>.extreme-line {
                     @media (min-width:1280px) {
                         transform: translateY(-4px);
                     }
                 }
             }
         }
-    
-        &--temperature{
 
-            .jauge{
+        &--temperature {
+            .jauge {
                 display: none;
 
                 @media (min-width:1280px) {
                     display: block;
                 }
             }
-    
-            &:not(:hover){
-                .jauge{
+
+            &:not(:hover) {
+                .jauge {
                     @media (min-width:1280px) {
                         transform: translateY(33px);
                         // y: 33px;
                     }
                 }
-            } 
-    
-            .jauge{
-               transition: 1s all;
-               fill: var(--color-primary);
             }
-        }
-    
-        &--satellites{
-            svg{
-            transition: 1s all;
+
+            .jauge {
+                transition: 1s all;
+                fill: var(--color-primary);
+            }
         }
 
-            &:hover svg{
+        &--satellites {
+            svg {
+                transition: 1s all;
+            }
+
+            &:hover svg {
                 @media (min-width:1280px) {
-                    transform:rotate(-90deg);
+                    transform: rotate(-90deg);
                 }
             }
-        }    
+        }
     }
 }
 
+.btn-anim--landing svg {
+    .middle-line {
+        transition: 1s all;
+    }
 
-
-
-
-
-
-
-.btn-anim--landing svg{
-   .middle-line{
-    transition: 1s all; 
-    } 
-
-    .extreme-line{
+    .extreme-line {
         transition: 1s all;
     }
 }
 
-.how-icons__item--temperature .jauge{
+.how-icons__item--temperature .jauge {
     fill: var(--color-text);
 }
 
-
- .planet-all__item{
+.planet-all__item {
     position: relative;
 
-    &:hover:after{
-       @media(min-width:1280px) {
-           content: "";
-           position: absolute;
-           border-radius: 50%;
-           left: 50%;
-           z-index: -10;
-           top: 50%;
-           border: 1px solid;
-           transform: translateY(-50%) translateX(-50%);
-           color: var(--color-secondary);
-       }
-   }
-
-   &--mercury:hover:after{
-      animation: mercury-circle-hover .6s ease-out forwards;
+    &:hover:after {
+        @media(min-width:1280px) {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            z-index: -10;
+            top: 50%;
+            border: 1px solid;
+            transform: translateY(-50%) translateX(-50%);
+            color: var(--color-secondary);
+        }
     }
 
-    &--venus:hover:after{
+    &--mercury:hover:after {
+        animation: mercury-circle-hover .6s ease-out forwards;
+    }
+
+    &--venus:hover:after {
         animation: venus-circle-hover .6s ease-out forwards;
     }
 
-    &--earth:hover:after{
+    &--earth:hover:after {
         animation: earth-circle-hover .6s ease-out forwards;
     }
 
-    &--mars:hover:after{
+    &--mars:hover:after {
         animation: mars-circle-hover .6s ease-out forwards;
     }
 
-    &--jupiter:hover:after{
+    &--jupiter:hover:after {
         animation: jupiter-circle-hover .6s ease-out forwards;
     }
 
-    &--saturn:hover:after{
+    &--saturn:hover:after {
         animation: saturn-circle-hover .6s ease-out forwards;
     }
 
-    &--uranus:hover:after{
+    &--uranus:hover:after {
         animation: uranus-circle-hover .6s ease-out forwards;
     }
-    
-    &--neptune:hover:after{
+
+    &--neptune:hover:after {
         animation: neptune-circle-hover .6s ease-out forwards;
     }
 }
- 
-
 
 @keyframes mercury-circle-hover {
     0% {

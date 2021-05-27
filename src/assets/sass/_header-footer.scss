@@ -1,10 +1,10 @@
 /* Header & Footer 
 ================================================================================ */
-/* experimentation - nav */
+
 .btn {
     background-color: transparent;
     border: none;
-    padding: 0 1.2rem;
+    padding: 0 1.8rem;
     cursor: pointer;
     width: 100%;
     align-items: center;
@@ -32,14 +32,13 @@
 
         &-active {
             color: white;
-
         }
     }
 
     &-data {
         position: relative;
         transition: .5s all;
-    
+
         &__text {
             // display: none;
             order: 2;
@@ -50,35 +49,34 @@
             opacity: 0;
             transition: .5s all;
             color: var(--color-primary);
-    
+
             @media (min-width: 1280px) {
                 top: 2.8em;
             }
         }
-    
+
         >&__text {
             transition: .5s all;
         }
+
         >svg>path {
             transition: .5s all;
         }
-  
 
-        &--active span{
+        &--active span {
             color: var(--color-text);
             opacity: 1;
-            outline: none; 
+            outline: none;
         }
-        &--active svg>path{
+
+        &--active svg>path {
             fill: var(--color-text);
             transition: .5s all;
         }
 
-
-        &:hover>&__text{
+        &:hover>&__text {
             opacity: 1;
             outline: none;
-            
         }
 
         /*
@@ -101,7 +99,7 @@
         */
     }
 
-    &--type{
+    &--type {
         padding-left: 0px;
     }
 }
@@ -167,8 +165,8 @@
     }
 
     @media (min-width:850px) {
-            margin-left: -9rem;
-            width: 100vw;
+        margin-left: -9rem;
+        width: 100vw;
     }
 
     @media (min-width:1280px) {
@@ -186,7 +184,7 @@
         top: 0;
         bottom: 0;
         width: 100px;
-        background: -webkit-gradient(linear, right top, left top, from(#000000), to(#0000000f));
+        background: -webkit-gradient(linear, right top, left top, from(#000000c7), to(#0000000f));
         pointer-events: none;
 
         @media (min-width:728px) {
@@ -215,17 +213,18 @@
         }
     }
 }
-.hide-scroll{
-    // @media (min-width:1280px) {
-        opacity: 1;
-        transition-duration: 0.3s;
-    // }
 
-}
-.hide-scroll--hidden{
+.hide-scroll {
     // @media (min-width:1280px) {
-        opacity: 0;
-        transition-duration: 0.3s;
+    opacity: 1;
+    transition-duration: 0.3s;
+    // }
+}
+
+.hide-scroll--hidden {
+    // @media (min-width:1280px) {
+    opacity: 0;
+    transition-duration: 0.3s;
     // }
 }
 
@@ -249,7 +248,7 @@
         width: 100vw;
         height: 1px;
         background-color: var(--color-secondary);
-        left: -4.3rem;        
+        left: -4.3rem;
         opacity: .6;
 
         @media (min-width:1024px) {
@@ -267,6 +266,7 @@
         @media (min-width:728px) {
             margin-bottom: 6rem;
         }
+
         @media (min-width:1280px) {
             padding-top: 28vh;
         }
@@ -295,7 +295,7 @@
     a {
         transition: .3s all;
 
-        &:hover, 
+        &:hover,
         &:focus {
             color: var(--color-primary);
         }
@@ -320,12 +320,12 @@
     max-width: 30rem;
     margin-right: 3%;
 
-    &__list{
+    &__list {
         display: flex;
         flex-wrap: wrap;
     }
 
-    &__item{
+    &__item {
         width: 50%;
     }
 
